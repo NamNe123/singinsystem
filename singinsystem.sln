@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35425.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "singinsystem", "singinsystem\singinsystem.csproj", "{5B06CD21-F9E1-4B97-ADB8-3517275C2191}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B06CD21-F9E1-4B97-ADB8-3517275C2191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B06CD21-F9E1-4B97-ADB8-3517275C2191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B06CD21-F9E1-4B97-ADB8-3517275C2191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B06CD21-F9E1-4B97-ADB8-3517275C2191}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC4E7607-B564-4EBC-9B0E-C8DF9DCDEEFE}
+	EndGlobalSection
+EndGlobal
