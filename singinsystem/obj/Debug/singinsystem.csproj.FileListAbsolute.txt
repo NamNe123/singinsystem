@@ -1,0 +1,9 @@
+D:\github\singinsystem\singinsystem\bin\Debug\singinsystem.exe.config
+D:\github\singinsystem\singinsystem\bin\Debug\singinsystem.exe
+D:\github\singinsystem\singinsystem\bin\Debug\singinsystem.pdb
+D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.Properties.Resources.resources
+D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.csproj.GenerateResource.cache
+D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.csproj.CoreCompileInputs.cache
+D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.exe
+D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.pdb
+D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.csproj.AssemblyReference.cache

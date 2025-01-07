@@ -1,0 +1,2 @@
+D:\github\singinsystem\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+D:\github\singinsystem\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
