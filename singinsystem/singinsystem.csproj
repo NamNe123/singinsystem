@@ -81,6 +81,24 @@
     <Compile Include="QLDangKyVao\ucQLDangKyVao.Designer.cs">
       <DependentUpon>ucQLDangKyVao.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLDiLai\frmGhiChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLDiLai\frmGhiChu.Designer.cs">
+      <DependentUpon>frmGhiChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLDiLai\frmThongBaoDiLai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLDiLai\frmThongBaoDiLai.Designer.cs">
+      <DependentUpon>frmThongBaoDiLai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLDiLai\ucQLDiLai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLDiLai\ucQLDiLai.Designer.cs">
+      <DependentUpon>ucQLDiLai.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLDiLam\frmDongYXuongCa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +110,12 @@
     </Compile>
     <Compile Include="QLDiLam\ucQLDiLam.Designer.cs">
       <DependentUpon>ucQLDiLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLXuongCa\ucQLXuongCa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLXuongCa\ucQLXuongCa.Designer.cs">
+      <DependentUpon>ucQLXuongCa.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmThongBao.resources" />
     <EmbeddedResource Include="login\frmLogin.resources" />
@@ -108,6 +132,9 @@
     </Compile>
     <EmbeddedResource Include="QLDangKyVao\ucQLDangKyVao.resx">
       <DependentUpon>ucQLDangKyVao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLDiLai\ucQLDiLai.resx">
+      <DependentUpon>ucQLDiLai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLDiLam\ucQLDiLam.resx">
       <DependentUpon>ucQLDiLam.cs</DependentUpon>
@@ -136,9 +163,36 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="NhanVien\" />
-    <Folder Include="QLDiLai\" />
     <Folder Include="QLQuanTri\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

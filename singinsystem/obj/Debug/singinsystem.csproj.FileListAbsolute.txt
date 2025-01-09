@@ -9,3 +9,5 @@ D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.pdb
 D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.csproj.AssemblyReference.cache
 D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.QLDangKyVao.ucQLDangKyVao.resources
 D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.QLDiLam.ucQLDiLam.resources
+D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.QLDiLai.ucQLDiLai.resources
+D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.csproj.ResolveComReference.cache

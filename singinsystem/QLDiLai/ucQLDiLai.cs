@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -47,6 +49,13 @@ namespace singinsystem.QLDiLai
 			{
 				return this.Text;
 			}
+		}
+		public class LuuThongTin
+		{
+			public static int Id;
+			public static string TenNV;
+			public static string TuNgay;
+			public static string DenNgay;
 		}
 		public void ChayLaiNgay()
 		{
@@ -209,7 +218,7 @@ namespace singinsystem.QLDiLai
 			}
 			DateTime date = this.dtpTu.Value.Date;
 			DateTime denNgay = this.dtpDen.Value.Date.AddHours(23.0).AddMinutes(59.0);
-			DataTable dataTable = this.QLDLManager.HienThiTimKiem(manv, lydo, date, denNgay, ref this.error);
+            System.Data.DataTable dataTable = this.QLDLManager.HienThiTimKiem(manv, lydo, date, denNgay, ref this.error);
 			bool flag3 = dataTable == null;
 			if (flag3)
 			{
@@ -236,7 +245,7 @@ namespace singinsystem.QLDiLai
 						}
 					}
 				}
-				DataTable dataTable2 = dataTable.Clone();
+                System.Data.DataTable dataTable2 = dataTable.Clone();
 				for (int i = 0; i < Math.Min(dataTable.Rows.Count, val); i++)
 				{
 					dataTable2.ImportRow(dataTable.Rows[i]);
@@ -299,7 +308,7 @@ namespace singinsystem.QLDiLai
 					this.dgDSQLDiLai.Rows[i].DefaultCellStyle.BackColor = Color.LightCoral;
 				}
 			}
-			this.dgDSQLDiLai.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Yahei", 16f);
+			this.dgDSQLDiLai.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Yahei", 16f);
 			float num = 0.1f;
 			int num2 = this.dgDSQLDiLai.ClientSize.Height - this.dgDSQLDiLai.ColumnHeadersHeight;
 			int height = (int)((float)num2 * num);
@@ -307,7 +316,7 @@ namespace singinsystem.QLDiLai
 			{
 				this.dgDSQLDiLai.Rows[j].Height = height;
 			}
-			this.dgDSQLDiLai.ScrollBars = ScrollBars.Vertical;
+			this.dgDSQLDiLai.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 		}
 		private void cbNhanSu_SelectedValueChanged(object sender, EventArgs e)
 		{
@@ -319,87 +328,84 @@ namespace singinsystem.QLDiLai
 		}
 		private void ExportExcel(string templatePath, string outputPath)
 		{
-			int manv = 0;
-			string lydo = "";
-			QLXuongCaEntity qlxuongCaEntity = new QLXuongCaEntity();
-			ucQLDiLai.ComboboxItem comboboxItem = (ucQLDiLai.ComboboxItem)this.cbNhanSu.SelectedItem;
-			bool flag = comboboxItem != null;
-			if (flag)
+			try
 			{
-				manv = int.Parse(comboboxItem.Value);
-			}
-			ucQLDiLai.ComboboxItem comboboxItem2 = (ucQLDiLai.ComboboxItem)this.cbLoaiDangKy.SelectedItem;
-			bool flag2 = comboboxItem2 != null;
-			if (flag2)
-			{
-				lydo = comboboxItem2.Text;
-			}
-			DateTime value = this.dtpTu.Value;
-			DateTime value2 = this.dtpDen.Value;
-			DataTable dataTable = this.QLDLManager.HienThiTimKiem(manv, lydo, value, value2, ref this.error);
-			bool flag3 = dataTable == null;
-			if (flag3)
-			{
-				MessageBox.Show("没有数据 : " + this.error);
-			}
-			else
-			{
-				bool flag4 = dataTable.Columns.Count == 0;
-				if (flag4)
+				// Lấy dữ liệu từ giao diện
+				int manv = 0;
+				string lydo = "";
+
+				if (cbNhanSu.SelectedItem is ucQLDiLai.ComboboxItem comboboxItemNhanSu)
 				{
-					MessageBox.Show("没有列 !");
+					manv = int.Parse(comboboxItemNhanSu.Value);
 				}
-				else
+
+				if (cbLoaiDangKy.SelectedItem is ucQLDiLai.ComboboxItem comboboxItemLyDo)
 				{
-					bool flag5 = dataTable.Columns.Contains("Id");
-					if (flag5)
-					{
-						dataTable.Columns.Remove("Id");
-					}
-					Microsoft.Office.Interop.Excel.Application application = (Microsoft.Office.Interop.Excel.Application)Activator.CreateInstance(Marshal.GetTypeFromCLSID(new Guid("00024500-0000-0000-C000-000000000046")));
-					Workbook workbook = application.Workbooks.Open(templatePath, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-					if (ucQLDiLai.<> o__19.<> p__0 == null)
-					{
-						ucQLDiLai.<> o__19.<> p__0 = CallSite<Func<CallSite, object, Worksheet>>.Create(Binder.Convert(CSharpBinderFlags.None, typeof(Worksheet), typeof(ucQLDiLai)));
-					}
-					Worksheet worksheet = ucQLDiLai.<> o__19.<> p__0.Target(ucQLDiLai.<> o__19.<> p__0, workbook.ActiveSheet);
-					int num = 2;
-					object[,] array = new object[dataTable.Rows.Count, dataTable.Columns.Count];
-					for (int i = 0; i < dataTable.Rows.Count; i++)
-					{
-						int num2 = 1;
-						for (int j = 0; j < dataTable.Columns.Count; j++)
-						{
-							array[i, num2 - 1] = dataTable.Rows[i][j];
-							num2++;
-						}
-					}
-					if (ucQLDiLai.<> o__19.<> p__1 == null)
-					{
-						ucQLDiLai.<> o__19.<> p__1 = CallSite<Func<CallSite, object, Range>>.Create(Binder.Convert(CSharpBinderFlags.ConvertExplicit, typeof(Range), typeof(ucQLDiLai)));
-					}
-					Range range = ucQLDiLai.<> o__19.<> p__1.Target(ucQLDiLai.<> o__19.<> p__1, worksheet.Cells[num, 1]);
-					if (ucQLDiLai.<> o__19.<> p__2 == null)
-					{
-						ucQLDiLai.<> o__19.<> p__2 = CallSite<Func<CallSite, object, Range>>.Create(Binder.Convert(CSharpBinderFlags.ConvertExplicit, typeof(Range), typeof(ucQLDiLai)));
-					}
-					Range range2 = ucQLDiLai.<> o__19.<> p__2.Target(ucQLDiLai.<> o__19.<> p__2, worksheet.Cells[num + dataTable.Rows.Count - 1, dataTable.Columns.Count]);
-					Range range3 = worksheet.get_Range(range, range2);
-					range3.set_Value(Type.Missing, array);
-					workbook.SaveAs(outputPath, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, XlSaveAsAccessMode.xlNoChange, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-					workbook.Close(Type.Missing, Type.Missing, Type.Missing);
-					application.Quit();
-					Marshal.ReleaseComObject(range3);
-					Marshal.ReleaseComObject(range);
-					Marshal.ReleaseComObject(range2);
-					Marshal.ReleaseComObject(worksheet);
-					Marshal.ReleaseComObject(workbook);
-					Marshal.ReleaseComObject(application);
-					ucQLDiLai.LuuThongTin.TuNgay = this.dtpTu.Value.Date.ToString("dd/MM/yyyy");
-					ucQLDiLai.LuuThongTin.DenNgay = this.dtpDen.Value.Date.ToString("dd/MM/yyyy");
-					frmThongBaoDiLai frmThongBaoDiLai = new frmThongBaoDiLai();
-					frmThongBaoDiLai.ShowDialog();
+					lydo = comboboxItemLyDo.Text;
 				}
+
+				DateTime fromDate = dtpTu.Value;
+				DateTime toDate = dtpDen.Value;
+
+				// Lấy dữ liệu từ database
+				System.Data.DataTable dataTable = QLDLManager.HienThiTimKiem(manv, lydo, fromDate, toDate, ref error);
+				if (dataTable == null || dataTable.Rows.Count == 0)
+				{
+					MessageBox.Show(dataTable == null ? $"没有数据: {error}" : "没有列 !");
+					return;
+				}
+
+				// Xóa cột không cần thiết (nếu tồn tại)
+				if (dataTable.Columns.Contains("Id"))
+				{
+					dataTable.Columns.Remove("Id");
+				}
+
+				// Tạo đối tượng Excel
+				var excelApp = new Microsoft.Office.Interop.Excel.Application();
+				Workbook workbook = excelApp.Workbooks.Open(templatePath);
+				Worksheet worksheet = workbook.ActiveSheet as Worksheet;
+
+				// Ghi dữ liệu vào mảng
+				int startRow = 2; // Dòng bắt đầu ghi dữ liệu
+				object[,] dataArray = new object[dataTable.Rows.Count, dataTable.Columns.Count];
+
+				for (int i = 0; i < dataTable.Rows.Count; i++)
+				{
+					for (int j = 0; j < dataTable.Columns.Count; j++)
+					{
+						dataArray[i, j] = dataTable.Rows[i][j];
+					}
+				}
+
+				// Ghi mảng vào Excel
+				Range startCell = worksheet.Cells[startRow, 1];
+				Range endCell = worksheet.Cells[startRow + dataTable.Rows.Count - 1, dataTable.Columns.Count];
+				Range writeRange = worksheet.get_Range(startCell, endCell);
+				writeRange.Value2 = dataArray;
+
+				// Lưu và đóng workbook
+				workbook.SaveAs(outputPath);
+				workbook.Close(false);
+				excelApp.Quit();
+
+				// Giải phóng đối tượng COM
+				Marshal.ReleaseComObject(writeRange);
+				Marshal.ReleaseComObject(worksheet);
+				Marshal.ReleaseComObject(workbook);
+				Marshal.ReleaseComObject(excelApp);
+
+				// Cập nhật thông tin lưu trữ
+				ucQLDiLai.LuuThongTin.TuNgay = fromDate.ToString("dd/MM/yyyy");
+				ucQLDiLai.LuuThongTin.DenNgay = toDate.ToString("dd/MM/yyyy");
+
+				// Hiển thị thông báo
+				frmThongBaoDiLai frmThongBaoDiLai = new frmThongBaoDiLai();
+				frmThongBaoDiLai.ShowDialog();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show($"发生错误: {ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 		private void pictureBox1_Click(object sender, EventArgs e)
@@ -432,63 +438,68 @@ namespace singinsystem.QLDiLai
 		}
 		private void ExportExcelBCTH(string templatePath, string outputPath)
 		{
-			int manv = 0;
-			string lydo = "";
-			QLXuongCaEntity qlxuongCaEntity = new QLXuongCaEntity();
-			ucQLDiLai.ComboboxItem comboboxItem = (ucQLDiLai.ComboboxItem)this.cbNhanSu.SelectedItem;
-			bool flag = comboboxItem != null;
-			if (flag)
+			try
 			{
-				manv = int.Parse(comboboxItem.Value);
-			}
-			ucQLDiLai.ComboboxItem comboboxItem2 = (ucQLDiLai.ComboboxItem)this.cbLoaiDangKy.SelectedItem;
-			bool flag2 = comboboxItem2 != null;
-			if (flag2)
-			{
-				lydo = comboboxItem2.Text;
-			}
-			DateTime value = this.dtpTu.Value;
-			DateTime value2 = this.dtpDen.Value;
-			DataTable dataTable = this.QLDLManager.BaoCaoTongHop(manv, lydo, value, value2, ref this.error);
-			bool flag3 = dataTable == null;
-			if (flag3)
-			{
-				MessageBox.Show("没有数据 : " + this.error);
-			}
-			else
-			{
-				bool flag4 = dataTable.Columns.Count == 0;
-				if (flag4)
+				// Lấy dữ liệu từ giao diện
+				int manv = 0;
+				string lydo = "";
+
+				if (cbNhanSu.SelectedItem is ucQLDiLai.ComboboxItem comboboxItemNhanSu)
 				{
-					MessageBox.Show("没有列 !");
+					manv = int.Parse(comboboxItemNhanSu.Value);
 				}
-				else
+
+				if (cbLoaiDangKy.SelectedItem is ucQLDiLai.ComboboxItem comboboxItemLyDo)
 				{
-					Microsoft.Office.Interop.Excel.Application application = (Microsoft.Office.Interop.Excel.Application)Activator.CreateInstance(Marshal.GetTypeFromCLSID(new Guid("00024500-0000-0000-C000-000000000046")));
-					Workbook workbook = application.Workbooks.Open(templatePath, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-					if (ucQLDiLai.<> o__21.<> p__0 == null)
-					{
-						ucQLDiLai.<> o__21.<> p__0 = CallSite<Func<CallSite, object, Worksheet>>.Create(Binder.Convert(CSharpBinderFlags.None, typeof(Worksheet), typeof(ucQLDiLai)));
-					}
-					Worksheet worksheet = ucQLDiLai.<> o__21.<> p__0.Target(ucQLDiLai.<> o__21.<> p__0, workbook.ActiveSheet);
-					for (int i = 0; i < dataTable.Rows.Count; i++)
-					{
-						for (int j = 0; j < dataTable.Columns.Count; j++)
-						{
-							worksheet.Cells[i + 2, j + 1] = dataTable.Rows[i][j];
-						}
-					}
-					workbook.SaveAs(outputPath, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, XlSaveAsAccessMode.xlNoChange, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-					workbook.Close(Type.Missing, Type.Missing, Type.Missing);
-					application.Quit();
-					Marshal.ReleaseComObject(worksheet);
-					Marshal.ReleaseComObject(workbook);
-					Marshal.ReleaseComObject(application);
-					ucQLDiLai.LuuThongTin.TuNgay = this.dtpTu.Value.Date.ToString("dd/MM/yyyy");
-					ucQLDiLai.LuuThongTin.DenNgay = this.dtpDen.Value.Date.ToString("dd/MM/yyyy");
-					frmThongBaoDiLai frmThongBaoDiLai = new frmThongBaoDiLai();
-					frmThongBaoDiLai.ShowDialog();
+					lydo = comboboxItemLyDo.Text;
 				}
+
+				DateTime fromDate = dtpTu.Value;
+				DateTime toDate = dtpDen.Value;
+
+				// Lấy dữ liệu từ database
+				System.Data.DataTable dataTable = QLDLManager.BaoCaoTongHop(manv, lydo, fromDate, toDate, ref error);
+				if (dataTable == null || dataTable.Rows.Count == 0)
+				{
+					MessageBox.Show(dataTable == null ? $"没有数据: {error}" : "没有数据 !");
+					return;
+				}
+
+				// Tạo đối tượng Excel
+				var excelApp = new Microsoft.Office.Interop.Excel.Application();
+				Workbook workbook = excelApp.Workbooks.Open(templatePath);
+				Worksheet worksheet = workbook.ActiveSheet as Worksheet;
+
+				// Ghi dữ liệu vào Excel
+				for (int i = 0; i < dataTable.Rows.Count; i++)
+				{
+					for (int j = 0; j < dataTable.Columns.Count; j++)
+					{
+						worksheet.Cells[i + 2, j + 1] = dataTable.Rows[i][j];
+					}
+				}
+
+				// Lưu và đóng workbook
+				workbook.SaveAs(outputPath);
+				workbook.Close(false);
+				excelApp.Quit();
+
+				// Giải phóng đối tượng COM
+				Marshal.ReleaseComObject(worksheet);
+				Marshal.ReleaseComObject(workbook);
+				Marshal.ReleaseComObject(excelApp);
+
+				// Cập nhật thông tin lưu trữ
+				ucQLDiLai.LuuThongTin.TuNgay = fromDate.ToString("dd/MM/yyyy");
+				ucQLDiLai.LuuThongTin.DenNgay = toDate.ToString("dd/MM/yyyy");
+
+				// Hiển thị thông báo
+				frmThongBaoDiLai frmThongBaoDiLai = new frmThongBaoDiLai();
+				frmThongBaoDiLai.ShowDialog();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show($"发生错误: {ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 		private void btnBCTH_Click(object sender, EventArgs e)

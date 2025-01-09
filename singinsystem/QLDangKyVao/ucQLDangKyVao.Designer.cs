@@ -394,7 +394,7 @@ namespace singinsystem.QLDangKyVao
             this.tableLayoutPanel8.ColumnCount = 3;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.65399F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.34601F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 344F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 345F));
             this.tableLayoutPanel8.Controls.Add(this.panel7, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.panel8, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -418,7 +418,7 @@ namespace singinsystem.QLDangKyVao
             this.panel8.Controls.Add(this.btnCheckOut);
             this.panel8.Location = new System.Drawing.Point(293, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(216, 50);
+            this.panel8.Size = new System.Drawing.Size(215, 50);
             this.panel8.TabIndex = 2;
             // 
             // btnCheckOut
@@ -438,7 +438,7 @@ namespace singinsystem.QLDangKyVao
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.88409F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.11591F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 401F));
             this.tableLayoutPanel7.Controls.Add(this.cbLoaiDangKy, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel6, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -456,7 +456,7 @@ namespace singinsystem.QLDangKyVao
             this.cbLoaiDangKy.FormattingEnabled = true;
             this.cbLoaiDangKy.Location = new System.Drawing.Point(235, 3);
             this.cbLoaiDangKy.Name = "cbLoaiDangKy";
-            this.cbLoaiDangKy.Size = new System.Drawing.Size(218, 38);
+            this.cbLoaiDangKy.Size = new System.Drawing.Size(217, 38);
             this.cbLoaiDangKy.TabIndex = 6;
             // 
             // panel6
@@ -550,7 +550,7 @@ namespace singinsystem.QLDangKyVao
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.88409F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.11591F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 401F));
             this.tableLayoutPanel5.Controls.Add(this.cbNhanSu, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.panel4, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -570,7 +570,7 @@ namespace singinsystem.QLDangKyVao
             this.cbNhanSu.IntegralHeight = false;
             this.cbNhanSu.Location = new System.Drawing.Point(235, 3);
             this.cbNhanSu.Name = "cbNhanSu";
-            this.cbNhanSu.Size = new System.Drawing.Size(218, 38);
+            this.cbNhanSu.Size = new System.Drawing.Size(217, 38);
             this.cbNhanSu.TabIndex = 3;
             // 
             // panel4
