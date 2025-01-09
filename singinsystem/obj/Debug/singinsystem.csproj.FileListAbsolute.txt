@@ -11,3 +11,8 @@ D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.QLDangKyVao.ucQLDangK
 D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.QLDiLam.ucQLDiLam.resources
 D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.QLDiLai.ucQLDiLai.resources
 D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.csproj.ResolveComReference.cache
+D:\github\singinsystem\singinsystem\bin\Debug\BusinessLogicLayer.dll
+D:\github\singinsystem\singinsystem\bin\Debug\DataAccessLayer.dll
+D:\github\singinsystem\singinsystem\bin\Debug\BusinessLogicLayer.pdb
+D:\github\singinsystem\singinsystem\bin\Debug\DataAccessLayer.pdb
+D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.csproj.CopyComplete

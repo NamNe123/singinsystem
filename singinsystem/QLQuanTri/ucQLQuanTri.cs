@@ -18,7 +18,13 @@ namespace singinsystem.QLQuanTri
 {
     public partial class ucQLQuanTri : UserControl
     {
-        public ucQLQuanTri()
+		private ucQLVanPhong ucQLVP;
+		private ucQLLoaiDangKy QLLDK;
+		private ucQLDiLai QLDL;
+		private ucQLQuyDinh QLQD;
+		private ucQLNhanSu QLNS;
+		private ucQuanLyTaiKhoan QLTK;
+		public ucQLQuanTri()
         {
             InitializeComponent();
         }

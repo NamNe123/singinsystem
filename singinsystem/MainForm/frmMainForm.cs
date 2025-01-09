@@ -8,7 +8,7 @@ using singinsystem.QLDangKyVao;
 using singinsystem.QLDiLai;
 using singinsystem.QLDiLam;
 using singinsystem.QLQuanTri;
-using singinsystem.QLTaiKhoan;
+using singinsystem.QuanTri.QLTaiKhoan;
 
 namespace singinsystem.MainForm
 {

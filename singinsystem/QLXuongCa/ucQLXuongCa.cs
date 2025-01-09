@@ -118,7 +118,7 @@ namespace singinsystem.QLXuongCa
 		}
 		public void HienThiDuLieuVao_combo_NhanSu()
 		{
-			string connectionString = "Data Source=DESKTOP-FQPDVRO\\SQLEXPRESS;Initial Catalog=Learning_QLBH;Integrated Security=True";
+			string connectionString = @"Data Source=DESKTOP-2QKH5AF\SQLEXPRESS;Initial Catalog=Learning_QLBH;Integrated Security=True";
 			using (SqlConnection sqlConnection = new SqlConnection(connectionString))
 			{
 				try
@@ -162,7 +162,7 @@ namespace singinsystem.QLXuongCa
 			if (flag)
 			{
 				this.isUpdating = true;
-				string connectionString = "Data Source=DESKTOP-FQPDVRO\\SQLEXPRESS;Initial Catalog=Learning_QLBH;Integrated Security=True";
+				string connectionString = @"Data Source=DESKTOP-2QKH5AF\SQLEXPRESS;Initial Catalog=Learning_QLBH;Integrated Security=True";
 				using (SqlConnection sqlConnection = new SqlConnection(connectionString))
 				{
 					try

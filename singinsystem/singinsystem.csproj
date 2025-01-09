@@ -159,6 +159,12 @@
     <Compile Include="QuanTri\QLTaiKhoan\ucQuanLyTaiKhoan.Designer.cs">
       <DependentUpon>ucQuanLyTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanTri\QLVanPhong\ucQLVanPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanTri\QLVanPhong\ucQLVanPhong.Designer.cs">
+      <DependentUpon>ucQLVanPhong.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmThongBao.resources" />
     <EmbeddedResource Include="login\frmLogin.resources" />
     <EmbeddedResource Include="login\frmLoginAdmin.resources" />
@@ -204,9 +210,7 @@
       <Name>DataAccessLayer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="QuanTri\QLVanPhong\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
       <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
