@@ -111,11 +111,35 @@
     <Compile Include="QLDiLam\ucQLDiLam.Designer.cs">
       <DependentUpon>ucQLDiLam.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLQuanTri\ucQLQuanTri.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLQuanTri\ucQLQuanTri.Designer.cs">
+      <DependentUpon>ucQLQuanTri.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLXuongCa\ucQLXuongCa.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="QLXuongCa\ucQLXuongCa.Designer.cs">
       <DependentUpon>ucQLXuongCa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\QLLoaiDangKy\ucQLLoaiDangKy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanTri\QLLoaiDangKy\ucQLLoaiDangKy.Designer.cs">
+      <DependentUpon>ucQLLoaiDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\QLNhanSu\ucQLNhanSu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanTri\QLNhanSu\ucQLNhanSu.Designer.cs">
+      <DependentUpon>ucQLNhanSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\QLQuyDinh\ucQLQuyDinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanTri\QLQuyDinh\ucQLQuyDinh.Designer.cs">
+      <DependentUpon>ucQLQuyDinh.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmThongBao.resources" />
     <EmbeddedResource Include="login\frmLogin.resources" />
@@ -163,7 +187,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="QLQuanTri\" />
+    <Folder Include="QuanTri\QLTaiKhoan\" />
+    <Folder Include="QuanTri\QLVanPhong\" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
