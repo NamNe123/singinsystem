@@ -7,3 +7,5 @@ D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.csproj.CoreCompileInp
 D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.exe
 D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.pdb
 D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.csproj.AssemblyReference.cache
+D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.QLDangKyVao.ucQLDangKyVao.resources
+D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.QLDiLam.ucQLDiLam.resources

@@ -46,14 +46,57 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="clsCauHinhHeThong.cs" />
+    <Compile Include="CustomMessageBox.cs" />
+    <Compile Include="CustomMessageBoxPhu.cs" />
+    <Compile Include="frmThongBao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmThongBao.designer.cs">
+      <DependentUpon>frmThongBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login\frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login\frmLoginAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login\frmLoginAdmin.designer.cs">
+      <DependentUpon>frmLoginAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\frmMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\frmMainForm.designer.cs">
+      <DependentUpon>frmMainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLDangKyVao\ucQLDangKyVao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLDangKyVao\ucQLDangKyVao.Designer.cs">
+      <DependentUpon>ucQLDangKyVao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLDiLam\frmDongYXuongCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLDiLam\frmDongYXuongCa.Designer.cs">
+      <DependentUpon>frmDongYXuongCa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLDiLam\ucQLDiLam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLDiLam\ucQLDiLam.Designer.cs">
+      <DependentUpon>ucQLDiLam.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmThongBao.resources" />
+    <EmbeddedResource Include="login\frmLogin.resources" />
+    <EmbeddedResource Include="login\frmLoginAdmin.resources" />
+    <EmbeddedResource Include="MainForm\frmMainForm.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +106,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QLDangKyVao\ucQLDangKyVao.resx">
+      <DependentUpon>ucQLDangKyVao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLDiLam\ucQLDiLam.resx">
+      <DependentUpon>ucQLDiLam.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -81,6 +130,15 @@
       <Project>{48b906a7-a84c-4a9b-ab8b-cbb1b66f4e51}</Project>
       <Name>BusinessLogicLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{b84b46c3-2ec3-4b5e-b7e2-5e21daf8277f}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NhanVien\" />
+    <Folder Include="QLDiLai\" />
+    <Folder Include="QLQuanTri\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
