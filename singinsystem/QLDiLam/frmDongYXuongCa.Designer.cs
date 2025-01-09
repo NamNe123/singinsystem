@@ -133,5 +133,6 @@ namespace singinsystem.QLDiLam
 			this.tableLayoutPanel3.PerformLayout();
 			base.ResumeLayout(false);
 		}
+	}
 	#endregion
 }
