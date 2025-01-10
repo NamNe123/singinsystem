@@ -23,7 +23,6 @@ namespace singinsystem.Login
 			base.Close();
 		}
 
-		// Token: 0x060000C5 RID: 197 RVA: 0x000197E8 File Offset: 0x000179E8
 		private void btnDangNhap_Click(object sender, EventArgs e)
 		{
 			bool flag = string.IsNullOrEmpty(this.txtDangNhap.Text) || string.IsNullOrEmpty(this.txtMatKhau.Text);
@@ -33,7 +32,7 @@ namespace singinsystem.Login
 			}
 			else
 			{
-				string connectionString = @"Data Source=DESKTOP-2QKH5A\SQLEXPRESS;Initial Catalog=Learning_QLBH;Integrated Security=True";
+				string connectionString = @"Data Source=DESKTOP-2QKH5AF\SQLEXPRESS;Initial Catalog=Learning_QLBH;Integrated Security=True";
 				SqlConnection sqlConnection = null;
 				try
 				{
@@ -76,8 +75,6 @@ namespace singinsystem.Login
 				}
 			}
 		}
-
-		// Token: 0x0200003D RID: 61
 		public class LuuThongTin
 		{
 			// Token: 0x040001F6 RID: 502
