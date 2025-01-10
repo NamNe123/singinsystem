@@ -103,7 +103,7 @@ namespace singinsystem.QLQuanTri
 			this.btnQLTaiKhoan.Click += this.btnQLTaiKhoan_Click;
 			this.button5.BackColor = Color.FromArgb(255, 128, 128);
 			this.button5.ForeColor = SystemColors.ButtonHighlight;
-			this.button5.Image = (Image)componentResourceManager.GetObject("button5.Image");
+			//this.button5.Image = (Image)componentResourceManager.GetObject("button5.Image");
 			this.button5.ImageAlign = ContentAlignment.MiddleLeft;
 			this.button5.Location = new Point(0, 422);
 			this.button5.Margin = new Padding(4);
@@ -116,7 +116,7 @@ namespace singinsystem.QLQuanTri
 			this.button5.Click += this.button5_Click;
 			this.btnQLLoaiDangNhap.BackColor = Color.FromArgb(255, 128, 128);
 			this.btnQLLoaiDangNhap.ForeColor = SystemColors.ButtonHighlight;
-			this.btnQLLoaiDangNhap.Image = (Image)componentResourceManager.GetObject("btnQLLoaiDangNhap.Image");
+			//this.btnQLLoaiDangNhap.Image = (Image)componentResourceManager.GetObject("btnQLLoaiDangNhap.Image");
 			this.btnQLLoaiDangNhap.ImageAlign = ContentAlignment.MiddleLeft;
 			this.btnQLLoaiDangNhap.Location = new Point(0, 354);
 			this.btnQLLoaiDangNhap.Margin = new Padding(4);
@@ -129,7 +129,7 @@ namespace singinsystem.QLQuanTri
 			this.btnQLLoaiDangNhap.Click += this.btnQLLoaiDangNhap_Click;
 			this.btnMenuQuanLyNhanSu.BackColor = Color.FromArgb(255, 128, 128);
 			this.btnMenuQuanLyNhanSu.ForeColor = SystemColors.ButtonHighlight;
-			this.btnMenuQuanLyNhanSu.Image = (Image)componentResourceManager.GetObject("btnMenuQuanLyNhanSu.Image");
+			//this.btnMenuQuanLyNhanSu.Image = (Image)componentResourceManager.GetObject("btnMenuQuanLyNhanSu.Image");
 			this.btnMenuQuanLyNhanSu.ImageAlign = ContentAlignment.MiddleLeft;
 			this.btnMenuQuanLyNhanSu.Location = new Point(0, 285);
 			this.btnMenuQuanLyNhanSu.Margin = new Padding(4);
@@ -140,7 +140,7 @@ namespace singinsystem.QLQuanTri
 			this.btnMenuQuanLyNhanSu.TextImageRelation = TextImageRelation.ImageBeforeText;
 			this.btnMenuQuanLyNhanSu.UseVisualStyleBackColor = false;
 			this.btnMenuQuanLyNhanSu.Click += this.btnMenuQuanLyNhanSu_Click;
-			this.pictureBox1.Image = (Image)componentResourceManager.GetObject("pictureBox1.Image");
+			//this.pictureBox1.Image = (Image)componentResourceManager.GetObject("pictureBox1.Image");
 			this.pictureBox1.Location = new Point(49, 5);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new Size(198, 201);
@@ -149,7 +149,7 @@ namespace singinsystem.QLQuanTri
 			this.pictureBox1.TabStop = false;
 			this.btnMenuTaiKhoan.BackColor = Color.FromArgb(255, 128, 128);
 			this.btnMenuTaiKhoan.ForeColor = SystemColors.ButtonHighlight;
-			this.btnMenuTaiKhoan.Image = (Image)componentResourceManager.GetObject("btnMenuTaiKhoan.Image");
+			//this.btnMenuTaiKhoan.Image = (Image)componentResourceManager.GetObject("btnMenuTaiKhoan.Image");
 			this.btnMenuTaiKhoan.ImageAlign = ContentAlignment.BottomLeft;
 			this.btnMenuTaiKhoan.Location = new Point(0, 213);
 			this.btnMenuTaiKhoan.Margin = new Padding(4);

@@ -177,6 +177,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="QLDangKyVao\ucQLDangKyVao.resx">
       <DependentUpon>ucQLDangKyVao.cs</DependentUpon>
@@ -196,6 +197,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\btnMenuQuanLyNhanSu.Image" />
+    <None Include="Resources\btnMenuTaiKhoan.Image" />
+    <None Include="Resources\btnQLLoaiDangNhap.Image" />
+    <None Include="Resources\btnQLTaiKhoan.Image" />
+    <None Include="Resources\button5.Image" />
+    <None Include="Resources\excel" />
+    <None Include="Resources\pictureBox1.Image" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
