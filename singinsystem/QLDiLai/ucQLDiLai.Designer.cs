@@ -398,7 +398,7 @@ namespace singinsystem.QLDiLai
             this.dtpTu.Name = "dtpTu";
             this.dtpTu.Size = new System.Drawing.Size(166, 30);
             this.dtpTu.TabIndex = 0;
-            this.dtpTu.Value = new System.DateTime(2025, 1, 10, 0, 0, 0, 0);
+            this.dtpTu.Value = DateTime.Today;
             this.dtpTu.ValueChanged += new System.EventHandler(this.dtpTu_ValueChanged);
             // 
             // panel6
@@ -417,7 +417,7 @@ namespace singinsystem.QLDiLai
             this.dtpDen.Name = "dtpDen";
             this.dtpDen.Size = new System.Drawing.Size(150, 30);
             this.dtpDen.TabIndex = 1;
-            this.dtpDen.Value = new System.DateTime(2025, 1, 10, 23, 59, 0, 0);
+            this.dtpDen.Value = DateTime.Today.AddHours(23).AddMinutes(59);
             this.dtpDen.ValueChanged += new System.EventHandler(this.dtpDen_ValueChanged);
             // 
             // panel4

@@ -273,7 +273,7 @@ namespace singinsystem.QLXuongCa
             this.dtpTu.Name = "dtpTu";
             this.dtpTu.Size = new System.Drawing.Size(159, 30);
             this.dtpTu.TabIndex = 0;
-            this.dtpTu.Value = new System.DateTime(2025, 1, 13, 0, 0, 0, 0);
+            this.dtpTu.Value = DateTime.Today;
             this.dtpTu.ValueChanged += new System.EventHandler(this.dtpTu_ValueChanged);
             // 
             // panel6
@@ -292,7 +292,7 @@ namespace singinsystem.QLXuongCa
             this.dtpDen.Name = "dtpDen";
             this.dtpDen.Size = new System.Drawing.Size(151, 30);
             this.dtpDen.TabIndex = 0;
-            this.dtpDen.Value = new System.DateTime(2025, 1, 13, 23, 59, 0, 0);
+            this.dtpDen.Value = DateTime.Today.AddHours(23).AddMinutes(59);
             this.dtpDen.ValueChanged += new System.EventHandler(this.dtpDen_ValueChanged);
             // 
             // panel7
