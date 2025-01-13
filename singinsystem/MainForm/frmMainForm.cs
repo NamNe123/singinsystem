@@ -161,6 +161,7 @@ namespace singinsystem.MainForm
 			}
 			else
 			{
+				this.ucQLDLA.ChayLaiNgay();
 				this.ucQLDLA.HienThiDuLieuVao_combo_LoaiDangKy();
 				this.ucQLDLA.HienThiDuLieuVao_combo_NhanSu();
 				this.ucQLDLA.BringToFront();
