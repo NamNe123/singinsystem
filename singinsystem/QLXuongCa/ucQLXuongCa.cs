@@ -399,6 +399,6 @@ namespace singinsystem.QLXuongCa
 		{
 			this.HienThiDanhSachQLXuongCa();
 		}
-		
-	}
+
+    }
 }

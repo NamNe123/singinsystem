@@ -69,12 +69,12 @@ namespace singinsystem.QLXuongCa
 		private void InitializeComponent()
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucQLXuongCa));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -229,7 +229,7 @@ namespace singinsystem.QLXuongCa
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 275F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 216F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
             this.tableLayoutPanel7.Controls.Add(this.cbNhanSu, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel5, 3, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel6, 4, 0);
@@ -251,14 +251,16 @@ namespace singinsystem.QLXuongCa
             this.cbNhanSu.IntegralHeight = false;
             this.cbNhanSu.Location = new System.Drawing.Point(38, 3);
             this.cbNhanSu.Name = "cbNhanSu";
-            this.cbNhanSu.Size = new System.Drawing.Size(121, 38);
+            this.cbNhanSu.Size = new System.Drawing.Size(119, 38);
             this.cbNhanSu.TabIndex = 2;
+            this.cbNhanSu.TextUpdate += new System.EventHandler(this.cbNhanSu_TextUpdate);
+            this.cbNhanSu.SelectedValueChanged += new System.EventHandler(this.cbNhanSu_SelectedValueChanged);
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.dtpTu);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(440, 3);
+            this.panel5.Location = new System.Drawing.Point(438, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(159, 32);
             this.panel5.TabIndex = 3;
@@ -272,12 +274,13 @@ namespace singinsystem.QLXuongCa
             this.dtpTu.Size = new System.Drawing.Size(159, 30);
             this.dtpTu.TabIndex = 0;
             this.dtpTu.Value = new System.DateTime(2025, 1, 13, 0, 0, 0, 0);
+            this.dtpTu.ValueChanged += new System.EventHandler(this.dtpTu_ValueChanged);
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.dtpDen);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(605, 3);
+            this.panel6.Location = new System.Drawing.Point(603, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(210, 32);
             this.panel6.TabIndex = 4;
@@ -290,11 +293,12 @@ namespace singinsystem.QLXuongCa
             this.dtpDen.Size = new System.Drawing.Size(151, 30);
             this.dtpDen.TabIndex = 0;
             this.dtpDen.Value = new System.DateTime(2025, 1, 13, 23, 59, 0, 0);
+            this.dtpDen.ValueChanged += new System.EventHandler(this.dtpDen_ValueChanged);
             // 
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(165, 3);
+            this.panel7.Location = new System.Drawing.Point(163, 3);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(269, 32);
             this.panel7.TabIndex = 5;
@@ -304,7 +308,7 @@ namespace singinsystem.QLXuongCa
             this.tableLayoutPanel6.ColumnCount = 3;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.16505F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 88.83495F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 378F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 380F));
             this.tableLayoutPanel6.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel4, 2, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -321,7 +325,7 @@ namespace singinsystem.QLXuongCa
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(63, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(477, 24);
+            this.panel2.Size = new System.Drawing.Size(475, 24);
             this.panel2.TabIndex = 0;
             // 
             // label3
@@ -339,9 +343,9 @@ namespace singinsystem.QLXuongCa
             // 
             this.panel4.Controls.Add(this.label2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(546, 3);
+            this.panel4.Location = new System.Drawing.Point(544, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(373, 24);
+            this.panel4.Size = new System.Drawing.Size(375, 24);
             this.panel4.TabIndex = 1;
             // 
             // label2
@@ -380,6 +384,7 @@ namespace singinsystem.QLXuongCa
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel8
             // 
@@ -404,6 +409,7 @@ namespace singinsystem.QLXuongCa
             this.cbHienThi.Name = "cbHienThi";
             this.cbHienThi.Size = new System.Drawing.Size(91, 33);
             this.cbHienThi.TabIndex = 1;
+            this.cbHienThi.TextChanged += new System.EventHandler(this.cbHienThi_TextChanged);
             // 
             // label4
             // 
@@ -428,14 +434,14 @@ namespace singinsystem.QLXuongCa
             // 
             this.dgDSQLXuongCa.AllowUserToAddRows = false;
             this.dgDSQLXuongCa.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgDSQLXuongCa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgDSQLXuongCa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dgDSQLXuongCa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDSQLXuongCa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -452,6 +458,8 @@ namespace singinsystem.QLXuongCa
             this.dgDSQLXuongCa.RowHeadersWidth = 51;
             this.dgDSQLXuongCa.Size = new System.Drawing.Size(934, 442);
             this.dgDSQLXuongCa.TabIndex = 4;
+            this.dgDSQLXuongCa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDSQLXuongCa_CellContentClick);
+            this.dgDSQLXuongCa.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgDSQLXuongCa_DataBindingComplete);
             // 
             // Id
             // 
@@ -482,9 +490,9 @@ namespace singinsystem.QLXuongCa
             // 
             this.GioLamViec.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.GioLamViec.DataPropertyName = "GioLamViec";
-            dataGridViewCellStyle2.Format = "G";
-            dataGridViewCellStyle2.NullValue = null;
-            this.GioLamViec.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Format = "G";
+            dataGridViewCellStyle26.NullValue = null;
+            this.GioLamViec.DefaultCellStyle = dataGridViewCellStyle26;
             this.GioLamViec.HeaderText = "上班时间";
             this.GioLamViec.MinimumWidth = 6;
             this.GioLamViec.Name = "GioLamViec";
@@ -493,9 +501,9 @@ namespace singinsystem.QLXuongCa
             // 
             this.GioXuongCa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.GioXuongCa.DataPropertyName = "GioXuongCa";
-            dataGridViewCellStyle3.Format = "G";
-            dataGridViewCellStyle3.NullValue = null;
-            this.GioXuongCa.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.Format = "G";
+            dataGridViewCellStyle27.NullValue = null;
+            this.GioXuongCa.DefaultCellStyle = dataGridViewCellStyle27;
             this.GioXuongCa.HeaderText = "下班时间";
             this.GioXuongCa.MinimumWidth = 6;
             this.GioXuongCa.Name = "GioXuongCa";
@@ -504,8 +512,8 @@ namespace singinsystem.QLXuongCa
             // 
             this.TongGioLam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TongGioLam.DataPropertyName = "TongGioLam";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.TongGioLam.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.TongGioLam.DefaultCellStyle = dataGridViewCellStyle28;
             this.TongGioLam.HeaderText = "总时间";
             this.TongGioLam.MinimumWidth = 6;
             this.TongGioLam.Name = "TongGioLam";
@@ -523,10 +531,10 @@ namespace singinsystem.QLXuongCa
             // 
             this.btnTroLaiLamViec.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.btnTroLaiLamViec.DataPropertyName = "btnTroLaiLamViec";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            this.btnTroLaiLamViec.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.White;
+            this.btnTroLaiLamViec.DefaultCellStyle = dataGridViewCellStyle29;
             this.btnTroLaiLamViec.HeaderText = "操作";
             this.btnTroLaiLamViec.MinimumWidth = 6;
             this.btnTroLaiLamViec.Name = "btnTroLaiLamViec";
@@ -539,10 +547,10 @@ namespace singinsystem.QLXuongCa
             // 
             this.dataGridViewButtonColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewButtonColumn1.DataPropertyName = "btnTroLaiLamViec";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.White;
+            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle30;
             this.dataGridViewButtonColumn1.HeaderText = "Thao tác";
             this.dataGridViewButtonColumn1.MinimumWidth = 6;
             this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";

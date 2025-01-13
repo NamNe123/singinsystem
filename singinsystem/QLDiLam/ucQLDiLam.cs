@@ -430,7 +430,5 @@ namespace singinsystem.QLDiLam
 				}
 			}
 		}
-		
-
-	}
+    }
 }

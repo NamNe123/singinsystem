@@ -121,6 +121,5 @@ namespace singinsystem.QLQuanTri
 				this.QLTK.BringToFront();
 			}
 		}
-
-	}
+    }
 }

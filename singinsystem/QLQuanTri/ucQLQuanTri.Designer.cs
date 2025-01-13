@@ -111,6 +111,7 @@ namespace singinsystem.QLQuanTri
             this.btnQLTaiKhoan.Text = "账号管理";
             this.btnQLTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLTaiKhoan.UseVisualStyleBackColor = false;
+            this.btnQLTaiKhoan.Click += new System.EventHandler(this.btnQLTaiKhoan_Click);
             // 
             // button5
             // 
@@ -125,6 +126,7 @@ namespace singinsystem.QLQuanTri
             this.button5.Text = "规定管理";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // btnQLLoaiDangNhap
             // 
@@ -139,6 +141,7 @@ namespace singinsystem.QLQuanTri
             this.btnQLLoaiDangNhap.Text = "打卡类型";
             this.btnQLLoaiDangNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLLoaiDangNhap.UseVisualStyleBackColor = false;
+            this.btnQLLoaiDangNhap.Click += new System.EventHandler(this.btnQLLoaiDangNhap_Click);
             // 
             // btnMenuQuanLyNhanSu
             // 
@@ -153,6 +156,7 @@ namespace singinsystem.QLQuanTri
             this.btnMenuQuanLyNhanSu.Text = "人事管理";
             this.btnMenuQuanLyNhanSu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMenuQuanLyNhanSu.UseVisualStyleBackColor = false;
+            this.btnMenuQuanLyNhanSu.Click += new System.EventHandler(this.btnMenuQuanLyNhanSu_Click);
             // 
             // pictureBox1
             // 
@@ -177,6 +181,7 @@ namespace singinsystem.QLQuanTri
             this.btnMenuTaiKhoan.Text = "办公室管理";
             this.btnMenuTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMenuTaiKhoan.UseVisualStyleBackColor = false;
+            this.btnMenuTaiKhoan.Click += new System.EventHandler(this.btnMenuTaiKhoan_Click);
             // 
             // ucQLQuanTri
             // 
