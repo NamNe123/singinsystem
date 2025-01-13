@@ -362,7 +362,7 @@ namespace singinsystem.QLDiLai
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 184F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
             this.tableLayoutPanel7.Controls.Add(this.panel5, 4, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel6, 5, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel4, 0, 0);
@@ -382,7 +382,7 @@ namespace singinsystem.QLDiLai
             // 
             this.panel5.Controls.Add(this.dtpTu);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(402, 3);
+            this.panel5.Location = new System.Drawing.Point(401, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(166, 26);
             this.panel5.TabIndex = 3;
@@ -401,7 +401,7 @@ namespace singinsystem.QLDiLai
             // 
             this.panel6.Controls.Add(this.dtpDen);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(574, 3);
+            this.panel6.Location = new System.Drawing.Point(573, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(160, 26);
             this.panel6.TabIndex = 9;
@@ -420,14 +420,14 @@ namespace singinsystem.QLDiLai
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(16, 26);
+            this.panel4.Size = new System.Drawing.Size(15, 26);
             this.panel4.TabIndex = 6;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.cbNhanSu);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(25, 3);
+            this.panel7.Location = new System.Drawing.Point(24, 3);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(77, 26);
             this.panel7.TabIndex = 10;
@@ -448,7 +448,7 @@ namespace singinsystem.QLDiLai
             // 
             this.panel8.Controls.Add(this.cbLoaiDangKy);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(108, 3);
+            this.panel8.Location = new System.Drawing.Point(107, 3);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(119, 26);
             this.panel8.TabIndex = 11;
@@ -466,7 +466,7 @@ namespace singinsystem.QLDiLai
             // panel9
             // 
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(233, 3);
+            this.panel9.Location = new System.Drawing.Point(232, 3);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(163, 26);
             this.panel9.TabIndex = 12;
@@ -474,9 +474,9 @@ namespace singinsystem.QLDiLai
             // panel10
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(740, 3);
+            this.panel10.Location = new System.Drawing.Point(739, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(179, 26);
+            this.panel10.Size = new System.Drawing.Size(180, 26);
             this.panel10.TabIndex = 13;
             // 
             // tableLayoutPanel6
@@ -561,7 +561,7 @@ namespace singinsystem.QLDiLai
             // 
             this.pictureBox1.Location = new System.Drawing.Point(762, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 30);
+            this.pictureBox1.Size = new System.Drawing.Size(47, 35);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
