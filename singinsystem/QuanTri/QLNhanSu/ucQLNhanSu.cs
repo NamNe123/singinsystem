@@ -284,6 +284,5 @@ namespace singinsystem.QuanTri.QLNhanSu
 				}
 			}
 		}
-
-	}
+    }
 }
