@@ -41,134 +41,155 @@ namespace singinsystem.QLQuanTri
 		/// </summary>
 		private void InitializeComponent()
 		{
-			ComponentResourceManager componentResourceManager = new ComponentResourceManager(typeof(ucQLQuanTri));
-			this.pnMain = new Panel();
-			this.tableLayoutPanel1 = new TableLayoutPanel();
-			this.pnMenu = new Panel();
-			this.btnQLTaiKhoan = new Button();
-			this.button5 = new Button();
-			this.btnQLLoaiDangNhap = new Button();
-			this.btnMenuQuanLyNhanSu = new Button();
-			this.pictureBox1 = new PictureBox();
-			this.btnMenuTaiKhoan = new Button();
-			this.tableLayoutPanel1.SuspendLayout();
-			this.pnMenu.SuspendLayout();
-			((ISupportInitialize)this.pictureBox1).BeginInit();
-			base.SuspendLayout();
-			this.pnMain.Dock = DockStyle.Fill;
-			this.pnMain.Location = new Point(318, 4);
-			this.pnMain.Margin = new Padding(4);
-			this.pnMain.Name = "pnMain";
-			this.pnMain.Size = new Size(764, 600);
-			this.pnMain.TabIndex = 1;
-			this.tableLayoutPanel1.ColumnCount = 2;
-			this.tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 314f));
-			this.tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f));
-			this.tableLayoutPanel1.Controls.Add(this.pnMenu, 0, 0);
-			this.tableLayoutPanel1.Controls.Add(this.pnMain, 1, 0);
-			this.tableLayoutPanel1.Dock = DockStyle.Fill;
-			this.tableLayoutPanel1.Location = new Point(0, 0);
-			this.tableLayoutPanel1.Margin = new Padding(4);
-			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-			this.tableLayoutPanel1.RowCount = 1;
-			this.tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100f));
-			this.tableLayoutPanel1.Size = new Size(1086, 608);
-			this.tableLayoutPanel1.TabIndex = 2;
-			this.pnMenu.BackColor = Color.FromArgb(255, 128, 128);
-			this.pnMenu.Controls.Add(this.btnQLTaiKhoan);
-			this.pnMenu.Controls.Add(this.button5);
-			this.pnMenu.Controls.Add(this.btnQLLoaiDangNhap);
-			this.pnMenu.Controls.Add(this.btnMenuQuanLyNhanSu);
-			this.pnMenu.Controls.Add(this.pictureBox1);
-			this.pnMenu.Controls.Add(this.btnMenuTaiKhoan);
-			this.pnMenu.Dock = DockStyle.Fill;
-			this.pnMenu.Font = new Font("Microsoft Sans Serif", 12f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			this.pnMenu.Location = new Point(4, 4);
-			this.pnMenu.Margin = new Padding(4);
-			this.pnMenu.Name = "pnMenu";
-			this.pnMenu.Size = new Size(306, 600);
-			this.pnMenu.TabIndex = 0;
-			this.btnQLTaiKhoan.BackColor = Color.FromArgb(255, 128, 128);
-			this.btnQLTaiKhoan.ForeColor = SystemColors.ButtonHighlight;
-			this.btnQLTaiKhoan.Image = (Image)componentResourceManager.GetObject("btnQLTaiKhoan.Image");
-			this.btnQLTaiKhoan.ImageAlign = ContentAlignment.MiddleLeft;
-			this.btnQLTaiKhoan.Location = new Point(0, 493);
-			this.btnQLTaiKhoan.Margin = new Padding(4);
-			this.btnQLTaiKhoan.Name = "btnQLTaiKhoan";
-			this.btnQLTaiKhoan.Size = new Size(306, 63);
-			this.btnQLTaiKhoan.TabIndex = 12;
-			this.btnQLTaiKhoan.Text = "账号管理";
-			this.btnQLTaiKhoan.TextImageRelation = TextImageRelation.ImageBeforeText;
-			this.btnQLTaiKhoan.UseVisualStyleBackColor = false;
-			this.btnQLTaiKhoan.Click += this.btnQLTaiKhoan_Click;
-			this.button5.BackColor = Color.FromArgb(255, 128, 128);
-			this.button5.ForeColor = SystemColors.ButtonHighlight;
-			//this.button5.Image = (Image)componentResourceManager.GetObject("button5.Image");
-			this.button5.ImageAlign = ContentAlignment.MiddleLeft;
-			this.button5.Location = new Point(0, 422);
-			this.button5.Margin = new Padding(4);
-			this.button5.Name = "button5";
-			this.button5.Size = new Size(306, 63);
-			this.button5.TabIndex = 11;
-			this.button5.Text = "规定管理";
-			this.button5.TextImageRelation = TextImageRelation.ImageBeforeText;
-			this.button5.UseVisualStyleBackColor = false;
-			this.button5.Click += this.button5_Click;
-			this.btnQLLoaiDangNhap.BackColor = Color.FromArgb(255, 128, 128);
-			this.btnQLLoaiDangNhap.ForeColor = SystemColors.ButtonHighlight;
-			//this.btnQLLoaiDangNhap.Image = (Image)componentResourceManager.GetObject("btnQLLoaiDangNhap.Image");
-			this.btnQLLoaiDangNhap.ImageAlign = ContentAlignment.MiddleLeft;
-			this.btnQLLoaiDangNhap.Location = new Point(0, 354);
-			this.btnQLLoaiDangNhap.Margin = new Padding(4);
-			this.btnQLLoaiDangNhap.Name = "btnQLLoaiDangNhap";
-			this.btnQLLoaiDangNhap.Size = new Size(306, 60);
-			this.btnQLLoaiDangNhap.TabIndex = 8;
-			this.btnQLLoaiDangNhap.Text = "打卡类型";
-			this.btnQLLoaiDangNhap.TextImageRelation = TextImageRelation.ImageBeforeText;
-			this.btnQLLoaiDangNhap.UseVisualStyleBackColor = false;
-			this.btnQLLoaiDangNhap.Click += this.btnQLLoaiDangNhap_Click;
-			this.btnMenuQuanLyNhanSu.BackColor = Color.FromArgb(255, 128, 128);
-			this.btnMenuQuanLyNhanSu.ForeColor = SystemColors.ButtonHighlight;
-			//this.btnMenuQuanLyNhanSu.Image = (Image)componentResourceManager.GetObject("btnMenuQuanLyNhanSu.Image");
-			this.btnMenuQuanLyNhanSu.ImageAlign = ContentAlignment.MiddleLeft;
-			this.btnMenuQuanLyNhanSu.Location = new Point(0, 285);
-			this.btnMenuQuanLyNhanSu.Margin = new Padding(4);
-			this.btnMenuQuanLyNhanSu.Name = "btnMenuQuanLyNhanSu";
-			this.btnMenuQuanLyNhanSu.Size = new Size(306, 61);
-			this.btnMenuQuanLyNhanSu.TabIndex = 7;
-			this.btnMenuQuanLyNhanSu.Text = "人事管理";
-			this.btnMenuQuanLyNhanSu.TextImageRelation = TextImageRelation.ImageBeforeText;
-			this.btnMenuQuanLyNhanSu.UseVisualStyleBackColor = false;
-			this.btnMenuQuanLyNhanSu.Click += this.btnMenuQuanLyNhanSu_Click;
-			//this.pictureBox1.Image = (Image)componentResourceManager.GetObject("pictureBox1.Image");
-			this.pictureBox1.Location = new Point(49, 5);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new Size(198, 201);
-			this.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-			this.pictureBox1.TabIndex = 3;
-			this.pictureBox1.TabStop = false;
-			this.btnMenuTaiKhoan.BackColor = Color.FromArgb(255, 128, 128);
-			this.btnMenuTaiKhoan.ForeColor = SystemColors.ButtonHighlight;
-			//this.btnMenuTaiKhoan.Image = (Image)componentResourceManager.GetObject("btnMenuTaiKhoan.Image");
-			this.btnMenuTaiKhoan.ImageAlign = ContentAlignment.BottomLeft;
-			this.btnMenuTaiKhoan.Location = new Point(0, 213);
-			this.btnMenuTaiKhoan.Margin = new Padding(4);
-			this.btnMenuTaiKhoan.Name = "btnMenuTaiKhoan";
-			this.btnMenuTaiKhoan.Size = new Size(306, 64);
-			this.btnMenuTaiKhoan.TabIndex = 2;
-			this.btnMenuTaiKhoan.Text = "办公室管理";
-			this.btnMenuTaiKhoan.TextImageRelation = TextImageRelation.ImageBeforeText;
-			this.btnMenuTaiKhoan.UseVisualStyleBackColor = false;
-			this.btnMenuTaiKhoan.Click += this.btnMenuTaiKhoan_Click;
-			base.AutoScaleDimensions = new SizeF(8f, 16f);
-			base.AutoScaleMode = AutoScaleMode.Font;
-			base.Controls.Add(this.tableLayoutPanel1);
-			base.Name = "ucQLQuanTri";
-			base.Size = new Size(1086, 608);
-			this.tableLayoutPanel1.ResumeLayout(false);
-			this.pnMenu.ResumeLayout(false);
-			((ISupportInitialize)this.pictureBox1).EndInit();
-			base.ResumeLayout(false);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucQLQuanTri));
+            this.pnMain = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pnMenu = new System.Windows.Forms.Panel();
+            this.btnQLTaiKhoan = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btnQLLoaiDangNhap = new System.Windows.Forms.Button();
+            this.btnMenuQuanLyNhanSu = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnMenuTaiKhoan = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.pnMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pnMain
+            // 
+            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMain.Location = new System.Drawing.Point(318, 4);
+            this.pnMain.Margin = new System.Windows.Forms.Padding(4);
+            this.pnMain.Name = "pnMain";
+            this.pnMain.Size = new System.Drawing.Size(764, 600);
+            this.pnMain.TabIndex = 1;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 314F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.pnMenu, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnMain, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1086, 608);
+            this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // pnMenu
+            // 
+            this.pnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.pnMenu.Controls.Add(this.btnQLTaiKhoan);
+            this.pnMenu.Controls.Add(this.button5);
+            this.pnMenu.Controls.Add(this.btnQLLoaiDangNhap);
+            this.pnMenu.Controls.Add(this.btnMenuQuanLyNhanSu);
+            this.pnMenu.Controls.Add(this.pictureBox1);
+            this.pnMenu.Controls.Add(this.btnMenuTaiKhoan);
+            this.pnMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnMenu.Location = new System.Drawing.Point(4, 4);
+            this.pnMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.pnMenu.Name = "pnMenu";
+            this.pnMenu.Size = new System.Drawing.Size(306, 600);
+            this.pnMenu.TabIndex = 0;
+            // 
+            // btnQLTaiKhoan
+            // 
+            this.btnQLTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnQLTaiKhoan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnQLTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLTaiKhoan.Location = new System.Drawing.Point(0, 493);
+            this.btnQLTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQLTaiKhoan.Name = "btnQLTaiKhoan";
+            this.btnQLTaiKhoan.Size = new System.Drawing.Size(306, 63);
+            this.btnQLTaiKhoan.TabIndex = 12;
+            this.btnQLTaiKhoan.Text = "账号管理";
+            this.btnQLTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQLTaiKhoan.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(0, 422);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(306, 63);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "规定管理";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // btnQLLoaiDangNhap
+            // 
+            this.btnQLLoaiDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnQLLoaiDangNhap.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnQLLoaiDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLLoaiDangNhap.Location = new System.Drawing.Point(0, 354);
+            this.btnQLLoaiDangNhap.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQLLoaiDangNhap.Name = "btnQLLoaiDangNhap";
+            this.btnQLLoaiDangNhap.Size = new System.Drawing.Size(306, 60);
+            this.btnQLLoaiDangNhap.TabIndex = 8;
+            this.btnQLLoaiDangNhap.Text = "打卡类型";
+            this.btnQLLoaiDangNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQLLoaiDangNhap.UseVisualStyleBackColor = false;
+            // 
+            // btnMenuQuanLyNhanSu
+            // 
+            this.btnMenuQuanLyNhanSu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnMenuQuanLyNhanSu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMenuQuanLyNhanSu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuQuanLyNhanSu.Location = new System.Drawing.Point(0, 285);
+            this.btnMenuQuanLyNhanSu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMenuQuanLyNhanSu.Name = "btnMenuQuanLyNhanSu";
+            this.btnMenuQuanLyNhanSu.Size = new System.Drawing.Size(306, 61);
+            this.btnMenuQuanLyNhanSu.TabIndex = 7;
+            this.btnMenuQuanLyNhanSu.Text = "人事管理";
+            this.btnMenuQuanLyNhanSu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMenuQuanLyNhanSu.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(49, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(198, 201);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnMenuTaiKhoan
+            // 
+            this.btnMenuTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnMenuTaiKhoan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMenuTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnMenuTaiKhoan.Location = new System.Drawing.Point(0, 213);
+            this.btnMenuTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMenuTaiKhoan.Name = "btnMenuTaiKhoan";
+            this.btnMenuTaiKhoan.Size = new System.Drawing.Size(306, 64);
+            this.btnMenuTaiKhoan.TabIndex = 2;
+            this.btnMenuTaiKhoan.Text = "办公室管理";
+            this.btnMenuTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMenuTaiKhoan.UseVisualStyleBackColor = false;
+            // 
+            // ucQLQuanTri
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Name = "ucQLQuanTri";
+            this.Size = new System.Drawing.Size(1086, 608);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.pnMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
 		}
 
 		#endregion

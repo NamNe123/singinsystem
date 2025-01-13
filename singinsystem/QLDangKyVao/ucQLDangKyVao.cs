@@ -396,8 +396,5 @@ namespace singinsystem.QLDangKyVao
 			ucQLDangKyVao.LuuThongTin.LyDo = this.cbLoaiDangKy.Text;
 			this.HienThiDanhSachQLDangKyVao();
 		}
-
-
-
-	}
+    }
 }

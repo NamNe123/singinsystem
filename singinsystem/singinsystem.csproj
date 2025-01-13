@@ -191,6 +191,9 @@
     <EmbeddedResource Include="QLQuanTri\ucQLQuanTri.resx">
       <DependentUpon>ucQLQuanTri.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QLXuongCa\ucQLXuongCa.resx">
+      <DependentUpon>ucQLXuongCa.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
