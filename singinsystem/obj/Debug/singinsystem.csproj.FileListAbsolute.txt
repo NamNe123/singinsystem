@@ -16,3 +16,4 @@ D:\github\singinsystem\singinsystem\bin\Debug\DataAccessLayer.dll
 D:\github\singinsystem\singinsystem\bin\Debug\BusinessLogicLayer.pdb
 D:\github\singinsystem\singinsystem\bin\Debug\DataAccessLayer.pdb
 D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.csproj.CopyComplete
+D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.QLQuanTri.ucQLQuanTri.resources

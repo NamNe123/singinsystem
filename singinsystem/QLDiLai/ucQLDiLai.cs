@@ -546,7 +546,5 @@ namespace singinsystem.QLDiLai
 		{
 			this.HienThiDanhSachQLDiLai();
 		}
-	
-
-	}
+    }
 }
