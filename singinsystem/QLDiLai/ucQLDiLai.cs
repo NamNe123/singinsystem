@@ -148,6 +148,7 @@ namespace singinsystem.QLDiLai
 							this.cbNhanSu.DroppedDown = true;
 						}
 						this.cbNhanSu.SelectionStart = this.cbNhanSu.Text.Length;
+						
 					}
 					catch (Exception ex)
 					{
@@ -157,7 +158,24 @@ namespace singinsystem.QLDiLai
 					finally
 					{
 						this.isUpdating = false;
-						this.cbNhanSu.Text = this.currentText;
+						if (this.cbNhanSu.Items.Count == 1)
+						{
+							// Lấy đối tượng đầu tiên trong danh sách Items
+							var selectedItem = this.cbNhanSu.Items[0] as ucQLDiLai.ComboboxItem;
+
+							if (selectedItem != null) // Kiểm tra đối tượng không null
+							{
+								this.cbNhanSu.Text = selectedItem.Text; // Gán Text của ComboBox bằng Text của mục duy nhất
+								this.cbNhanSu.SelectedValue = selectedItem.Value; // Gán Value nếu cần
+								this.cbNhanSu.SelectionStart = this.cbNhanSu.Text.Length;
+								this.cbNhanSu.DroppedDown = false;
+							}
+						}
+                        else
+                        {
+							this.cbNhanSu.Text = this.currentText;
+							this.cbNhanSu.SelectionStart = this.cbNhanSu.Text.Length;
+						}
 					}
 					this.HienThiDanhSachQLDiLai();
 				}
