@@ -91,7 +91,21 @@ namespace BusinessLogicLayer.Manager
 			}
 			return result;
 		}
-
+		public bool ImportQLQuyDinh(DataTable dataTable, ref string error)
+		{
+			bool flag = dataTable == null;
+			bool result;
+			if (flag)
+			{
+				error = "Phai nhap ten nhân sự";
+				result = false;
+			}
+			else
+			{
+				result = this.process.ImportQLQuyDinh(dataTable, ref error);
+			}
+			return result;
+		}
 		// Token: 0x04000009 RID: 9
 		private QLQuyDinhResponsitory process;
 	}

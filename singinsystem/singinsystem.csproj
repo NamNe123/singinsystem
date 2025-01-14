@@ -200,6 +200,15 @@
     <EmbeddedResource Include="QuanTri\QLNhanSu\ucQLNhanSu.resx">
       <DependentUpon>ucQLNhanSu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanTri\QLQuyDinh\ucQLQuyDinh.resx">
+      <DependentUpon>ucQLQuyDinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanTri\QLTaiKhoan\ucQuanLyTaiKhoan.resx">
+      <DependentUpon>ucQuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanTri\QLVanPhong\ucQLVanPhong.resx">
+      <DependentUpon>ucQLVanPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

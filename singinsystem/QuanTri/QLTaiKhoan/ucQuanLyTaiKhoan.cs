@@ -112,6 +112,5 @@ namespace singinsystem.QuanTri.QLTaiKhoan
 			}.ShowDialog();
 			this.HienThiDanhSachTaiKhoan();
 		}
-
-	}
+    }
 }

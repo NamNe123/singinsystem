@@ -127,6 +127,5 @@ namespace singinsystem.QuanTri.QLVanPhong
 				this.txtTenVP.Text = dataGridViewRow.Cells["Ten"].Value.ToString();
 			}
 		}
-
-	}
+    }
 }

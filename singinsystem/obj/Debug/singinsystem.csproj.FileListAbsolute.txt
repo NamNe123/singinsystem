@@ -20,3 +20,6 @@ D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.QLQuanTri.ucQLQuanTri
 D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.QLXuongCa.ucQLXuongCa.resources
 D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.QuanTri.QLLoaiDangKy.ucQLLoaiDangKy.resources
 D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.QuanTri.QLNhanSu.ucQLNhanSu.resources
+D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.QuanTri.QLQuyDinh.ucQLQuyDinh.resources
+D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.QuanTri.QLTaiKhoan.ucQuanLyTaiKhoan.resources
+D:\github\singinsystem\singinsystem\obj\Debug\singinsystem.QuanTri.QLVanPhong.ucQLVanPhong.resources

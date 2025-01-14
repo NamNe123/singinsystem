@@ -130,7 +130,77 @@ namespace DataAccessLayer.Reponsitories
 			}
 			return result;
 		}
-
+		public DataTable TenQuyDinhById(int manv, ref string error)
+		{
+			DataTable result;
+			try
+			{
+				string sql = " select Id, Ten  from QLNhanSu where Id=@Id ";
+				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
+				{
+					new SqlParameter("@Id", manv)
+				});
+				result = dataFromDB;
+			}
+			catch (Exception ex)
+			{
+				error = "Ket noi lôi: " + ex.Message;
+				result = null;
+			}
+			return result;
+		}
+		public bool ImportQLQuyDinh(DataTable dataTable, ref string error)
+		{
+			bool result;
+			try
+			{
+				foreach (object obj in dataTable.Rows)
+				{
+					DataRow dataRow = (DataRow)obj;
+					int id = Convert.ToInt32(dataRow["ID"]);
+					string quydinh = dataRow["规定"].ToString();
+					string diembitru = dataRow["扣分"].ToString();
+					string kieu = dataRow["类型"].ToString();
+					int num2 = 0;
+					DataTable dataTable2 = this.TenQuyDinhById(id, ref error);
+					bool flag = dataTable2.Rows.Count > 0;
+					if (flag)
+					{
+						num2 = int.Parse(dataTable2.Rows[0]["Id"].ToString());
+					}
+					bool flag2 = id != num2;
+					if (flag2)
+					{
+						string sql = "INSERT INTO QLQuyDinh(Id, QuyDinh, DiemBiTru, Kieu) VALUES(@Id, @QuyDinh, @DiemBiTru, @Kieu)";
+						bool flag3 = this.DB.ProcessData(sql, CommandType.Text, ref error, new SqlParameter[]
+						{
+							new SqlParameter("@Id", id),
+							new SqlParameter("@QuyDinh", quydinh),
+							new SqlParameter("@DiemBiTru", diembitru),
+							new SqlParameter("@Kieu", kieu)
+						});
+					}
+					else
+					{
+						string sql2 = " update QLQuyDinh set QuyDinh=@QuyDinh, DiemBiTru=@DiemBiTru, Kieu=@Kieu  where  Id=@Id   ";
+						bool flag4 = this.DB.ProcessData(sql2, CommandType.Text, ref error, new SqlParameter[]
+						{
+							new SqlParameter("@Id", id),
+							new SqlParameter("@QuyDinh", quydinh),
+							new SqlParameter("@DiemBiTru", diembitru),
+							new SqlParameter("@Kieu", kieu)
+						});
+					}
+				}
+				result = true;
+			}
+			catch (Exception ex)
+			{
+				error = "Kết nối 错误 ！: test " + ex.Message + dataTable.ToString() + "test";
+				result = false;
+			}
+			return result;
+		}
 		// Token: 0x0400000C RID: 12
 		private Database DB = new Database();
 	}
