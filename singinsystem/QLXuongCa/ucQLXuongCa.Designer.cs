@@ -39,14 +39,6 @@ namespace singinsystem.QLXuongCa
 		private Label label4;
 		private Panel panel9;
 		private DataGridView dgDSQLXuongCa;
-		private DataGridViewTextBoxColumn Id;
-		private DataGridViewTextBoxColumn MaNv;
-		private DataGridViewTextBoxColumn Ten;
-		private DataGridViewTextBoxColumn GioLamViec;
-		private DataGridViewTextBoxColumn GioXuongCa;
-		private DataGridViewTextBoxColumn TongGioLam;
-		private DataGridViewTextBoxColumn TrangThai;
-		private DataGridViewButtonColumn btnTroLaiLamViec;
 		/// <summary> 
 		/// Clean up any resources being used.
 		/// </summary>
@@ -70,6 +62,7 @@ namespace singinsystem.QLXuongCa
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucQLXuongCa));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -101,6 +94,7 @@ namespace singinsystem.QLXuongCa
             this.label4 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.dgDSQLXuongCa = new System.Windows.Forms.DataGridView();
+            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaNv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -109,7 +103,7 @@ namespace singinsystem.QLXuongCa
             this.TongGioLam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTroLaiLamViec = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnXuLyDuLieu = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -229,7 +223,7 @@ namespace singinsystem.QLXuongCa
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 275F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 216F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 107F));
             this.tableLayoutPanel7.Controls.Add(this.cbNhanSu, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel5, 3, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel6, 4, 0);
@@ -251,7 +245,7 @@ namespace singinsystem.QLXuongCa
             this.cbNhanSu.IntegralHeight = false;
             this.cbNhanSu.Location = new System.Drawing.Point(37, 3);
             this.cbNhanSu.Name = "cbNhanSu";
-            this.cbNhanSu.Size = new System.Drawing.Size(119, 38);
+            this.cbNhanSu.Size = new System.Drawing.Size(118, 38);
             this.cbNhanSu.TabIndex = 2;
             this.cbNhanSu.TextUpdate += new System.EventHandler(this.cbNhanSu_TextUpdate);
             this.cbNhanSu.SelectedValueChanged += new System.EventHandler(this.cbNhanSu_SelectedValueChanged);
@@ -260,7 +254,7 @@ namespace singinsystem.QLXuongCa
             // 
             this.panel5.Controls.Add(this.dtpTu);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(437, 3);
+            this.panel5.Location = new System.Drawing.Point(436, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(159, 32);
             this.panel5.TabIndex = 3;
@@ -280,7 +274,7 @@ namespace singinsystem.QLXuongCa
             // 
             this.panel6.Controls.Add(this.dtpDen);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(602, 3);
+            this.panel6.Location = new System.Drawing.Point(601, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(210, 32);
             this.panel6.TabIndex = 4;
@@ -298,7 +292,7 @@ namespace singinsystem.QLXuongCa
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(162, 3);
+            this.panel7.Location = new System.Drawing.Point(161, 3);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(269, 32);
             this.panel7.TabIndex = 5;
@@ -308,7 +302,7 @@ namespace singinsystem.QLXuongCa
             this.tableLayoutPanel6.ColumnCount = 3;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.16505F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 88.83495F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 381F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 382F));
             this.tableLayoutPanel6.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel4, 2, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -325,7 +319,7 @@ namespace singinsystem.QLXuongCa
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(63, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(474, 24);
+            this.panel2.Size = new System.Drawing.Size(473, 24);
             this.panel2.TabIndex = 0;
             // 
             // label3
@@ -343,9 +337,9 @@ namespace singinsystem.QLXuongCa
             // 
             this.panel4.Controls.Add(this.label2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(543, 3);
+            this.panel4.Location = new System.Drawing.Point(542, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(376, 24);
+            this.panel4.Size = new System.Drawing.Size(377, 24);
             this.panel4.TabIndex = 1;
             // 
             // label2
@@ -451,7 +445,8 @@ namespace singinsystem.QLXuongCa
             this.GioXuongCa,
             this.TongGioLam,
             this.TrangThai,
-            this.btnTroLaiLamViec});
+            this.btnTroLaiLamViec,
+            this.btnXuLyDuLieu});
             this.dgDSQLXuongCa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgDSQLXuongCa.Location = new System.Drawing.Point(0, 0);
             this.dgDSQLXuongCa.Name = "dgDSQLXuongCa";
@@ -460,6 +455,22 @@ namespace singinsystem.QLXuongCa
             this.dgDSQLXuongCa.TabIndex = 4;
             this.dgDSQLXuongCa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDSQLXuongCa_CellContentClick);
             this.dgDSQLXuongCa.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgDSQLXuongCa_DataBindingComplete);
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            this.dataGridViewButtonColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewButtonColumn1.DataPropertyName = "btnTroLaiLamViec";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewButtonColumn1.HeaderText = "Thao tác";
+            this.dataGridViewButtonColumn1.MinimumWidth = 6;
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewButtonColumn1.Text = "Trở lại làm việc";
+            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
             // 
             // Id
             // 
@@ -543,21 +554,20 @@ namespace singinsystem.QLXuongCa
             this.btnTroLaiLamViec.Text = "回来上班";
             this.btnTroLaiLamViec.UseColumnTextForButtonValue = true;
             // 
-            // dataGridViewButtonColumn1
+            // btnXuLyDuLieu
             // 
-            this.dataGridViewButtonColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewButtonColumn1.DataPropertyName = "btnTroLaiLamViec";
+            this.btnXuLyDuLieu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.btnXuLyDuLieu.DataPropertyName = "btnXuLyDuLieu";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.Lime;
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewButtonColumn1.HeaderText = "Thao tác";
-            this.dataGridViewButtonColumn1.MinimumWidth = 6;
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewButtonColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewButtonColumn1.Text = "Trở lại làm việc";
-            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
+            this.btnXuLyDuLieu.DefaultCellStyle = dataGridViewCellStyle6;
+            this.btnXuLyDuLieu.HeaderText = "数据处理";
+            this.btnXuLyDuLieu.MinimumWidth = 6;
+            this.btnXuLyDuLieu.Name = "btnXuLyDuLieu";
+            this.btnXuLyDuLieu.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btnXuLyDuLieu.Text = "更新时间";
+            this.btnXuLyDuLieu.UseColumnTextForButtonValue = true;
             // 
             // ucQLXuongCa
             // 
@@ -594,6 +604,16 @@ namespace singinsystem.QLXuongCa
 
 		}
 
-		#endregion
-	}
+        #endregion
+
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn MaNv;
+        private DataGridViewTextBoxColumn Ten;
+        private DataGridViewTextBoxColumn GioLamViec;
+        private DataGridViewTextBoxColumn GioXuongCa;
+        private DataGridViewTextBoxColumn TongGioLam;
+        private DataGridViewTextBoxColumn TrangThai;
+        private DataGridViewButtonColumn btnTroLaiLamViec;
+        private DataGridViewButtonColumn btnXuLyDuLieu;
+    }
 }

@@ -350,6 +350,26 @@ namespace DataAccessLayer.Reponsitories
 			}
 			return result;
 		}
+		public bool SuaQLXuongCaXuLyDuLieu(QLXuongCaEntity Entity, ref string error)
+		{
+			bool result;
+			try
+			{
+				string sql = " update QLXuongCa set GioXuongCa=@GioXuongCa  where  Id=@Id   ";
+				bool flag = this.DB.ProcessData(sql, CommandType.Text, ref error, new SqlParameter[]
+				{
+					new SqlParameter("@Id", Entity.Id),
+					new SqlParameter("@GioXuongCa", Entity.GioXuongCa)
+				});
+				result = flag;
+			}
+			catch (Exception ex)
+			{
+				error = "连接失败: " + ex.Message;
+				result = false;
+			}
+			return result;
+		}
 
 		// Token: 0x0600006B RID: 107 RVA: 0x000055C4 File Offset: 0x000037C4
 		public bool SuaQLXuongCa123(QLXuongCaEntity Entity, ref string error)

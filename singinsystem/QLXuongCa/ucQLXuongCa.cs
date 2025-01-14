@@ -274,6 +274,37 @@ namespace singinsystem.QLXuongCa
 					frmLogin.LuuThongTin.KiemTra = 0;
 				}
 			}
+			bool flagxuly = this.dgDSQLXuongCa.Columns[e.ColumnIndex].Name == "btnXuLyDuLieu";
+			if(flagxuly)
+			{
+				frmLogin frmLogin = new frmLogin();
+				frmLogin.ShowDialog();
+				int kiemTra = frmLogin.LuuThongTin.KiemTra;
+				bool flag2 = kiemTra == 1;
+				if (flag2)
+				{
+					DataGridViewRow dataGridViewRow = this.dgDSQLXuongCa.Rows[e.RowIndex];
+					QLXuongCaEntity qlxuongCaEntity = new QLXuongCaEntity();
+					int id = int.Parse(dataGridViewRow.Cells["Id"].Value.ToString());
+					string ten = dataGridViewRow.Cells["Ten"].Value.ToString();
+					DateTime giolamviec = Convert.ToDateTime(dataGridViewRow.Cells["GioLamViec"].Value);
+					qlxuongCaEntity.Id = id;
+					qlxuongCaEntity.Ten = ten;
+					qlxuongCaEntity.GioXuongCa = giolamviec.AddHours(12);
+					bool flag3 = this.QLXCManager.SuaQLXuongCaXuLyDuLieu(qlxuongCaEntity, ref this.error);
+					bool flag4 = flag3;
+					if (flag4)
+					{
+						MessageBox.Show("回来上班成功 ！");
+						this.HienThiDanhSachQLXuongCa();
+					}
+					else
+					{
+						MessageBox.Show("回来上班失败 : " + this.error);
+					}
+					frmLogin.LuuThongTin.KiemTra = 0;
+				}
+			}
 		}
 		private void dgDSQLXuongCa_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
 		{

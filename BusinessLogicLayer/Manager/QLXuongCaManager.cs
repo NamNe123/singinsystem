@@ -207,7 +207,21 @@ namespace BusinessLogicLayer.Manager
 			}
 			return result;
 		}
-
+		public bool SuaQLXuongCaXuLyDuLieu(QLXuongCaEntity Entity, ref string error)
+		{
+			bool flag = string.IsNullOrEmpty(Entity.Id.ToString());
+			bool result;
+			if (flag)
+			{
+				error = "Phai chọn người muốn xuống ca trong bảng";
+				result = false;
+			}
+			else
+			{
+				result = this.process.SuaQLXuongCaXuLyDuLieu(Entity, ref error);
+			}
+			return result;
+		}
 		// Token: 0x0400000E RID: 14
 		private QLXuongCaResponsitory process;
 
