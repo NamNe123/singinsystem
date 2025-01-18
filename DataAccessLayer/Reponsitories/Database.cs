@@ -12,7 +12,7 @@ namespace DataAccessLayer.Reponsitories
 		{
 			try
 			{
-				this.connString = @"Data Source=DESKTOP-FQPDVRO\SQLEXPRESS;Initial Catalog=Learning_QLBH;Integrated Security=True";
+				this.connString = @"Data Source=DESKTOP-2QKH5AF\SQLEXPRESS;Initial Catalog=Learning_QLBH;Integrated Security=True";
 				this.connect = new SqlConnection(this.connString);
 				this.command = new SqlCommand();
 				this.command.Connection = this.connect;

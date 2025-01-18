@@ -32,7 +32,7 @@ namespace singinsystem.Login
 			}
 			else
 			{
-				string connectionString = @"Data Source=DESKTOP-FQPDVRO\SQLEXPRESS;Initial Catalog=Learning_QLBH;Integrated Security=True";
+				string connectionString = @"Data Source=DESKTOP-2QKH5AF\SQLEXPRESS;Initial Catalog=Learning_QLBH;Integrated Security=True";
 				SqlConnection sqlConnection = null;
 				try
 				{
