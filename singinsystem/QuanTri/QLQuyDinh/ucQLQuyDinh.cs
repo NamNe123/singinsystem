@@ -182,7 +182,7 @@ namespace singinsystem.QuanTri.QLQuyDinh
 
 				if (worksheet == null)
 				{
-					MessageBox.Show("Không thể đọc sheet đầu tiên từ file Excel.");
+					MessageBox.Show("不能收到文档的数据 ！");
 					return;
 				}
 
@@ -190,7 +190,7 @@ namespace singinsystem.QuanTri.QLQuyDinh
 				Range usedRange = worksheet.UsedRange;
 				if (usedRange == null || usedRange.Rows.Count == 0 || usedRange.Columns.Count == 0)
 				{
-					MessageBox.Show("File Excel không chứa dữ liệu.");
+					MessageBox.Show("文档没有数据 ！");
 					return;
 				}
 
