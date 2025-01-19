@@ -253,17 +253,17 @@ namespace singinsystem.QuanTri.QLNhanSu
 
 				if (importSuccess)
 				{
-					MessageBox.Show("Import dữ liệu thành công!");
+					MessageBox.Show("导入成功 ！");
 					HienThiDanhSachQLNhanSu();
 				}
 				else
 				{
-					MessageBox.Show($"Import thất bại: {errorMessage}");
+					MessageBox.Show($"导入失败: {errorMessage}");
 				}
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show($"错误 : {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 

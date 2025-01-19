@@ -355,10 +355,11 @@ namespace DataAccessLayer.Reponsitories
 			bool result;
 			try
 			{
-				string sql = " update QLXuongCa set GioXuongCa=@GioXuongCa  where  Id=@Id   ";
+				string sql = " update QLXuongCa set GioXuongCa=@GioXuongCa, TongGioLam=@TongGioLam  where  Id=@Id   ";
 				bool flag = this.DB.ProcessData(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@Id", Entity.Id),
+					new SqlParameter("@TongGioLam", 12),
 					new SqlParameter("@GioXuongCa", Entity.GioXuongCa)
 				});
 				result = flag;
