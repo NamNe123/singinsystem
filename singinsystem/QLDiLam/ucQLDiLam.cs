@@ -377,7 +377,15 @@ namespace singinsystem.QLDiLam
 						this.cbNhanSu.Text = "";
 						this.cbNhanSu.ValueMember = "";
 						ucQLDiLam.LuuThongTin.MaNV = "";
-						this.HienThiDanhSachQLDiLam();
+						int scrollPosition = dgDSQLDiLam.FirstDisplayedScrollingRowIndex; // Lưu vị trí cuộn trước khi cập nhật
+
+						this.HienThiDanhSachQLDiLam(); // Cập nhật danh sách
+
+						if (scrollPosition >= 0 && scrollPosition < dgDSQLDiLam.Rows.Count)
+						{
+							dgDSQLDiLam.FirstDisplayedScrollingRowIndex = scrollPosition; // Khôi phục vị trí cuộn
+						}
+						
 					}
 					else
 					{
