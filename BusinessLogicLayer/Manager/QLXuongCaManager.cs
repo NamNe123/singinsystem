@@ -129,7 +129,7 @@ namespace BusinessLogicLayer.Manager
 				if (flag3)
 				{
 					DateTime d = Convert.ToDateTime(dataRow["GioXuongCa"]);
-					bool flag4 = (Entity.GioLamViec - d).TotalHours < 5.0;
+					bool flag4 = (Entity.GioLamViec - d).TotalHours < 3.0;
 					if (flag4)
 					{
 						error = "员工已经下班 !";

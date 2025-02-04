@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_371017E9FD3A43FA837482D79444B9FA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_3E15C7ADCA10447AB5DBFF396D75D22E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -28,25 +34,19 @@
         "Entry"
         {
         "MsmKey" = "8:_6378883F57E8427704C23061C9B66891"
-        "OwnerKey" = "8:_710D019DB1124F46AB6066F589E11059"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_710D019DB1124F46AB6066F589E11059"
-        "OwnerKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_371017E9FD3A43FA837482D79444B9FA"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_B56E22151AD31702442620C365E924F8"
-        "OwnerKey" = "8:_710D019DB1124F46AB6066F589E11059"
+        "OwnerKey" = "8:_371017E9FD3A43FA837482D79444B9FA"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_B8839981BF4E5636B79BA58F4BF2C08F"
-        "OwnerKey" = "8:_710D019DB1124F46AB6066F589E11059"
+        "OwnerKey" = "8:_371017E9FD3A43FA837482D79444B9FA"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -58,7 +58,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_710D019DB1124F46AB6066F589E11059"
+        "OwnerKey" = "8:_371017E9FD3A43FA837482D79444B9FA"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -98,6 +98,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -122,6 +130,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -442,7 +458,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_04E5452F6FC04B5DA37FC3662CA3A4DE"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_0142615121304B7ABF149F5D67C08704"
             {
             "Name" = "8:Sign-in system"
             "Arguments" = "8:"
@@ -450,13 +466,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_710D019DB1124F46AB6066F589E11059"
+            "Target" = "8:_371017E9FD3A43FA837482D79444B9FA"
             "Folder" = "8:_D76B8AC5A93D401EB922A14DB970D1E0"
             "WorkingFolder" = "8:_3DBC05B5A571446F899D9A677FC0D416"
             "Icon" = "8:_3E15C7ADCA10447AB5DBFF396D75D22E"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_20A51BD07DDD4899A424D75338985450"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D8F35206F23A4CA4A90B68103182C02C"
             {
             "Name" = "8:Sign-in system"
             "Arguments" = "8:"
@@ -464,7 +480,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_710D019DB1124F46AB6066F589E11059"
+            "Target" = "8:_371017E9FD3A43FA837482D79444B9FA"
             "Folder" = "8:_FA676D044FC2412B9A71ECA9F08B93B7"
             "WorkingFolder" = "8:_3DBC05B5A571446F899D9A677FC0D416"
             "Icon" = "8:_3E15C7ADCA10447AB5DBFF396D75D22E"
@@ -869,7 +885,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_710D019DB1124F46AB6066F589E11059"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_371017E9FD3A43FA837482D79444B9FA"
             {
             "SourcePath" = "8:..\\singinsystem\\obj\\Debug\\singinsystem.exe"
             "TargetName" = "8:"
