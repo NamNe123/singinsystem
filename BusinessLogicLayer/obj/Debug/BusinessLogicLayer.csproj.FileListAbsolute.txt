@@ -1,9 +1,9 @@
-D:\github\singinsystem\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.AssemblyReference.cache
-D:\github\singinsystem\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
 D:\github\singinsystem\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
 D:\github\singinsystem\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
 D:\github\singinsystem\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
 D:\github\singinsystem\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+D:\github\singinsystem\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.AssemblyReference.cache
+D:\github\singinsystem\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
 D:\github\singinsystem\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
 D:\github\singinsystem\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
 D:\github\singinsystem\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb

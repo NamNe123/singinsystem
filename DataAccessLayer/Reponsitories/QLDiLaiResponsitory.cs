@@ -40,6 +40,15 @@ namespace DataAccessLayer.Reponsitories
 					new SqlParameter("@LyDo", LyDo),
 					new SqlParameter("@MaNV", manv)
 				});
+				string sqlnew = " select Id, MaNV, TenNV, LyDo, TimeOut, TimeIn, TongTime, GhiChu  from QLDiLai where TrangThai = N'Đã vào' AND MaNV=@MaNV AND LyDo=@LyDo AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Đêm' ORDER BY Id DESC ";
+				DataTable dataFromDBnew = this.DB.GetDataFromDB(sqlnew, CommandType.Text, ref error, new SqlParameter[]
+				{
+					new SqlParameter("@TuNgay", DenNgay),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(10)),
+					new SqlParameter("@LyDo", LyDo),
+					new SqlParameter("@MaNV", manv)
+				});
+				dataFromDB.Merge(dataFromDBnew);
 				result = dataFromDB;
 			}
 			catch (Exception ex)
@@ -80,7 +89,7 @@ namespace DataAccessLayer.Reponsitories
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", TuNgay),
-					new SqlParameter("@DenNgay", DenNgay),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(10)),
 					new SqlParameter("@LyDo", LyDo),
 					new SqlParameter("@MaNV", manv)
 				});
@@ -148,7 +157,7 @@ namespace DataAccessLayer.Reponsitories
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", TuNgay),
-					new SqlParameter("@DenNgay", DenNgay),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(10)),
 					new SqlParameter("@LyDo", LyDo),
 					new SqlParameter("@MaNV", manv)
 				});
@@ -175,6 +184,14 @@ namespace DataAccessLayer.Reponsitories
 					new SqlParameter("@DenNgay", DenNgay),
 					new SqlParameter("@MaNV", manv)
 				});
+				string sqlnew = " select Id, MaNV, TenNV, LyDo, TimeOut, TimeIn, TongTime, GhiChu  from QLDiLai where TrangThai = N'Đã vào' AND MaNV=@MaNV AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Đêm' ORDER BY Id DESC ";
+				DataTable dataFromDBnew = this.DB.GetDataFromDB(sqlnew, CommandType.Text, ref error, new SqlParameter[]
+				{
+					new SqlParameter("@TuNgay", DenNgay),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(10)),
+					new SqlParameter("@MaNV", manv)
+				});
+				dataFromDB.Merge(dataFromDBnew);
 				result = dataFromDB;
 			}
 			catch (Exception ex)
@@ -214,7 +231,7 @@ namespace DataAccessLayer.Reponsitories
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", TuNgay),
-					new SqlParameter("@DenNgay", DenNgay),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(10)),
 					new SqlParameter("@MaNV", manv)
 				});
 				result = dataFromDB;
@@ -279,7 +296,7 @@ namespace DataAccessLayer.Reponsitories
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", TuNgay),
-					new SqlParameter("@DenNgay", DenNgay),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(10)),
 					new SqlParameter("@MaNV", manv)
 				});
 				result = dataFromDB;
@@ -305,6 +322,14 @@ namespace DataAccessLayer.Reponsitories
 					new SqlParameter("@DenNgay", DenNgay),
 					new SqlParameter("@LyDo", LyDo)
 				});
+				string sqlnew = " select Id, MaNV, TenNV, LyDo, TimeOut, TimeIn, TongTime, GhiChu  from QLDiLai where TrangThai = N'Đã vào' AND LyDo=@LyDo AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Đêm' ORDER BY Id DESC ";
+				DataTable dataFromDBnew = this.DB.GetDataFromDB(sqlnew, CommandType.Text, ref error, new SqlParameter[]
+				{
+					new SqlParameter("@TuNgay", DenNgay),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(10)),
+					new SqlParameter("@LyDo", LyDo)
+				});
+				dataFromDB.Merge(dataFromDBnew);
 				result = dataFromDB;
 			}
 			catch (Exception ex)
@@ -345,7 +370,7 @@ namespace DataAccessLayer.Reponsitories
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", TuNgay),
-					new SqlParameter("@DenNgay", DenNgay),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(10)),
 					new SqlParameter("@LyDo", LyDo)
 				});
 				result = dataFromDB;
@@ -410,7 +435,7 @@ namespace DataAccessLayer.Reponsitories
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", TuNgay),
-					new SqlParameter("@DenNgay", DenNgay),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(10)),
 					new SqlParameter("@LyDo", LyDo)
 				});
 				result = dataFromDB;
@@ -435,6 +460,13 @@ namespace DataAccessLayer.Reponsitories
 					new SqlParameter("@TuNgay", TuNgay),
 					new SqlParameter("@DenNgay", DenNgay)
 				});
+				string sqlnew = " select Id, MaNV, TenNV, LyDo, TimeOut, TimeIn, TongTime, GhiChu  from QLDiLai where TrangThai = N'Đã vào' AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Đêm' ORDER BY Id DESC ";
+				DataTable dataFromDBnew = this.DB.GetDataFromDB(sqlnew, CommandType.Text, ref error, new SqlParameter[]
+				{
+					new SqlParameter("@TuNgay", DenNgay),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(10))
+				});
+				dataFromDB.Merge(dataFromDBnew);
 				result = dataFromDB;
 			}
 			catch (Exception ex)
@@ -473,7 +505,7 @@ namespace DataAccessLayer.Reponsitories
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", TuNgay),
-					new SqlParameter("@DenNgay", DenNgay)
+					new SqlParameter("@DenNgay", DenNgay.AddHours(10))
 				});
 				result = dataFromDB;
 			}
@@ -535,7 +567,7 @@ namespace DataAccessLayer.Reponsitories
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", TuNgay),
-					new SqlParameter("@DenNgay", DenNgay)
+					new SqlParameter("@DenNgay", DenNgay.AddHours(10))
 				});
 				result = dataFromDB;
 			}

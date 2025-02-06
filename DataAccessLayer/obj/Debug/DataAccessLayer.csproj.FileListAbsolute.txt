@@ -1,6 +1,5 @@
-D:\github\singinsystem\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 D:\github\singinsystem\DataAccessLayer\bin\Debug\DataAccessLayer.dll
 D:\github\singinsystem\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\github\singinsystem\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 D:\github\singinsystem\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 D:\github\singinsystem\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
-D:\github\singinsystem\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
