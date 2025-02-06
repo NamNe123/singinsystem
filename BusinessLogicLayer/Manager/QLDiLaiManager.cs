@@ -35,6 +35,14 @@ namespace BusinessLogicLayer.Manager
 			DataTable result;
 			if (flag)
 			{
+				//if(CaNgay && !CaDem)
+				//{
+				//	result = this.process.HienThiDanhSachQLDiLaiTheo4DieuKienCaSang(manv, lydo, TuNgay, DenNgay, ref error);
+				//}
+				//else if(!CaNgay && CaDem)
+				//{
+				//	result = this.process.HienThiDanhSachQLDiLaiTheo4DieuKienCaChieu(manv, lydo, TuNgay, DenNgay, ref error);
+				//}
 				result = this.process.HienThiDanhSachQLDiLaiTheo4DieuKien(manv, lydo, TuNgay, DenNgay, ref error);
 			}
 			else
@@ -208,8 +216,18 @@ namespace BusinessLogicLayer.Manager
 						if (flag4)
 						{
 							Entity.GioVaoCa = DateTime.Parse(dataTable2.Rows[i]["GioLamViec"].ToString());
+							DateTime GioBatDauLam = DateTime.Today.Add(DateTime.Parse(dataTable2.Rows[i]["GioLamViec"].ToString()).TimeOfDay);
+							if (GioBatDauLam.TimeOfDay > new TimeSpan(6, 0, 0) && GioBatDauLam.TimeOfDay < new TimeSpan(18, 0, 0))
+							{
+								Entity.CaLam = "Ca Sáng";
+							}
+							if (GioBatDauLam.TimeOfDay > new TimeSpan(18, 0, 0) || GioBatDauLam.TimeOfDay < new TimeSpan(5, 0, 0))
+							{
+								Entity.CaLam = "Ca Tối";
+							}
 							num = 1;
 						}
+
 					}
 				}
 				bool flag5 = num == 0;

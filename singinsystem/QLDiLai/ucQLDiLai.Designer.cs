@@ -76,13 +76,13 @@ namespace singinsystem.QLDiLai
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucQLDiLai));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -123,6 +123,9 @@ namespace singinsystem.QLDiLai
             this.panel11 = new System.Windows.Forms.Panel();
             this.cbHienThi = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.cBCaDem = new System.Windows.Forms.CheckBox();
+            this.cBCaNgay = new System.Windows.Forms.CheckBox();
             this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -140,6 +143,7 @@ namespace singinsystem.QLDiLai
             this.tableLayoutPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -198,14 +202,14 @@ namespace singinsystem.QLDiLai
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgDSQLDiLai.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgDSQLDiLai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgDSQLDiLai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgDSQLDiLai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDSQLDiLai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -262,9 +266,9 @@ namespace singinsystem.QLDiLai
             // 
             this.TimeOut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TimeOut.DataPropertyName = "TimeOut";
-            dataGridViewCellStyle2.Format = "G";
-            dataGridViewCellStyle2.NullValue = null;
-            this.TimeOut.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Format = "G";
+            dataGridViewCellStyle14.NullValue = null;
+            this.TimeOut.DefaultCellStyle = dataGridViewCellStyle14;
             this.TimeOut.HeaderText = "出去时间";
             this.TimeOut.MinimumWidth = 6;
             this.TimeOut.Name = "TimeOut";
@@ -273,9 +277,9 @@ namespace singinsystem.QLDiLai
             // 
             this.TimeIn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TimeIn.DataPropertyName = "TimeIn";
-            dataGridViewCellStyle3.Format = "G";
-            dataGridViewCellStyle3.NullValue = null;
-            this.TimeIn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Format = "G";
+            dataGridViewCellStyle15.NullValue = null;
+            this.TimeIn.DefaultCellStyle = dataGridViewCellStyle15;
             this.TimeIn.HeaderText = "进入时间";
             this.TimeIn.MinimumWidth = 6;
             this.TimeIn.Name = "TimeIn";
@@ -284,8 +288,8 @@ namespace singinsystem.QLDiLai
             // 
             this.TongTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TongTime.DataPropertyName = "TongTime";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.TongTime.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.TongTime.DefaultCellStyle = dataGridViewCellStyle16;
             this.TongTime.HeaderText = "超时";
             this.TongTime.MinimumWidth = 6;
             this.TongTime.Name = "TongTime";
@@ -302,10 +306,10 @@ namespace singinsystem.QLDiLai
             // 
             this.btnThemGhiChu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.btnThemGhiChu.DataPropertyName = "btnThemGhiChu";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            this.btnThemGhiChu.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            this.btnThemGhiChu.DefaultCellStyle = dataGridViewCellStyle17;
             this.btnThemGhiChu.HeaderText = "";
             this.btnThemGhiChu.MinimumWidth = 6;
             this.btnThemGhiChu.Name = "btnThemGhiChu";
@@ -365,7 +369,7 @@ namespace singinsystem.QLDiLai
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193F));
             this.tableLayoutPanel7.Controls.Add(this.panel5, 4, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel6, 5, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel4, 0, 0);
@@ -385,7 +389,7 @@ namespace singinsystem.QLDiLai
             // 
             this.panel5.Controls.Add(this.dtpTu);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(397, 3);
+            this.panel5.Location = new System.Drawing.Point(393, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(166, 26);
             this.panel5.TabIndex = 3;
@@ -405,7 +409,7 @@ namespace singinsystem.QLDiLai
             // 
             this.panel6.Controls.Add(this.dtpDen);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(569, 3);
+            this.panel6.Location = new System.Drawing.Point(565, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(160, 26);
             this.panel6.TabIndex = 9;
@@ -425,16 +429,16 @@ namespace singinsystem.QLDiLai
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(15, 26);
+            this.panel4.Size = new System.Drawing.Size(14, 26);
             this.panel4.TabIndex = 6;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.cbNhanSu);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(24, 3);
+            this.panel7.Location = new System.Drawing.Point(23, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(73, 26);
+            this.panel7.Size = new System.Drawing.Size(70, 26);
             this.panel7.TabIndex = 10;
             // 
             // cbNhanSu
@@ -446,7 +450,7 @@ namespace singinsystem.QLDiLai
             this.cbNhanSu.IntegralHeight = false;
             this.cbNhanSu.Location = new System.Drawing.Point(0, 0);
             this.cbNhanSu.Name = "cbNhanSu";
-            this.cbNhanSu.Size = new System.Drawing.Size(73, 38);
+            this.cbNhanSu.Size = new System.Drawing.Size(70, 38);
             this.cbNhanSu.TabIndex = 14;
             this.cbNhanSu.TextUpdate += new System.EventHandler(this.cbNhanSu_TextUpdate);
             this.cbNhanSu.SelectedValueChanged += new System.EventHandler(this.cbNhanSu_SelectedValueChanged);
@@ -455,7 +459,7 @@ namespace singinsystem.QLDiLai
             // 
             this.panel8.Controls.Add(this.cbLoaiDangKy);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(103, 3);
+            this.panel8.Location = new System.Drawing.Point(99, 3);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(119, 26);
             this.panel8.TabIndex = 11;
@@ -475,7 +479,7 @@ namespace singinsystem.QLDiLai
             // panel9
             // 
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(228, 3);
+            this.panel9.Location = new System.Drawing.Point(224, 3);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(163, 26);
             this.panel9.TabIndex = 12;
@@ -483,9 +487,9 @@ namespace singinsystem.QLDiLai
             // panel10
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(735, 3);
+            this.panel10.Location = new System.Drawing.Point(731, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(184, 26);
+            this.panel10.Size = new System.Drawing.Size(188, 26);
             this.panel10.TabIndex = 13;
             // 
             // tableLayoutPanel6
@@ -551,18 +555,20 @@ namespace singinsystem.QLDiLai
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.ColumnCount = 4;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 278F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.82759F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 116F));
             this.tableLayoutPanel8.Controls.Add(this.pictureBox1, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.btnBCTH, 3, 0);
             this.tableLayoutPanel8.Controls.Add(this.panel11, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.panel12, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 77);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(928, 41);
             this.tableLayoutPanel8.TabIndex = 1;
             // 
@@ -595,7 +601,7 @@ namespace singinsystem.QLDiLai
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(3, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(343, 35);
+            this.panel11.Size = new System.Drawing.Size(272, 35);
             this.panel11.TabIndex = 13;
             // 
             // cbHienThi
@@ -623,14 +629,50 @@ namespace singinsystem.QLDiLai
             this.label5.TabIndex = 2;
             this.label5.Text = "显示:";
             // 
+            // panel12
+            // 
+            this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel12.Controls.Add(this.cBCaDem);
+            this.panel12.Controls.Add(this.cBCaNgay);
+            this.panel12.Location = new System.Drawing.Point(281, 3);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(475, 35);
+            this.panel12.TabIndex = 14;
+            // 
+            // cBCaDem
+            // 
+            this.cBCaDem.AutoSize = true;
+            this.cBCaDem.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBCaDem.Location = new System.Drawing.Point(104, 3);
+            this.cBCaDem.Name = "cBCaDem";
+            this.cBCaDem.Size = new System.Drawing.Size(74, 31);
+            this.cBCaDem.TabIndex = 1;
+            this.cBCaDem.Text = "夜班";
+            this.cBCaDem.UseVisualStyleBackColor = true;
+            this.cBCaDem.CheckedChanged += new System.EventHandler(this.cBCaDem_CheckedChanged);
+            // 
+            // cBCaNgay
+            // 
+            this.cBCaNgay.AutoSize = true;
+            this.cBCaNgay.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBCaNgay.Location = new System.Drawing.Point(3, 3);
+            this.cBCaNgay.Name = "cBCaNgay";
+            this.cBCaNgay.Size = new System.Drawing.Size(74, 31);
+            this.cBCaNgay.TabIndex = 0;
+            this.cBCaNgay.Text = "白班";
+            this.cBCaNgay.UseVisualStyleBackColor = true;
+            this.cBCaNgay.CheckedChanged += new System.EventHandler(this.cBCaNgay_CheckedChanged);
+            // 
             // dataGridViewButtonColumn1
             // 
             this.dataGridViewButtonColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewButtonColumn1.DataPropertyName = "btnTroLaiLamViec";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
+            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridViewButtonColumn1.HeaderText = "Thao tác";
             this.dataGridViewButtonColumn1.MinimumWidth = 6;
             this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
@@ -668,10 +710,16 @@ namespace singinsystem.QLDiLai
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.ResumeLayout(false);
 
 		}
 
         #endregion
+
+        private Panel panel12;
+        private CheckBox cBCaDem;
+        private CheckBox cBCaNgay;
     }
 }

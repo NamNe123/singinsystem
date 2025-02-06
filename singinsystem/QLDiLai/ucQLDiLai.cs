@@ -234,6 +234,8 @@ namespace singinsystem.QLDiLai
 			{
 				lydo = comboboxItem2.Text;
 			}
+			//bool cangay = cBCaNgay.Checked;
+			//bool cadem = cBCaDem.Checked;
 			DateTime date = this.dtpTu.Value.Date;
 			DateTime denNgay = this.dtpDen.Value.Date.AddHours(23.0).AddMinutes(59.0);
             System.Data.DataTable dataTable = this.QLDLManager.HienThiTimKiem(manv, lydo, date, denNgay, ref this.error);
@@ -365,6 +367,8 @@ namespace singinsystem.QLDiLai
 				DateTime fromDate = dtpTu.Value;
 				DateTime toDate = dtpDen.Value;
 
+				bool cangay = cBCaNgay.Checked;
+				bool cadem = cBCaDem.Checked;
 				// Lấy dữ liệu từ database
 				System.Data.DataTable dataTable = QLDLManager.HienThiTimKiem(manv, lydo, fromDate, toDate, ref error);
 				if (dataTable == null || dataTable.Rows.Count == 0)
@@ -561,6 +565,16 @@ namespace singinsystem.QLDiLai
 			this.HienThiDanhSachQLDiLai();
 		}
 		private void cbHienThi_TextChanged(object sender, EventArgs e)
+		{
+			this.HienThiDanhSachQLDiLai();
+		}
+
+        private void cBCaDem_CheckedChanged(object sender, EventArgs e)
+		{
+			this.HienThiDanhSachQLDiLai();
+		}
+
+        private void cBCaNgay_CheckedChanged(object sender, EventArgs e)
 		{
 			this.HienThiDanhSachQLDiLai();
 		}

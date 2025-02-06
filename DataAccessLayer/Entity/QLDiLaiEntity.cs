@@ -50,6 +50,7 @@ namespace DataAccessLayer.Entity
 		// (get) Token: 0x06000103 RID: 259 RVA: 0x00005FCC File Offset: 0x000041CC
 		// (set) Token: 0x06000104 RID: 260 RVA: 0x00005FD4 File Offset: 0x000041D4
 		public string TrangThai { get; set; }
+		public string CaLam { get; set; }
 
 		// Token: 0x17000041 RID: 65
 		// (get) Token: 0x06000105 RID: 261 RVA: 0x00005FDD File Offset: 0x000041DD

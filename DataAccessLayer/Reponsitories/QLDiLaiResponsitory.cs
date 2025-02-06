@@ -49,6 +49,28 @@ namespace DataAccessLayer.Reponsitories
 			}
 			return result;
 		}
+		public DataTable HienThiDanhSachQLDiLaiTheo4DieuKienCaSang(int manv, string LyDo, DateTime TuNgay, DateTime DenNgay, ref string error)
+		{
+			DataTable result;
+			try
+			{
+				string sql = " select Id, MaNV, TenNV, LyDo, TimeOut, TimeIn, TongTime, GhiChu  from QLDiLai where TrangThai = N'Đã vào' AND MaNV=@MaNV AND LyDo=@LyDo AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay ORDER BY Id DESC ";
+				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
+				{
+					new SqlParameter("@TuNgay", TuNgay),
+					new SqlParameter("@DenNgay", DenNgay),
+					new SqlParameter("@LyDo", LyDo),
+					new SqlParameter("@MaNV", manv)
+				});
+				result = dataFromDB;
+			}
+			catch (Exception ex)
+			{
+				error = "Ket noi lôi: " + ex.Message;
+				result = null;
+			}
+			return result;
+		}
 
 		// Token: 0x0600003D RID: 61 RVA: 0x00003DF4 File Offset: 0x00001FF4
 		public DataTable BaoCaoTongHopTheo4DieuKien(int manv, string LyDo, DateTime TuNgay, DateTime DenNgay, ref string error)
@@ -544,6 +566,7 @@ namespace DataAccessLayer.Reponsitories
 					}
 				}
 			}
+
 			bool flag4 = num >= num2;
 			bool result;
 			if (flag4)
@@ -555,13 +578,14 @@ namespace DataAccessLayer.Reponsitories
 			{
 				try
 				{
-					string sql = " insert into QLDiLai( MaNV , TenNV, LyDo, TimeOut, TrangThai)  values( @MaNV, @TenNV,  @LyDo,  @TimeOut,  @TrangThai)";
+					string sql = " insert into QLDiLai( MaNV , TenNV, LyDo, TimeOut, TrangThai, CaLam)  values( @MaNV, @TenNV,  @LyDo,  @TimeOut,  @TrangThai,  @CaLam)";
 					bool flag5 = this.DB.ProcessData(sql, CommandType.Text, ref error, new SqlParameter[]
 					{
 						new SqlParameter("@MaNV", Entity.MaNV),
 						new SqlParameter("@TenNV", Entity.TenNV),
 						new SqlParameter("@LyDo", Entity.LyDo),
 						new SqlParameter("@TimeOut", Entity.TimeOut),
+						new SqlParameter("@CaLam", Entity.CaLam),
 						new SqlParameter("@TrangThai", Entity.TrangThai)
 					});
 					result = flag5;
