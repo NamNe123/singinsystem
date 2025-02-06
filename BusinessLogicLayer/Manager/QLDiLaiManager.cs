@@ -29,42 +29,80 @@ namespace BusinessLogicLayer.Manager
 		}
 
 		// Token: 0x06000038 RID: 56 RVA: 0x00002A9C File Offset: 0x00000C9C
-		public DataTable HienThiTimKiem(int manv, string lydo, DateTime TuNgay, DateTime DenNgay, ref string error)
+		public DataTable HienThiTimKiem(int manv, string lydo, DateTime TuNgay, DateTime DenNgay, bool CaNgay, bool CaDem, ref string error)
 		{
 			bool flag = manv != 0 && !string.IsNullOrEmpty(lydo.ToString()) && !string.IsNullOrEmpty(TuNgay.ToString()) && !string.IsNullOrEmpty(DenNgay.ToString());
 			DataTable result;
 			if (flag)
 			{
-				//if(CaNgay && !CaDem)
-				//{
-				//	result = this.process.HienThiDanhSachQLDiLaiTheo4DieuKienCaSang(manv, lydo, TuNgay, DenNgay, ref error);
-				//}
-				//else if(!CaNgay && CaDem)
-				//{
-				//	result = this.process.HienThiDanhSachQLDiLaiTheo4DieuKienCaChieu(manv, lydo, TuNgay, DenNgay, ref error);
-				//}
+                if (CaNgay && !CaDem)
+                {
+                    result = this.process.HienThiDanhSachQLDiLaiTheo4DieuKienCaNgay(manv, lydo, TuNgay, DenNgay, ref error);
+                }
+                else if (!CaNgay && CaDem)
+                {
+                    result = this.process.HienThiDanhSachQLDiLaiTheo4DieuKienCaDem(manv, lydo, TuNgay, DenNgay, ref error);
+                }
+                else
+                {
 				result = this.process.HienThiDanhSachQLDiLaiTheo4DieuKien(manv, lydo, TuNgay, DenNgay, ref error);
+                }
 			}
 			else
 			{
 				bool flag2 = manv != 0 && string.IsNullOrEmpty(lydo.ToString()) && !string.IsNullOrEmpty(TuNgay.ToString()) && !string.IsNullOrEmpty(DenNgay.ToString());
 				if (flag2)
 				{
-					result = this.process.HienThiDanhSachQLDiLaiTheoNhamViemTuNgayDenNgay(manv, TuNgay, DenNgay, ref error);
+					if (CaNgay && !CaDem)
+					{
+						result = this.process.HienThiDanhSachQLDiLaiTheoNhamViemTuNgayDenNgayCaNgay(manv, TuNgay, DenNgay, ref error);
+					}
+					else if (!CaNgay && CaDem)
+					{
+						result = this.process.HienThiDanhSachQLDiLaiTheoNhamViemTuNgayDenNgayCaDem(manv, TuNgay, DenNgay, ref error);
+					}
+					else
+					{
+						result = this.process.HienThiDanhSachQLDiLaiTheoNhamViemTuNgayDenNgay(manv, TuNgay, DenNgay, ref error);
+					}
+					
 				}
 				else
 				{
 					bool flag3 = manv == 0 && !string.IsNullOrEmpty(lydo.ToString()) && !string.IsNullOrEmpty(TuNgay.ToString()) && !string.IsNullOrEmpty(DenNgay.ToString());
 					if (flag3)
 					{
-						result = this.process.HienThiDanhSachQLDiLaiTheoLyDoTuNgayDenNgay(lydo, TuNgay, DenNgay, ref error);
+						if (CaNgay && !CaDem)
+						{
+							result = this.process.HienThiDanhSachQLDiLaiTheoLyDoTuNgayDenNgayCaNgay(lydo, TuNgay, DenNgay, ref error);
+						}
+						else if (!CaNgay && CaDem)
+						{
+							result = this.process.HienThiDanhSachQLDiLaiTheoLyDoTuNgayDenNgayCaDem(lydo, TuNgay, DenNgay, ref error);
+						}
+						else
+						{
+							result = this.process.HienThiDanhSachQLDiLaiTheoLyDoTuNgayDenNgay(lydo, TuNgay, DenNgay, ref error);
+						}
+						
 					}
 					else
 					{
 						bool flag4 = manv == 0 && string.IsNullOrEmpty(lydo.ToString()) && !string.IsNullOrEmpty(TuNgay.ToString()) && !string.IsNullOrEmpty(DenNgay.ToString());
 						if (flag4)
 						{
-							result = this.process.HienThiDanhSachQLDiLaiTheoTuNgayDenNgay(TuNgay, DenNgay, ref error);
+							if (CaNgay && !CaDem)
+							{
+								result = this.process.HienThiDanhSachQLDiLaiTheoTuNgayDenNgayCaNgay(TuNgay, DenNgay, ref error);
+							}
+							else if (!CaNgay && CaDem)
+							{
+								result = this.process.HienThiDanhSachQLDiLaiTheoTuNgayDenNgayCaDem(TuNgay, DenNgay, ref error);
+							}
+							else
+							{
+								result = this.process.HienThiDanhSachQLDiLaiTheoTuNgayDenNgay(TuNgay, DenNgay, ref error);
+							}
 						}
 						else
 						{
@@ -78,34 +116,78 @@ namespace BusinessLogicLayer.Manager
 		}
 
 		// Token: 0x06000039 RID: 57 RVA: 0x00002BE4 File Offset: 0x00000DE4
-		public DataTable BaoCaoTongHop(int manv, string lydo, DateTime TuNgay, DateTime DenNgay, ref string error)
+		public DataTable BaoCaoTongHop(int manv, string lydo, DateTime TuNgay, DateTime DenNgay, bool CaNgay, bool CaDem, ref string error)
 		{
 			bool flag = manv != 0 && !string.IsNullOrEmpty(lydo.ToString()) && !string.IsNullOrEmpty(TuNgay.ToString()) && !string.IsNullOrEmpty(DenNgay.ToString());
 			DataTable result;
 			if (flag)
 			{
-				result = this.process.BaoCaoTongHopTheo4DieuKien(manv, lydo, TuNgay, DenNgay, ref error);
+				if (CaNgay && !CaDem)
+				{
+					result = this.process.BaoCaoTongHopTheo4DieuKienCaNgay(manv, lydo, TuNgay, DenNgay, ref error);
+				}
+				else if (!CaNgay && CaDem)
+				{
+					result = this.process.BaoCaoTongHopTheo4DieuKienCaDem(manv, lydo, TuNgay, DenNgay, ref error);
+				}
+				else
+				{
+					result = this.process.BaoCaoTongHopTheo4DieuKien(manv, lydo, TuNgay, DenNgay, ref error);
+				}
 			}
 			else
 			{
 				bool flag2 = manv != 0 && string.IsNullOrEmpty(lydo.ToString()) && !string.IsNullOrEmpty(TuNgay.ToString()) && !string.IsNullOrEmpty(DenNgay.ToString());
 				if (flag2)
 				{
-					result = this.process.BaoCaoTongHopTheoNhamViemTuNgayDenNgay(manv, TuNgay, DenNgay, ref error);
+					if (CaNgay && !CaDem)
+					{
+						result = this.process.BaoCaoTongHopTheoNhamViemTuNgayDenNgayCaNgay(manv, TuNgay, DenNgay, ref error);
+					}
+					else if (!CaNgay && CaDem)
+					{
+						result = this.process.BaoCaoTongHopTheoNhamViemTuNgayDenNgayCaDem(manv, TuNgay, DenNgay, ref error);
+					}
+					else
+					{
+						result = this.process.BaoCaoTongHopTheoNhamViemTuNgayDenNgay(manv, TuNgay, DenNgay, ref error);
+					}
 				}
 				else
 				{
 					bool flag3 = manv == 0 && !string.IsNullOrEmpty(lydo.ToString()) && !string.IsNullOrEmpty(TuNgay.ToString()) && !string.IsNullOrEmpty(DenNgay.ToString());
 					if (flag3)
 					{
-						result = this.process.BaoCaoTongHopTheoLyDoTuNgayDenNgay(lydo, TuNgay, DenNgay, ref error);
+						if (CaNgay && !CaDem)
+						{
+							result = this.process.BaoCaoTongHopTheoLyDoTuNgayDenNgayCaNgay(lydo, TuNgay, DenNgay, ref error);
+						}
+						else if (!CaNgay && CaDem)
+						{
+							result = this.process.BaoCaoTongHopTheoLyDoTuNgayDenNgayCaDem(lydo, TuNgay, DenNgay, ref error);
+						}
+						else
+						{
+							result = this.process.BaoCaoTongHopTheoLyDoTuNgayDenNgay(lydo, TuNgay, DenNgay, ref error);
+						}
 					}
 					else
 					{
 						bool flag4 = manv == 0 && string.IsNullOrEmpty(lydo.ToString()) && !string.IsNullOrEmpty(TuNgay.ToString()) && !string.IsNullOrEmpty(DenNgay.ToString());
 						if (flag4)
 						{
-							result = this.process.BaoCaoTongHopTheoTuNgayDenNgay(TuNgay, DenNgay, ref error);
+							if (CaNgay && !CaDem)
+							{
+								result = this.process.BaoCaoTongHopTheoTuNgayDenNgayCaNgay(TuNgay, DenNgay, ref error);
+							}
+							else if (!CaNgay && CaDem)
+							{
+								result = this.process.BaoCaoTongHopTheoTuNgayDenNgayCaDem(TuNgay, DenNgay, ref error);
+							}
+							else
+							{
+								result = this.process.BaoCaoTongHopTheoTuNgayDenNgay(TuNgay, DenNgay, ref error);
+							}
 						}
 						else
 						{
@@ -219,11 +301,11 @@ namespace BusinessLogicLayer.Manager
 							DateTime GioBatDauLam = DateTime.Today.Add(DateTime.Parse(dataTable2.Rows[i]["GioLamViec"].ToString()).TimeOfDay);
 							if (GioBatDauLam.TimeOfDay > new TimeSpan(6, 0, 0) && GioBatDauLam.TimeOfDay < new TimeSpan(18, 0, 0))
 							{
-								Entity.CaLam = "Ca Sáng";
+								Entity.CaLam = "Ca Ngày";
 							}
 							if (GioBatDauLam.TimeOfDay > new TimeSpan(18, 0, 0) || GioBatDauLam.TimeOfDay < new TimeSpan(5, 0, 0))
 							{
-								Entity.CaLam = "Ca Tối";
+								Entity.CaLam = "Ca Đêm";
 							}
 							num = 1;
 						}

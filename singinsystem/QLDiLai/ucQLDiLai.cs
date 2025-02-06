@@ -234,11 +234,11 @@ namespace singinsystem.QLDiLai
 			{
 				lydo = comboboxItem2.Text;
 			}
-			//bool cangay = cBCaNgay.Checked;
-			//bool cadem = cBCaDem.Checked;
+			bool cangay = cBCaNgay.Checked;
+			bool cadem = cBCaDem.Checked;
 			DateTime date = this.dtpTu.Value.Date;
 			DateTime denNgay = this.dtpDen.Value.Date.AddHours(23.0).AddMinutes(59.0);
-            System.Data.DataTable dataTable = this.QLDLManager.HienThiTimKiem(manv, lydo, date, denNgay, ref this.error);
+            System.Data.DataTable dataTable = this.QLDLManager.HienThiTimKiem(manv, lydo, date, denNgay, cangay, cadem, ref this.error);
 			bool flag3 = dataTable == null;
 			if (flag3)
 			{
@@ -370,7 +370,7 @@ namespace singinsystem.QLDiLai
 				bool cangay = cBCaNgay.Checked;
 				bool cadem = cBCaDem.Checked;
 				// Lấy dữ liệu từ database
-				System.Data.DataTable dataTable = QLDLManager.HienThiTimKiem(manv, lydo, fromDate, toDate, ref error);
+				System.Data.DataTable dataTable = QLDLManager.HienThiTimKiem(manv, lydo, fromDate, toDate, cangay, cadem, ref error);
 				if (dataTable == null || dataTable.Rows.Count == 0)
 				{
 					MessageBox.Show(dataTable == null ? $"没有数据: {error}" : "没有列 !");
@@ -479,8 +479,10 @@ namespace singinsystem.QLDiLai
 				DateTime fromDate = dtpTu.Value;
 				DateTime toDate = dtpDen.Value;
 
+				bool cangay = cBCaNgay.Checked;
+				bool cadem = cBCaDem.Checked;
 				// Lấy dữ liệu từ database
-				System.Data.DataTable dataTable = QLDLManager.BaoCaoTongHop(manv, lydo, fromDate, toDate, ref error);
+				System.Data.DataTable dataTable = QLDLManager.BaoCaoTongHop(manv, lydo, fromDate, toDate, cangay, cadem, ref error);
 				if (dataTable == null || dataTable.Rows.Count == 0)
 				{
 					MessageBox.Show(dataTable == null ? $"没有数据: {error}" : "没有数据 !");
