@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "Busin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{B84B46C3-2EC3-4B5E-B7E2-5E21DAF8277F}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{65F873B9-0CA3-4C5D-AF31-2B47B613FEEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,8 @@ Global
 		{B84B46C3-2EC3-4B5E-B7E2-5E21DAF8277F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B84B46C3-2EC3-4B5E-B7E2-5E21DAF8277F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B84B46C3-2EC3-4B5E-B7E2-5E21DAF8277F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65F873B9-0CA3-4C5D-AF31-2B47B613FEEE}.Debug|Any CPU.ActiveCfg = Debug
+		{65F873B9-0CA3-4C5D-AF31-2B47B613FEEE}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

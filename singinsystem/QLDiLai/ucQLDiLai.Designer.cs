@@ -369,7 +369,7 @@ namespace singinsystem.QLDiLai
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 194F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
             this.tableLayoutPanel7.Controls.Add(this.panel5, 4, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel6, 5, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel4, 0, 0);
@@ -389,7 +389,7 @@ namespace singinsystem.QLDiLai
             // 
             this.panel5.Controls.Add(this.dtpTu);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(392, 3);
+            this.panel5.Location = new System.Drawing.Point(389, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(166, 26);
             this.panel5.TabIndex = 3;
@@ -402,14 +402,14 @@ namespace singinsystem.QLDiLai
             this.dtpTu.Name = "dtpTu";
             this.dtpTu.Size = new System.Drawing.Size(166, 30);
             this.dtpTu.TabIndex = 0;
-            this.dtpTu.Value = new System.DateTime(2025, 2, 7, 0, 0, 0, 0);
+            this.dtpTu.Value = DateTime.Now.Date;
             this.dtpTu.ValueChanged += new System.EventHandler(this.dtpTu_ValueChanged);
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.dtpDen);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(564, 3);
+            this.panel6.Location = new System.Drawing.Point(561, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(160, 26);
             this.panel6.TabIndex = 9;
@@ -421,7 +421,7 @@ namespace singinsystem.QLDiLai
             this.dtpDen.Name = "dtpDen";
             this.dtpDen.Size = new System.Drawing.Size(150, 30);
             this.dtpDen.TabIndex = 1;
-            this.dtpDen.Value = new System.DateTime(2025, 2, 7, 23, 59, 0, 0);
+            this.dtpDen.Value = DateTime.Now.Date.AddHours(23.0).AddMinutes(59.0);
             this.dtpDen.ValueChanged += new System.EventHandler(this.dtpDen_ValueChanged);
             // 
             // panel4
@@ -429,16 +429,16 @@ namespace singinsystem.QLDiLai
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(14, 26);
+            this.panel4.Size = new System.Drawing.Size(13, 26);
             this.panel4.TabIndex = 6;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.cbNhanSu);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(23, 3);
+            this.panel7.Location = new System.Drawing.Point(22, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(69, 26);
+            this.panel7.Size = new System.Drawing.Size(67, 26);
             this.panel7.TabIndex = 10;
             // 
             // cbNhanSu
@@ -450,7 +450,7 @@ namespace singinsystem.QLDiLai
             this.cbNhanSu.IntegralHeight = false;
             this.cbNhanSu.Location = new System.Drawing.Point(0, 0);
             this.cbNhanSu.Name = "cbNhanSu";
-            this.cbNhanSu.Size = new System.Drawing.Size(69, 38);
+            this.cbNhanSu.Size = new System.Drawing.Size(67, 38);
             this.cbNhanSu.TabIndex = 14;
             this.cbNhanSu.TextUpdate += new System.EventHandler(this.cbNhanSu_TextUpdate);
             this.cbNhanSu.SelectedValueChanged += new System.EventHandler(this.cbNhanSu_SelectedValueChanged);
@@ -459,7 +459,7 @@ namespace singinsystem.QLDiLai
             // 
             this.panel8.Controls.Add(this.cbLoaiDangKy);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(98, 3);
+            this.panel8.Location = new System.Drawing.Point(95, 3);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(119, 26);
             this.panel8.TabIndex = 11;
@@ -479,7 +479,7 @@ namespace singinsystem.QLDiLai
             // panel9
             // 
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(223, 3);
+            this.panel9.Location = new System.Drawing.Point(220, 3);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(163, 26);
             this.panel9.TabIndex = 12;
@@ -487,9 +487,9 @@ namespace singinsystem.QLDiLai
             // panel10
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(730, 3);
+            this.panel10.Location = new System.Drawing.Point(727, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(189, 26);
+            this.panel10.Size = new System.Drawing.Size(192, 26);
             this.panel10.TabIndex = 13;
             // 
             // tableLayoutPanel6
