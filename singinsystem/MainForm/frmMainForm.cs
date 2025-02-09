@@ -323,13 +323,13 @@ namespace singinsystem.MainForm
 		private ucQLXuongCa ucQLXC;
 
 		// Token: 0x040001AD RID: 429
-		private int checkhienthi = 0;
+		private int checkhienthi = 1;
 
 		// Token: 0x0200003C RID: 60
 		public class LuuThongTin
 		{
 			// Token: 0x040001F5 RID: 501
-			public static int CheckHienThi;
+			public static int CheckHienThi = 1;
 		}
 	}
 }

@@ -44,7 +44,7 @@ namespace DataAccessLayer.Reponsitories
 				DataTable dataFromDBnew = this.DB.GetDataFromDB(sqlnew, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", DenNgay),
-					new SqlParameter("@DenNgay", DenNgay.AddHours(10)),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(11)),
 					new SqlParameter("@LyDo", LyDo),
 					new SqlParameter("@MaNV", manv)
 				});
@@ -88,8 +88,8 @@ namespace DataAccessLayer.Reponsitories
 				string sql = " select Id, MaNV, TenNV, LyDo, TimeOut, TimeIn, TongTime, GhiChu  from QLDiLai where TrangThai = N'Đã vào' AND MaNV=@MaNV AND LyDo=@LyDo AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Đêm' ORDER BY Id DESC ";
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
-					new SqlParameter("@TuNgay", TuNgay),
-					new SqlParameter("@DenNgay", DenNgay.AddHours(10)),
+					new SqlParameter("@TuNgay", TuNgay.AddHours(11)),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(11)),
 					new SqlParameter("@LyDo", LyDo),
 					new SqlParameter("@MaNV", manv)
 				});
@@ -109,7 +109,7 @@ namespace DataAccessLayer.Reponsitories
 			DataTable result;
 			try
 			{
-				string sql = " select MaNV, TenNV, SUM(CASE WHEN LyDo = N'早餐（35 分钟）- Breakfast (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnSang,SUM(CASE WHEN LyDo = N'午餐（35 分钟）- Lunch (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnTrua,SUM(CASE WHEN LyDo = N'晚餐（35 分钟）- Dinner (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnToi,SUM(CASE WHEN LyDo = N'抽烟（10 分钟）- Smoking (10 minutes)' THEN 1 ELSE 0 END) AS SoLanHutThuoc,SUM(CASE WHEN LyDo = N'厕所小（10 分钟）- CR (10 minutes)' THEN 1 ELSE 0 END) AS SoLanTieuTien,SUM(CASE WHEN LyDo = N'厕所大（15 分钟）- CR (15 minutes)' THEN 1 ELSE 0 END) AS SoLanDaiTien,SUM(CASE WHEN LyDo = N'其他（5 分钟）- Other (5 minutes)' THEN 1 ELSE 0 END) AS SoLanKhac,SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime,SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio,COUNT(*) AS TongSoLan,SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChufrom QLDiLai where TrangThai = N'Đã vào' AND MaNV=@MaNV AND LyDo=@LyDo AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay GROUP BY MaNV, TenNV";
+				string sql = " select MaNV, TenNV, SUM(CASE WHEN TenLyDo = N'早餐' THEN 1 ELSE 0 END) AS SoLanAnSang,SUM(CASE WHEN TenLyDo = N'午餐' THEN 1 ELSE 0 END) AS SoLanAnTrua,SUM(CASE WHEN TenLyDo = N'晚餐' THEN 1 ELSE 0 END) AS SoLanAnToi,SUM(CASE WHEN TenLyDo = N'抽烟' THEN 1 ELSE 0 END) AS SoLanHutThuoc,SUM(CASE WHEN TenLyDo = N'厕所小' THEN 1 ELSE 0 END) AS SoLanTieuTien,SUM(CASE WHEN TenLyDo = N'厕所大' THEN 1 ELSE 0 END) AS SoLanDaiTien,SUM(CASE WHEN TenLyDo = N'其他' THEN 1 ELSE 0 END) AS SoLanKhac,SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime,SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio,COUNT(*) AS TongSoLan,SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChufrom QLDiLai where TrangThai = N'Đã vào' AND MaNV=@MaNV AND LyDo=@LyDo AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND GROUP BY MaNV, TenNV";
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", TuNgay),
@@ -131,7 +131,7 @@ namespace DataAccessLayer.Reponsitories
 			DataTable result;
 			try
 			{
-				string sql = " select MaNV, TenNV, SUM(CASE WHEN LyDo = N'早餐（35 分钟）- Breakfast (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnSang,SUM(CASE WHEN LyDo = N'午餐（35 分钟）- Lunch (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnTrua,SUM(CASE WHEN LyDo = N'晚餐（35 分钟）- Dinner (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnToi,SUM(CASE WHEN LyDo = N'抽烟（10 分钟）- Smoking (10 minutes)' THEN 1 ELSE 0 END) AS SoLanHutThuoc,SUM(CASE WHEN LyDo = N'厕所小（10 分钟）- CR (10 minutes)' THEN 1 ELSE 0 END) AS SoLanTieuTien,SUM(CASE WHEN LyDo = N'厕所大（15 分钟）- CR (15 minutes)' THEN 1 ELSE 0 END) AS SoLanDaiTien,SUM(CASE WHEN LyDo = N'其他（5 分钟）- Other (5 minutes)' THEN 1 ELSE 0 END) AS SoLanKhac,SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime,SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio,COUNT(*) AS TongSoLan,SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChufrom QLDiLai where TrangThai = N'Đã vào' AND MaNV=@MaNV AND LyDo=@LyDo AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Ngày' GROUP BY MaNV, TenNV";
+				string sql = " select MaNV, TenNV, SUM(CASE WHEN TenLyDo = N'早餐' THEN 1 ELSE 0 END) AS SoLanAnSang,SUM(CASE WHEN TenLyDo = N'午餐' THEN 1 ELSE 0 END) AS SoLanAnTrua,SUM(CASE WHEN TenLyDo = N'晚餐' THEN 1 ELSE 0 END) AS SoLanAnToi,SUM(CASE WHEN TenLyDo = N'抽烟' THEN 1 ELSE 0 END) AS SoLanHutThuoc,SUM(CASE WHEN TenLyDo = N'厕所小' THEN 1 ELSE 0 END) AS SoLanTieuTien,SUM(CASE WHEN TenLyDo = N'厕所大' THEN 1 ELSE 0 END) AS SoLanDaiTien,SUM(CASE WHEN TenLyDo = N'其他' THEN 1 ELSE 0 END) AS SoLanKhac,SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime,SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio,COUNT(*) AS TongSoLan,SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChufrom QLDiLai where TrangThai = N'Đã vào' AND MaNV=@MaNV AND LyDo=@LyDo AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Ngày' GROUP BY MaNV, TenNV";
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", TuNgay),
@@ -153,11 +153,11 @@ namespace DataAccessLayer.Reponsitories
 			DataTable result;
 			try
 			{
-				string sql = " select MaNV, TenNV, SUM(CASE WHEN LyDo = N'早餐（35 分钟）- Breakfast (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnSang,SUM(CASE WHEN LyDo = N'午餐（35 分钟）- Lunch (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnTrua,SUM(CASE WHEN LyDo = N'晚餐（35 分钟）- Dinner (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnToi,SUM(CASE WHEN LyDo = N'抽烟（10 分钟）- Smoking (10 minutes)' THEN 1 ELSE 0 END) AS SoLanHutThuoc,SUM(CASE WHEN LyDo = N'厕所小（10 分钟）- CR (10 minutes)' THEN 1 ELSE 0 END) AS SoLanTieuTien,SUM(CASE WHEN LyDo = N'厕所大（15 分钟）- CR (15 minutes)' THEN 1 ELSE 0 END) AS SoLanDaiTien,SUM(CASE WHEN LyDo = N'其他（5 分钟）- Other (5 minutes)' THEN 1 ELSE 0 END) AS SoLanKhac,SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime,SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio,COUNT(*) AS TongSoLan,SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChufrom QLDiLai where TrangThai = N'Đã vào' AND MaNV=@MaNV AND LyDo=@LyDo AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Đêm' GROUP BY MaNV, TenNV";
+				string sql = " select MaNV, TenNV, SUM(CASE WHEN TenLyDo = N'早餐' THEN 1 ELSE 0 END) AS SoLanAnSang,SUM(CASE WHEN TenLyDo = N'午餐' THEN 1 ELSE 0 END) AS SoLanAnTrua,SUM(CASE WHEN TenLyDo = N'晚餐' THEN 1 ELSE 0 END) AS SoLanAnToi,SUM(CASE WHEN TenLyDo = N'抽烟' THEN 1 ELSE 0 END) AS SoLanHutThuoc,SUM(CASE WHEN TenLyDo = N'厕所小' THEN 1 ELSE 0 END) AS SoLanTieuTien,SUM(CASE WHEN TenLyDo = N'厕所大' THEN 1 ELSE 0 END) AS SoLanDaiTien,SUM(CASE WHEN TenLyDo = N'其他' THEN 1 ELSE 0 END) AS SoLanKhac,SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime,SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio,COUNT(*) AS TongSoLan,SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChufrom QLDiLai where TrangThai = N'Đã vào' AND MaNV=@MaNV AND LyDo=@LyDo AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Đêm' GROUP BY MaNV, TenNV";
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
-					new SqlParameter("@TuNgay", TuNgay),
-					new SqlParameter("@DenNgay", DenNgay.AddHours(10)),
+					new SqlParameter("@TuNgay", TuNgay.AddHours(11)),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(11)),
 					new SqlParameter("@LyDo", LyDo),
 					new SqlParameter("@MaNV", manv)
 				});
@@ -188,7 +188,7 @@ namespace DataAccessLayer.Reponsitories
 				DataTable dataFromDBnew = this.DB.GetDataFromDB(sqlnew, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", DenNgay),
-					new SqlParameter("@DenNgay", DenNgay.AddHours(10)),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(11)),
 					new SqlParameter("@MaNV", manv)
 				});
 				dataFromDB.Merge(dataFromDBnew);
@@ -230,8 +230,8 @@ namespace DataAccessLayer.Reponsitories
 				string sql = " select Id, MaNV, TenNV, LyDo, TimeOut, TimeIn, TongTime, GhiChu  from QLDiLai where TrangThai = N'Đã vào' AND MaNV=@MaNV AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Đêm' ORDER BY Id DESC ";
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
-					new SqlParameter("@TuNgay", TuNgay),
-					new SqlParameter("@DenNgay", DenNgay.AddHours(10)),
+					new SqlParameter("@TuNgay", TuNgay.AddHours(11)),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(11)),
 					new SqlParameter("@MaNV", manv)
 				});
 				result = dataFromDB;
@@ -250,7 +250,7 @@ namespace DataAccessLayer.Reponsitories
 			DataTable result;
 			try
 			{
-				string sql = " select MaNV, TenNV, SUM(CASE WHEN LyDo = N'早餐（35 分钟）- Breakfast (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnSang, SUM(CASE WHEN LyDo = N'午餐（35 分钟）- Lunch (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnTrua, SUM(CASE WHEN LyDo = N'晚餐（35 分钟）- Dinner (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnToi, SUM(CASE WHEN LyDo = N'抽烟（10 分钟）- Smoking (10 minutes)' THEN 1 ELSE 0 END) AS SoLanHutThuoc, SUM(CASE WHEN LyDo = N'厕所小（10 分钟）- CR (10 minutes)' THEN 1 ELSE 0 END) AS SoLanTieuTien, SUM(CASE WHEN LyDo = N'厕所大（15 分钟）- CR (15 minutes)' THEN 1 ELSE 0 END) AS SoLanDaiTien, SUM(CASE WHEN LyDo = N'其他（5 分钟）- Other (5 minutes)' THEN 1 ELSE 0 END) AS SoLanKhac, SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime, SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio, COUNT(*) AS TongSoLan, SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChu from QLDiLai where TrangThai = N'Đã vào' AND MaNV=@MaNV AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay GROUP BY MaNV, TenNV ";
+				string sql = " select MaNV, TenNV, SUM(CASE WHEN TenLyDo = N'早餐' THEN 1 ELSE 0 END) AS SoLanAnSang, SUM(CASE WHEN TenLyDo = N'午餐' THEN 1 ELSE 0 END) AS SoLanAnTrua, SUM(CASE WHEN TenLyDo = N'晚餐' THEN 1 ELSE 0 END) AS SoLanAnToi, SUM(CASE WHEN TenLyDo = N'抽烟' THEN 1 ELSE 0 END) AS SoLanHutThuoc, SUM(CASE WHEN TenLyDo = N'厕所小' THEN 1 ELSE 0 END) AS SoLanTieuTien, SUM(CASE WHEN TenLyDo = N'厕所大' THEN 1 ELSE 0 END) AS SoLanDaiTien, SUM(CASE WHEN TenLyDo = N'其他' THEN 1 ELSE 0 END) AS SoLanKhac, SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime, SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio, COUNT(*) AS TongSoLan, SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChu from QLDiLai where TrangThai = N'Đã vào' AND MaNV=@MaNV AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay GROUP BY MaNV, TenNV ";
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", TuNgay),
@@ -271,7 +271,7 @@ namespace DataAccessLayer.Reponsitories
 			DataTable result;
 			try
 			{
-				string sql = " select MaNV, TenNV, SUM(CASE WHEN LyDo = N'早餐（35 分钟）- Breakfast (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnSang, SUM(CASE WHEN LyDo = N'午餐（35 分钟）- Lunch (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnTrua, SUM(CASE WHEN LyDo = N'晚餐（35 分钟）- Dinner (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnToi, SUM(CASE WHEN LyDo = N'抽烟（10 分钟）- Smoking (10 minutes)' THEN 1 ELSE 0 END) AS SoLanHutThuoc, SUM(CASE WHEN LyDo = N'厕所小（10 分钟）- CR (10 minutes)' THEN 1 ELSE 0 END) AS SoLanTieuTien, SUM(CASE WHEN LyDo = N'厕所大（15 分钟）- CR (15 minutes)' THEN 1 ELSE 0 END) AS SoLanDaiTien, SUM(CASE WHEN LyDo = N'其他（5 分钟）- Other (5 minutes)' THEN 1 ELSE 0 END) AS SoLanKhac, SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime, SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio, COUNT(*) AS TongSoLan, SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChu from QLDiLai where TrangThai = N'Đã vào' AND MaNV=@MaNV AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Ngày' GROUP BY MaNV, TenNV ";
+				string sql = " select MaNV, TenNV, SUM(CASE WHEN TenLyDo = N'早餐' THEN 1 ELSE 0 END) AS SoLanAnSang, SUM(CASE WHEN TenLyDo = N'午餐' THEN 1 ELSE 0 END) AS SoLanAnTrua, SUM(CASE WHEN TenLyDo = N'晚餐' THEN 1 ELSE 0 END) AS SoLanAnToi, SUM(CASE WHEN TenLyDo = N'抽烟' THEN 1 ELSE 0 END) AS SoLanHutThuoc, SUM(CASE WHEN TenLyDo = N'厕所小' THEN 1 ELSE 0 END) AS SoLanTieuTien, SUM(CASE WHEN TenLyDo = N'厕所大' THEN 1 ELSE 0 END) AS SoLanDaiTien, SUM(CASE WHEN TenLyDo = N'其他' THEN 1 ELSE 0 END) AS SoLanKhac, SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime, SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio, COUNT(*) AS TongSoLan, SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChu from QLDiLai where TrangThai = N'Đã vào' AND MaNV=@MaNV AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Ngày' GROUP BY MaNV, TenNV ";
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", TuNgay),
@@ -292,11 +292,11 @@ namespace DataAccessLayer.Reponsitories
 			DataTable result;
 			try
 			{
-				string sql = " select MaNV, TenNV, SUM(CASE WHEN LyDo = N'早餐（35 分钟）- Breakfast (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnSang, SUM(CASE WHEN LyDo = N'午餐（35 分钟）- Lunch (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnTrua, SUM(CASE WHEN LyDo = N'晚餐（35 分钟）- Dinner (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnToi, SUM(CASE WHEN LyDo = N'抽烟（10 分钟）- Smoking (10 minutes)' THEN 1 ELSE 0 END) AS SoLanHutThuoc, SUM(CASE WHEN LyDo = N'厕所小（10 分钟）- CR (10 minutes)' THEN 1 ELSE 0 END) AS SoLanTieuTien, SUM(CASE WHEN LyDo = N'厕所大（15 分钟）- CR (15 minutes)' THEN 1 ELSE 0 END) AS SoLanDaiTien, SUM(CASE WHEN LyDo = N'其他（5 分钟）- Other (5 minutes)' THEN 1 ELSE 0 END) AS SoLanKhac, SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime, SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio, COUNT(*) AS TongSoLan, SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChu from QLDiLai where TrangThai = N'Đã vào' AND MaNV=@MaNV AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Đêm' GROUP BY MaNV, TenNV ";
+				string sql = " select MaNV, TenNV, SUM(CASE WHEN TenLyDo = N'早餐' THEN 1 ELSE 0 END) AS SoLanAnSang, SUM(CASE WHEN TenLyDo = N'午餐' THEN 1 ELSE 0 END) AS SoLanAnTrua, SUM(CASE WHEN TenLyDo = N'晚餐' THEN 1 ELSE 0 END) AS SoLanAnToi, SUM(CASE WHEN TenLyDo = N'抽烟' THEN 1 ELSE 0 END) AS SoLanHutThuoc, SUM(CASE WHEN TenLyDo = N'厕所小' THEN 1 ELSE 0 END) AS SoLanTieuTien, SUM(CASE WHEN TenLyDo = N'厕所大' THEN 1 ELSE 0 END) AS SoLanDaiTien, SUM(CASE WHEN TenLyDo = N'其他' THEN 1 ELSE 0 END) AS SoLanKhac, SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime, SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio, COUNT(*) AS TongSoLan, SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChu from QLDiLai where TrangThai = N'Đã vào' AND MaNV=@MaNV AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Đêm' GROUP BY MaNV, TenNV ";
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
-					new SqlParameter("@TuNgay", TuNgay),
-					new SqlParameter("@DenNgay", DenNgay.AddHours(10)),
+					new SqlParameter("@TuNgay", TuNgay.AddHours(11)),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(11)),
 					new SqlParameter("@MaNV", manv)
 				});
 				result = dataFromDB;
@@ -326,7 +326,7 @@ namespace DataAccessLayer.Reponsitories
 				DataTable dataFromDBnew = this.DB.GetDataFromDB(sqlnew, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", DenNgay),
-					new SqlParameter("@DenNgay", DenNgay.AddHours(10)),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(11)),
 					new SqlParameter("@LyDo", LyDo)
 				});
 				dataFromDB.Merge(dataFromDBnew);
@@ -369,8 +369,8 @@ namespace DataAccessLayer.Reponsitories
 				string sql = " select Id, MaNV, TenNV, LyDo, TimeOut, TimeIn, TongTime, GhiChu  from QLDiLai where TrangThai = N'Đã vào' AND LyDo=@LyDo AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Đêm' ORDER BY Id DESC ";
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
-					new SqlParameter("@TuNgay", TuNgay),
-					new SqlParameter("@DenNgay", DenNgay.AddHours(10)),
+					new SqlParameter("@TuNgay", TuNgay.AddHours(11)),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(11)),
 					new SqlParameter("@LyDo", LyDo)
 				});
 				result = dataFromDB;
@@ -389,7 +389,7 @@ namespace DataAccessLayer.Reponsitories
 			DataTable result;
 			try
 			{
-				string sql = " select MaNV, TenNV, SUM(CASE WHEN LyDo = N'早餐（35 分钟）- Breakfast (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnSang, SUM(CASE WHEN LyDo = N'午餐（35 分钟）- Lunch (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnTrua, SUM(CASE WHEN LyDo = N'晚餐（35 分钟）- Dinner (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnToi, SUM(CASE WHEN LyDo = N'抽烟（10 分钟）- Smoking (10 minutes)' THEN 1 ELSE 0 END) AS SoLanHutThuoc, SUM(CASE WHEN LyDo = N'厕所小（10 分钟）- CR (10 minutes)' THEN 1 ELSE 0 END) AS SoLanTieuTien, SUM(CASE WHEN LyDo = N'厕所大（15 分钟）- CR (15 minutes)' THEN 1 ELSE 0 END) AS SoLanDaiTien, SUM(CASE WHEN LyDo = N'其他（5 分钟）- Other (5 minutes)' THEN 1 ELSE 0 END) AS SoLanKhac, SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime, SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio, COUNT(*) AS TongSoLan, SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChu  from QLDiLai where TrangThai = N'Đã vào' AND LyDo=@LyDo AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay GROUP BY MaNV, TenNV ";
+				string sql = " select MaNV, TenNV, SUM(CASE WHEN LyDo = N'早餐' THEN 1 ELSE 0 END) AS SoLanAnSang, SUM(CASE WHEN TenLyDo = N'午餐' THEN 1 ELSE 0 END) AS SoLanAnTrua, SUM(CASE WHEN TenLyDo = N'晚餐' THEN 1 ELSE 0 END) AS SoLanAnToi, SUM(CASE WHEN TenLyDo = N'抽烟' THEN 1 ELSE 0 END) AS SoLanHutThuoc, SUM(CASE WHEN TenLyDo = N'厕所小' THEN 1 ELSE 0 END) AS SoLanTieuTien, SUM(CASE WHEN TenLyDo = N'厕所大' THEN 1 ELSE 0 END) AS SoLanDaiTien, SUM(CASE WHEN TenLyDo = N'其他' THEN 1 ELSE 0 END) AS SoLanKhac, SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime, SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio, COUNT(*) AS TongSoLan, SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChu  from QLDiLai where TrangThai = N'Đã vào' AND LyDo=@LyDo AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay GROUP BY MaNV, TenNV ";
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", TuNgay),
@@ -410,7 +410,7 @@ namespace DataAccessLayer.Reponsitories
 			DataTable result;
 			try
 			{
-				string sql = " select MaNV, TenNV, SUM(CASE WHEN LyDo = N'早餐（35 分钟）- Breakfast (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnSang, SUM(CASE WHEN LyDo = N'午餐（35 分钟）- Lunch (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnTrua, SUM(CASE WHEN LyDo = N'晚餐（35 分钟）- Dinner (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnToi, SUM(CASE WHEN LyDo = N'抽烟（10 分钟）- Smoking (10 minutes)' THEN 1 ELSE 0 END) AS SoLanHutThuoc, SUM(CASE WHEN LyDo = N'厕所小（10 分钟）- CR (10 minutes)' THEN 1 ELSE 0 END) AS SoLanTieuTien, SUM(CASE WHEN LyDo = N'厕所大（15 分钟）- CR (15 minutes)' THEN 1 ELSE 0 END) AS SoLanDaiTien, SUM(CASE WHEN LyDo = N'其他（5 分钟）- Other (5 minutes)' THEN 1 ELSE 0 END) AS SoLanKhac, SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime, SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio, COUNT(*) AS TongSoLan, SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChu  from QLDiLai where TrangThai = N'Đã vào' AND LyDo=@LyDo AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Ngày' GROUP BY MaNV, TenNV ";
+				string sql = " select MaNV, TenNV, SUM(CASE WHEN LyDo = N'早餐' THEN 1 ELSE 0 END) AS SoLanAnSang, SUM(CASE WHEN TenLyDo = N'午餐' THEN 1 ELSE 0 END) AS SoLanAnTrua, SUM(CASE WHEN TenLyDo = N'晚餐' THEN 1 ELSE 0 END) AS SoLanAnToi, SUM(CASE WHEN TenLyDo = N'抽烟' THEN 1 ELSE 0 END) AS SoLanHutThuoc, SUM(CASE WHEN TenLyDo = N'厕所小' THEN 1 ELSE 0 END) AS SoLanTieuTien, SUM(CASE WHEN TenLyDo = N'厕所大' THEN 1 ELSE 0 END) AS SoLanDaiTien, SUM(CASE WHEN TenLyDo = N'其他' THEN 1 ELSE 0 END) AS SoLanKhac, SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime, SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio, COUNT(*) AS TongSoLan, SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChu  from QLDiLai where TrangThai = N'Đã vào' AND LyDo=@LyDo AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Ngày' GROUP BY MaNV, TenNV ";
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", TuNgay),
@@ -431,11 +431,11 @@ namespace DataAccessLayer.Reponsitories
 			DataTable result;
 			try
 			{
-				string sql = " select MaNV, TenNV, SUM(CASE WHEN LyDo = N'早餐（35 分钟）- Breakfast (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnSang, SUM(CASE WHEN LyDo = N'午餐（35 分钟）- Lunch (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnTrua, SUM(CASE WHEN LyDo = N'晚餐（35 分钟）- Dinner (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnToi, SUM(CASE WHEN LyDo = N'抽烟（10 分钟）- Smoking (10 minutes)' THEN 1 ELSE 0 END) AS SoLanHutThuoc, SUM(CASE WHEN LyDo = N'厕所小（10 分钟）- CR (10 minutes)' THEN 1 ELSE 0 END) AS SoLanTieuTien, SUM(CASE WHEN LyDo = N'厕所大（15 分钟）- CR (15 minutes)' THEN 1 ELSE 0 END) AS SoLanDaiTien, SUM(CASE WHEN LyDo = N'其他（5 分钟）- Other (5 minutes)' THEN 1 ELSE 0 END) AS SoLanKhac, SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime, SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio, COUNT(*) AS TongSoLan, SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChu  from QLDiLai where TrangThai = N'Đã vào' AND LyDo=@LyDo AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Đêm' GROUP BY MaNV, TenNV ";
+				string sql = " select MaNV, TenNV, SUM(CASE WHEN LyDo = N'早餐' THEN 1 ELSE 0 END) AS SoLanAnSang, SUM(CASE WHEN TenLyDo = N'午餐' THEN 1 ELSE 0 END) AS SoLanAnTrua, SUM(CASE WHEN TenLyDo = N'晚餐' THEN 1 ELSE 0 END) AS SoLanAnToi, SUM(CASE WHEN TenLyDo = N'抽烟' THEN 1 ELSE 0 END) AS SoLanHutThuoc, SUM(CASE WHEN TenLyDo = N'厕所小' THEN 1 ELSE 0 END) AS SoLanTieuTien, SUM(CASE WHEN TenLyDo = N'厕所大' THEN 1 ELSE 0 END) AS SoLanDaiTien, SUM(CASE WHEN TenLyDo = N'其他' THEN 1 ELSE 0 END) AS SoLanKhac, SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime, SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio, COUNT(*) AS TongSoLan, SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChu  from QLDiLai where TrangThai = N'Đã vào' AND LyDo=@LyDo AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Đêm' GROUP BY MaNV, TenNV ";
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
-					new SqlParameter("@TuNgay", TuNgay),
-					new SqlParameter("@DenNgay", DenNgay.AddHours(10)),
+					new SqlParameter("@TuNgay", TuNgay.AddHours(11)),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(11)),
 					new SqlParameter("@LyDo", LyDo)
 				});
 				result = dataFromDB;
@@ -464,7 +464,7 @@ namespace DataAccessLayer.Reponsitories
 				DataTable dataFromDBnew = this.DB.GetDataFromDB(sqlnew, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", DenNgay),
-					new SqlParameter("@DenNgay", DenNgay.AddHours(10))
+					new SqlParameter("@DenNgay", DenNgay.AddHours(11))
 				});
 				dataFromDB.Merge(dataFromDBnew);
 				result = dataFromDB;
@@ -504,8 +504,8 @@ namespace DataAccessLayer.Reponsitories
 				string sql = " select Id, MaNV, TenNV, LyDo, TimeOut, TimeIn, TongTime, GhiChu  from QLDiLai where TrangThai = N'Đã vào' AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Đêm' ORDER BY Id DESC ";
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
-					new SqlParameter("@TuNgay", TuNgay),
-					new SqlParameter("@DenNgay", DenNgay.AddHours(10))
+					new SqlParameter("@TuNgay", TuNgay.AddHours(11)),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(11))
 				});
 				result = dataFromDB;
 			}
@@ -523,7 +523,7 @@ namespace DataAccessLayer.Reponsitories
 			DataTable result;
 			try
 			{
-				string sql = " select MaNV, TenNV, SUM(CASE WHEN LyDo = N'早餐（35 分钟）- Breakfast (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnSang, SUM(CASE WHEN LyDo = N'午餐（35 分钟）- Lunch (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnTrua, SUM(CASE WHEN LyDo = N'晚餐（35 分钟）- Dinner (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnToi, SUM(CASE WHEN LyDo = N'抽烟（10 分钟）- Smoking (10 minutes)' THEN 1 ELSE 0 END) AS SoLanHutThuoc, SUM(CASE WHEN LyDo = N'厕所小（10 分钟）- CR (10 minutes)' THEN 1 ELSE 0 END) AS SoLanTieuTien, SUM(CASE WHEN LyDo = N'厕所大（15 分钟）- CR (15 minutes)' THEN 1 ELSE 0 END) AS SoLanDaiTien, SUM(CASE WHEN LyDo = N'其他（5 分钟）- Other (5 minutes)' THEN 1 ELSE 0 END) AS SoLanKhac, SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime, SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio, COUNT(*) AS TongSoLan, SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChu  from QLDiLai where TrangThai = N'Đã vào' AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay GROUP BY MaNV, TenNV";
+				string sql = " select MaNV, TenNV, SUM(CASE WHEN TenLyDo = N'早餐' THEN 1 ELSE 0 END) AS SoLanAnSang, SUM(CASE WHEN TenLyDo = N'午餐' THEN 1 ELSE 0 END) AS SoLanAnTrua, SUM(CASE WHEN TenLyDo = N'晚餐' THEN 1 ELSE 0 END) AS SoLanAnToi, SUM(CASE WHEN TenLyDo = N'抽烟' THEN 1 ELSE 0 END) AS SoLanHutThuoc, SUM(CASE WHEN TenLyDo = N'厕所小' THEN 1 ELSE 0 END) AS SoLanTieuTien, SUM(CASE WHEN TenLyDo = N'厕所大' THEN 1 ELSE 0 END) AS SoLanDaiTien, SUM(CASE WHEN TenLyDo = N'其他' THEN 1 ELSE 0 END) AS SoLanKhac, SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime, SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio, COUNT(*) AS TongSoLan, SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChu  from QLDiLai where TrangThai = N'Đã vào' AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay GROUP BY MaNV, TenNV";
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", TuNgay),
@@ -543,7 +543,7 @@ namespace DataAccessLayer.Reponsitories
 			DataTable result;
 			try
 			{
-				string sql = " select MaNV, TenNV, SUM(CASE WHEN LyDo = N'早餐（35 分钟）- Breakfast (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnSang, SUM(CASE WHEN LyDo = N'午餐（35 分钟）- Lunch (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnTrua, SUM(CASE WHEN LyDo = N'晚餐（35 分钟）- Dinner (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnToi, SUM(CASE WHEN LyDo = N'抽烟（10 分钟）- Smoking (10 minutes)' THEN 1 ELSE 0 END) AS SoLanHutThuoc, SUM(CASE WHEN LyDo = N'厕所小（10 分钟）- CR (10 minutes)' THEN 1 ELSE 0 END) AS SoLanTieuTien, SUM(CASE WHEN LyDo = N'厕所大（15 分钟）- CR (15 minutes)' THEN 1 ELSE 0 END) AS SoLanDaiTien, SUM(CASE WHEN LyDo = N'其他（5 分钟）- Other (5 minutes)' THEN 1 ELSE 0 END) AS SoLanKhac, SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime, SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio, COUNT(*) AS TongSoLan, SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChu  from QLDiLai where TrangThai = N'Đã vào' AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Ngày' GROUP BY MaNV, TenNV";
+				string sql = " select MaNV, TenNV, SUM(CASE WHEN TenLyDo = N'早餐' THEN 1 ELSE 0 END) AS SoLanAnSang, SUM(CASE WHEN TenLyDo = N'午餐' THEN 1 ELSE 0 END) AS SoLanAnTrua, SUM(CASE WHEN TenLyDo = N'晚餐' THEN 1 ELSE 0 END) AS SoLanAnToi, SUM(CASE WHEN TenLyDo = N'抽烟' THEN 1 ELSE 0 END) AS SoLanHutThuoc, SUM(CASE WHEN TenLyDo = N'厕所小' THEN 1 ELSE 0 END) AS SoLanTieuTien, SUM(CASE WHEN TenLyDo = N'厕所大' THEN 1 ELSE 0 END) AS SoLanDaiTien, SUM(CASE WHEN TenLyDo = N'其他' THEN 1 ELSE 0 END) AS SoLanKhac, SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime, SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio, COUNT(*) AS TongSoLan, SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChu  from QLDiLai where TrangThai = N'Đã vào' AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Ngày' GROUP BY MaNV, TenNV";
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
 					new SqlParameter("@TuNgay", TuNgay),
@@ -563,11 +563,11 @@ namespace DataAccessLayer.Reponsitories
 			DataTable result;
 			try
 			{
-				string sql = " select MaNV, TenNV, SUM(CASE WHEN LyDo = N'早餐（35 分钟）- Breakfast (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnSang, SUM(CASE WHEN LyDo = N'午餐（35 分钟）- Lunch (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnTrua, SUM(CASE WHEN LyDo = N'晚餐（35 分钟）- Dinner (35 minutes)' THEN 1 ELSE 0 END) AS SoLanAnToi, SUM(CASE WHEN LyDo = N'抽烟（10 分钟）- Smoking (10 minutes)' THEN 1 ELSE 0 END) AS SoLanHutThuoc, SUM(CASE WHEN LyDo = N'厕所小（10 分钟）- CR (10 minutes)' THEN 1 ELSE 0 END) AS SoLanTieuTien, SUM(CASE WHEN LyDo = N'厕所大（15 分钟）- CR (15 minutes)' THEN 1 ELSE 0 END) AS SoLanDaiTien, SUM(CASE WHEN LyDo = N'其他（5 分钟）- Other (5 minutes)' THEN 1 ELSE 0 END) AS SoLanKhac, SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime, SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio, COUNT(*) AS TongSoLan, SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChu  from QLDiLai where TrangThai = N'Đã vào' AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Đêm' GROUP BY MaNV, TenNV";
+				string sql = " select MaNV, TenNV, SUM(CASE WHEN TenLyDo = N'早餐' THEN 1 ELSE 0 END) AS SoLanAnSang, SUM(CASE WHEN TenLyDo = N'午餐' THEN 1 ELSE 0 END) AS SoLanAnTrua, SUM(CASE WHEN TenLyDo = N'晚餐' THEN 1 ELSE 0 END) AS SoLanAnToi, SUM(CASE WHEN TenLyDo = N'抽烟' THEN 1 ELSE 0 END) AS SoLanHutThuoc, SUM(CASE WHEN TenLyDo = N'厕所小' THEN 1 ELSE 0 END) AS SoLanTieuTien, SUM(CASE WHEN TenLyDo = N'厕所大' THEN 1 ELSE 0 END) AS SoLanDaiTien, SUM(CASE WHEN TenLyDo = N'其他' THEN 1 ELSE 0 END) AS SoLanKhac, SUM(CASE WHEN TongTimeSuDung < 0 THEN -TongTimeSuDung ELSE 0 END) + SUM(CASE WHEN TongTimeSuDung > 0 THEN TongTimeSuDung ELSE 0 END) AS TongTime, SUM(CASE WHEN TongTime > 0 THEN TongTime ELSE 0 END) AS TongTimeQuaGio, COUNT(*) AS TongSoLan, SUM(CASE WHEN TongTime > 0 THEN 1 ELSE 0 END) AS TongSoLanQuaGio, COUNT(GhiChu) AS TongSoLanGhiChu  from QLDiLai where TrangThai = N'Đã vào' AND TimeOut >= @TuNgay AND TimeOut <= @DenNgay AND CaLam=N'Ca Đêm' GROUP BY MaNV, TenNV";
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
-					new SqlParameter("@TuNgay", TuNgay),
-					new SqlParameter("@DenNgay", DenNgay.AddHours(10))
+					new SqlParameter("@TuNgay", TuNgay.AddHours(11)),
+					new SqlParameter("@DenNgay", DenNgay.AddHours(11))
 				});
 				result = dataFromDB;
 			}
@@ -925,12 +925,13 @@ namespace DataAccessLayer.Reponsitories
 			{
 				try
 				{
-					string sql = " insert into QLDiLai( MaNV , TenNV, LyDo, TimeOut, TrangThai, CaLam)  values( @MaNV, @TenNV,  @LyDo,  @TimeOut,  @TrangThai,  @CaLam)";
+					string sql = " insert into QLDiLai( MaNV , TenNV, LyDo, TenLyDo, TimeOut, TrangThai, CaLam)  values( @MaNV, @TenNV,  @LyDo,  @TenLyDo,  @TimeOut,  @TrangThai,  @CaLam)";
 					bool flag5 = this.DB.ProcessData(sql, CommandType.Text, ref error, new SqlParameter[]
 					{
 						new SqlParameter("@MaNV", Entity.MaNV),
 						new SqlParameter("@TenNV", Entity.TenNV),
 						new SqlParameter("@LyDo", Entity.LyDo),
+						new SqlParameter("@TenLyDo", Entity.TenLyDo),
 						new SqlParameter("@TimeOut", Entity.TimeOut),
 						new SqlParameter("@CaLam", Entity.CaLam),
 						new SqlParameter("@TrangThai", Entity.TrangThai)

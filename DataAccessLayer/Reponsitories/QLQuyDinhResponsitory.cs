@@ -130,15 +130,15 @@ namespace DataAccessLayer.Reponsitories
 			}
 			return result;
 		}
-		public DataTable TenQuyDinhById(int manv, ref string error)
+		public DataTable TenQuyDinhById(int Id, ref string error)
 		{
 			DataTable result;
 			try
 			{
-				string sql = " select Id, Ten  from QLNhanSu where Id=@Id ";
+				string sql = " select Id, QuyDinh  from QLQuyDinh where Id=@Id ";
 				DataTable dataFromDB = this.DB.GetDataFromDB(sql, CommandType.Text, ref error, new SqlParameter[]
 				{
-					new SqlParameter("@Id", manv)
+					new SqlParameter("@Id", Id)
 				});
 				result = dataFromDB;
 			}

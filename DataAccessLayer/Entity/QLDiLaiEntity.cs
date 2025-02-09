@@ -25,6 +25,7 @@ namespace DataAccessLayer.Entity
 		// (get) Token: 0x060000F9 RID: 249 RVA: 0x00005F77 File Offset: 0x00004177
 		// (set) Token: 0x060000FA RID: 250 RVA: 0x00005F7F File Offset: 0x0000417F
 		public string LyDo { get; set; }
+		public string TenLyDo { get; set; }
 
 		// Token: 0x1700003C RID: 60
 		// (get) Token: 0x060000FB RID: 251 RVA: 0x00005F88 File Offset: 0x00004188

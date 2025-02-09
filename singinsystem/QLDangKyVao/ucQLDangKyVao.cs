@@ -278,6 +278,10 @@ namespace singinsystem.QLDangKyVao
 					QLDiLaiEntity qldiLaiEntity = new QLDiLaiEntity();
 					qldiLaiEntity.MaNV = int.Parse(ucQLDangKyVao.LuuThongTin.MaNV);
 					qldiLaiEntity.LyDo = ucQLDangKyVao.LuuThongTin.LyDo;
+					char[] brackets = { '(', '（' }; // Bao gồm cả ngoặc đơn bình thường và Unicode Trung Quốc
+					int index = qldiLaiEntity.LyDo.IndexOfAny(brackets);
+
+					qldiLaiEntity.TenLyDo = index > 0 ? qldiLaiEntity.LyDo.Substring(0, index).Trim(): qldiLaiEntity.LyDo;
 					qldiLaiEntity.TimeOut = DateTime.Now;
 					qldiLaiEntity.TrangThai = "Đã ra";
 					bool flag3 = this.QLDLManager.ThemQLDangKyVao(qldiLaiEntity, ref this.error);

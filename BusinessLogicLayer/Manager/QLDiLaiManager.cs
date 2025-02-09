@@ -299,11 +299,11 @@ namespace BusinessLogicLayer.Manager
 						{
 							Entity.GioVaoCa = DateTime.Parse(dataTable2.Rows[i]["GioLamViec"].ToString());
 							DateTime GioBatDauLam = DateTime.Today.Add(DateTime.Parse(dataTable2.Rows[i]["GioLamViec"].ToString()).TimeOfDay);
-							if (GioBatDauLam.TimeOfDay > new TimeSpan(6, 0, 0) && GioBatDauLam.TimeOfDay < new TimeSpan(18, 0, 0))
+							if (GioBatDauLam.TimeOfDay > new TimeSpan(5, 0, 0) && GioBatDauLam.TimeOfDay < new TimeSpan(18, 0, 0))
 							{
 								Entity.CaLam = "Ca Ngày";
 							}
-							if (GioBatDauLam.TimeOfDay > new TimeSpan(18, 0, 0) || GioBatDauLam.TimeOfDay < new TimeSpan(5, 0, 0))
+							else
 							{
 								Entity.CaLam = "Ca Đêm";
 							}

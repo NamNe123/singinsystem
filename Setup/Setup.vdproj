@@ -28,25 +28,25 @@
         "Entry"
         {
         "MsmKey" = "8:_1F1425DD94A107B78D2679C6C21FB8C4"
-        "OwnerKey" = "8:_452B12998B6D42C2ADCC81ECB672E069"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_452B12998B6D42C2ADCC81ECB672E069"
-        "OwnerKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_DB477EA3447C4C20AC63E28200187925"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_846ACB90C08653A9321632CC42A857B1"
-        "OwnerKey" = "8:_452B12998B6D42C2ADCC81ECB672E069"
+        "OwnerKey" = "8:_DB477EA3447C4C20AC63E28200187925"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_B2D463E4F1D866A6D69DD81BBE31C40C"
-        "OwnerKey" = "8:_452B12998B6D42C2ADCC81ECB672E069"
+        "OwnerKey" = "8:_DB477EA3447C4C20AC63E28200187925"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DB477EA3447C4C20AC63E28200187925"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -58,7 +58,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_452B12998B6D42C2ADCC81ECB672E069"
+        "OwnerKey" = "8:_DB477EA3447C4C20AC63E28200187925"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -338,7 +338,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup"
         "ProductCode" = "8:{3A75D0D7-978B-4D90-9DDF-E64F0AE421C9}"
-        "PackageCode" = "8:{ED5F48C7-B3E2-4851-85BC-649628003FD0}"
+        "PackageCode" = "8:{9323889A-E6C3-4B33-A92E-C0C3A066AD00}"
         "UpgradeCode" = "8:{94418190-E370-4188-916E-F9C9318B314F}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -458,7 +458,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_9D03628900834D7BBBECC8FCE48F10AB"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_ADA4B7412EA8420AB8906AF1C73694C5"
             {
             "Name" = "8:Sign-in system"
             "Arguments" = "8:"
@@ -466,13 +466,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_452B12998B6D42C2ADCC81ECB672E069"
-            "Folder" = "8:_A5F60B81A06A49C786318674841A5D29"
+            "Target" = "8:_DB477EA3447C4C20AC63E28200187925"
+            "Folder" = "8:_05958214D1794EF19BEA8CF079423AF5"
             "WorkingFolder" = "8:_71C0C26A47D847FB89A89EFC49DCDF79"
             "Icon" = "8:_128B3043C72E43858E7DBD4ACCEFDE15"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D6D74DE1A6CF4834A768CD2971204176"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D50C32880B12463F9C21D0CA9893F639"
             {
             "Name" = "8:Sign-in system"
             "Arguments" = "8:"
@@ -480,8 +480,8 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_452B12998B6D42C2ADCC81ECB672E069"
-            "Folder" = "8:_05958214D1794EF19BEA8CF079423AF5"
+            "Target" = "8:_DB477EA3447C4C20AC63E28200187925"
+            "Folder" = "8:_A5F60B81A06A49C786318674841A5D29"
             "WorkingFolder" = "8:_71C0C26A47D847FB89A89EFC49DCDF79"
             "Icon" = "8:_128B3043C72E43858E7DBD4ACCEFDE15"
             "Feature" = "8:"
@@ -885,7 +885,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_452B12998B6D42C2ADCC81ECB672E069"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_DB477EA3447C4C20AC63E28200187925"
             {
             "SourcePath" = "8:..\\singinsystem\\obj\\Debug\\singinsystem.exe"
             "TargetName" = "8:"
