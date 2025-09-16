@@ -290,7 +290,7 @@ namespace singinsystem.QLDangKyVao
 					if (flag4)
 					{
 						CustomMessageBoxPhu.Show("开始出去 ！", "成功 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-						string test = "test new";
+						string test = "开始出去"+ qldiLaiEntity.LyDo;
 						SpeechSynthesizer reader = new SpeechSynthesizer();
 						//reader.Rate = ; giá trị -10 đến 10 điều chỉnh tốc độ đọc
                         reader.Speak(test);
@@ -344,7 +344,11 @@ namespace singinsystem.QLDangKyVao
 					ucQLDangKyVao.LuuThongTin.MaNV = "";
 					ucQLDangKyVao.LuuThongTin.LyDo = "";
 					this.cbLoaiDangKy.Text = "";
-					this.HienThiDanhSachQLDangKyVao();
+                    string test = "test new" ;
+                    SpeechSynthesizer reader = new SpeechSynthesizer();
+                    //reader.Rate = ; giá trị -10 đến 10 điều chỉnh tốc độ đọc
+                    reader.Speak(test);
+                    this.HienThiDanhSachQLDangKyVao();
 				}
 				else
 				{
