@@ -53,7 +53,7 @@ namespace singinsystem.QLDiLam
 		}
 		public void HienThiDuLieuVao_combo_NhanSu()
 		{
-			string connectionString = @"Data Source=DESKTOP-FQPDVRO\SQLEXPRESS;Initial Catalog=Learning_QLBH;Integrated Security=True";
+			string connectionString = @"Data Source=NGUYENNAM;Initial Catalog=Learning_QLBH;Integrated Security=True";
 			using (SqlConnection sqlConnection = new SqlConnection(connectionString))
 			{
 				try
@@ -97,7 +97,7 @@ namespace singinsystem.QLDiLam
 			if (flag)
 			{
 				this.isUpdating = true;
-				string connectionString = @"Data Source=DESKTOP-FQPDVRO\SQLEXPRESS;Initial Catalog=Learning_QLBH;Integrated Security=True";
+				string connectionString = @"Data Source=NGUYENNAM;Initial Catalog=Learning_QLBH;Integrated Security=True";
 				using (SqlConnection sqlConnection = new SqlConnection(connectionString))
 				{
 					try

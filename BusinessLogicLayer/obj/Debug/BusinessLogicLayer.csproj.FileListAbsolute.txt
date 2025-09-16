@@ -7,3 +7,12 @@ D:\github\singinsystem\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.Co
 D:\github\singinsystem\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
 D:\github\singinsystem\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
 D:\github\singinsystem\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.AssemblyReference.cache
+D:\update\github\singinsystem\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+D:\update\github\singinsystem\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+D:\update\github\singinsystem\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+D:\update\github\singinsystem\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+D:\update\github\singinsystem\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.AssemblyReference.cache
+D:\update\github\singinsystem\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+D:\update\github\singinsystem\BusinessLogicLayer\obj\Debug\Business.450209FB.Up2Date
+D:\update\github\singinsystem\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+D:\update\github\singinsystem\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
