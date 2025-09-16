@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\update\\github\\singinsystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5B06CD21-F9E1-4B97-ADB8-3517275C2191}|singinsystem\\singinsystem.csproj|d:\\update\\github\\singinsystem\\singinsystem\\qldangkyvao\\ucqldangkyvao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B06CD21-F9E1-4B97-ADB8-3517275C2191}|singinsystem\\singinsystem.csproj|solutionrelative:singinsystem\\qldangkyvao\\ucqldangkyvao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B06CD21-F9E1-4B97-ADB8-3517275C2191}|singinsystem\\singinsystem.csproj|d:\\update\\github\\singinsystem\\singinsystem\\qldangkyvao\\ucqldangkyvao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B06CD21-F9E1-4B97-ADB8-3517275C2191}|singinsystem\\singinsystem.csproj|solutionrelative:singinsystem\\qldangkyvao\\ucqldangkyvao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B06CD21-F9E1-4B97-ADB8-3517275C2191}|singinsystem\\singinsystem.csproj|d:\\update\\github\\singinsystem\\singinsystem\\qldilai\\ucqldilai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5B06CD21-F9E1-4B97-ADB8-3517275C2191}|singinsystem\\singinsystem.csproj|solutionrelative:singinsystem\\qldilai\\ucqldilai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5B06CD21-F9E1-4B97-ADB8-3517275C2191}|singinsystem\\singinsystem.csproj|d:\\update\\github\\singinsystem\\singinsystem\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{5B06CD21-F9E1-4B97-ADB8-3517275C2191}|singinsystem\\singinsystem.csproj|solutionrelative:singinsystem\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
@@ -19,6 +31,43 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ucQLDangKyVao.cs",
+              "DocumentMoniker": "D:\\update\\github\\singinsystem\\singinsystem\\QLDangKyVao\\ucQLDangKyVao.cs",
+              "RelativeDocumentMoniker": "singinsystem\\QLDangKyVao\\ucQLDangKyVao.cs",
+              "ToolTip": "D:\\update\\github\\singinsystem\\singinsystem\\QLDangKyVao\\ucQLDangKyVao.cs*",
+              "RelativeToolTip": "singinsystem\\QLDangKyVao\\ucQLDangKyVao.cs*",
+              "ViewState": "AgIAAAwBAAAAAAAAAAAAwCcBAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T07:24:05.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ucQLDangKyVao.cs [Design]",
+              "DocumentMoniker": "D:\\update\\github\\singinsystem\\singinsystem\\QLDangKyVao\\ucQLDangKyVao.cs",
+              "RelativeDocumentMoniker": "singinsystem\\QLDangKyVao\\ucQLDangKyVao.cs",
+              "ToolTip": "D:\\update\\github\\singinsystem\\singinsystem\\QLDangKyVao\\ucQLDangKyVao.cs [Design]*",
+              "RelativeToolTip": "singinsystem\\QLDangKyVao\\ucQLDangKyVao.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T07:06:41.592Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ucQLDiLai.cs [Design]",
+              "DocumentMoniker": "D:\\update\\github\\singinsystem\\singinsystem\\QLDiLai\\ucQLDiLai.cs",
+              "RelativeDocumentMoniker": "singinsystem\\QLDiLai\\ucQLDiLai.cs",
+              "ToolTip": "D:\\update\\github\\singinsystem\\singinsystem\\QLDiLai\\ucQLDiLai.cs [Design]",
+              "RelativeToolTip": "singinsystem\\QLDiLai\\ucQLDiLai.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T07:05:51.896Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "App.config",
               "DocumentMoniker": "D:\\update\\github\\singinsystem\\singinsystem\\App.config",
               "RelativeDocumentMoniker": "singinsystem\\App.config",

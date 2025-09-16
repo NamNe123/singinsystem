@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Speech.Synthesis;
 
 namespace singinsystem.QLDangKyVao
 {
@@ -289,7 +290,12 @@ namespace singinsystem.QLDangKyVao
 					if (flag4)
 					{
 						CustomMessageBoxPhu.Show("开始出去 ！", "成功 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-					}
+						string test = "test new";
+						SpeechSynthesizer reader = new SpeechSynthesizer();
+						//reader.Rate = ; giá trị -10 đến 10 điều chỉnh tốc độ đọc
+                        reader.Speak(test);
+
+                    }
 					else
 					{
 						bool flag5 = this.error == "=> 不能再选这个选项 <= 请选其他选项";
