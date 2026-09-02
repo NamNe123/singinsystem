@@ -221,7 +221,7 @@ namespace singinsystem.QLDangKyVao
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn1.FillWeight = 70F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "规定";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Regulation";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -234,7 +234,7 @@ namespace singinsystem.QLDangKyVao
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTextBoxColumn2.FillWeight = 30F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "扣分";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Deduct points";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -330,7 +330,7 @@ namespace singinsystem.QLDangKyVao
             // MaNV
             // 
             this.MaNV.DataPropertyName = "MaNV";
-            this.MaNV.HeaderText = "代码";
+            this.MaNV.HeaderText = "Code";
             this.MaNV.MinimumWidth = 6;
             this.MaNV.Name = "MaNV";
             this.MaNV.Width = 125;
@@ -340,7 +340,7 @@ namespace singinsystem.QLDangKyVao
             this.TenNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TenNV.DataPropertyName = "TenNV";
             this.TenNV.FillWeight = 150F;
-            this.TenNV.HeaderText = "姓名";
+            this.TenNV.HeaderText = "Name";
             this.TenNV.MinimumWidth = 6;
             this.TenNV.Name = "TenNV";
             // 
@@ -348,7 +348,7 @@ namespace singinsystem.QLDangKyVao
             // 
             this.LyDo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.LyDo.DataPropertyName = "LyDo";
-            this.LyDo.HeaderText = "理由";
+            this.LyDo.HeaderText = "Reason";
             this.LyDo.MinimumWidth = 6;
             this.LyDo.Name = "LyDo";
             // 
@@ -359,7 +359,7 @@ namespace singinsystem.QLDangKyVao
             dataGridViewCellStyle7.Format = "G";
             dataGridViewCellStyle7.NullValue = null;
             this.TimeOut.DefaultCellStyle = dataGridViewCellStyle7;
-            this.TimeOut.HeaderText = "出去时间";
+            this.TimeOut.HeaderText = "Time Out";
             this.TimeOut.MinimumWidth = 6;
             this.TimeOut.Name = "TimeOut";
             // 
@@ -383,12 +383,12 @@ namespace singinsystem.QLDangKyVao
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.btnCheckIn.DefaultCellStyle = dataGridViewCellStyle8;
-            this.btnCheckIn.HeaderText = "进入";
+            this.btnCheckIn.HeaderText = "Check In";
             this.btnCheckIn.MinimumWidth = 6;
             this.btnCheckIn.Name = "btnCheckIn";
             this.btnCheckIn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.btnCheckIn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.btnCheckIn.Text = "进入 - Punch - in";
+            this.btnCheckIn.Text = "Check In";
             this.btnCheckIn.UseColumnTextForButtonValue = true;
             // 
             // tableLayoutPanel8
@@ -396,7 +396,7 @@ namespace singinsystem.QLDangKyVao
             this.tableLayoutPanel8.ColumnCount = 3;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.65399F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.34601F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 351F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 353F));
             this.tableLayoutPanel8.Controls.Add(this.panel7, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.panel8, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -412,15 +412,15 @@ namespace singinsystem.QLDangKyVao
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(3, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(280, 65);
+            this.panel7.Size = new System.Drawing.Size(279, 65);
             this.panel7.TabIndex = 1;
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.btnCheckOut);
-            this.panel8.Location = new System.Drawing.Point(289, 3);
+            this.panel8.Location = new System.Drawing.Point(288, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(213, 50);
+            this.panel8.Size = new System.Drawing.Size(212, 50);
             this.panel8.TabIndex = 2;
             // 
             // btnCheckOut
@@ -432,7 +432,7 @@ namespace singinsystem.QLDangKyVao
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(217, 47);
             this.btnCheckOut.TabIndex = 4;
-            this.btnCheckOut.Text = "出去 - Punch - out";
+            this.btnCheckOut.Text = "Punch - out";
             this.btnCheckOut.UseVisualStyleBackColor = false;
             this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
@@ -441,7 +441,7 @@ namespace singinsystem.QLDangKyVao
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.88409F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.11591F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 407F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 409F));
             this.tableLayoutPanel7.Controls.Add(this.cbLoaiDangKy, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel6, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -457,9 +457,9 @@ namespace singinsystem.QLDangKyVao
             this.cbLoaiDangKy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbLoaiDangKy.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLoaiDangKy.FormattingEnabled = true;
-            this.cbLoaiDangKy.Location = new System.Drawing.Point(231, 3);
+            this.cbLoaiDangKy.Location = new System.Drawing.Point(230, 3);
             this.cbLoaiDangKy.Name = "cbLoaiDangKy";
-            this.cbLoaiDangKy.Size = new System.Drawing.Size(215, 38);
+            this.cbLoaiDangKy.Size = new System.Drawing.Size(214, 38);
             this.cbLoaiDangKy.TabIndex = 6;
             this.cbLoaiDangKy.TextUpdate += new System.EventHandler(this.cbLoaiDangKy_TextUpdate);
             this.cbLoaiDangKy.SelectedValueChanged += new System.EventHandler(this.cbLoaiDangKy_SelectedValueChanged);
@@ -470,14 +470,14 @@ namespace singinsystem.QLDangKyVao
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(3, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(222, 45);
+            this.panel6.Size = new System.Drawing.Size(221, 45);
             this.panel6.TabIndex = 0;
             // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.7713F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.22871F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.60443F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.39557F));
             this.tableLayoutPanel6.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel5, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -493,25 +493,25 @@ namespace singinsystem.QLDangKyVao
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(241, 0);
+            this.label2.Location = new System.Drawing.Point(230, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(613, 38);
+            this.label2.Size = new System.Drawing.Size(624, 38);
             this.label2.TabIndex = 2;
-            this.label2.Text = "选择";
+            this.label2.Text = "Select a reason";
             // 
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(3, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(232, 32);
+            this.panel5.Size = new System.Drawing.Size(221, 32);
             this.panel5.TabIndex = 0;
             // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.67094F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.32906F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.72112F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.27888F));
             this.tableLayoutPanel4.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.panel10, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -527,16 +527,16 @@ namespace singinsystem.QLDangKyVao
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(213, 82);
+            this.panel2.Size = new System.Drawing.Size(223, 82);
             this.panel2.TabIndex = 0;
             // 
             // panel10
             // 
             this.panel10.Controls.Add(this.label3);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(222, 3);
+            this.panel10.Location = new System.Drawing.Point(232, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(632, 82);
+            this.panel10.Size = new System.Drawing.Size(622, 82);
             this.panel10.TabIndex = 1;
             // 
             // label3
@@ -546,9 +546,9 @@ namespace singinsystem.QLDangKyVao
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 31);
+            this.label3.Size = new System.Drawing.Size(165, 31);
             this.label3.TabIndex = 4;
-            this.label3.Text = "代码 - 姓名";
+            this.label3.Text = "Code - Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel5
@@ -556,7 +556,7 @@ namespace singinsystem.QLDangKyVao
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.88409F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.11591F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 407F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 409F));
             this.tableLayoutPanel5.Controls.Add(this.cbNhanSu, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.panel4, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -574,9 +574,9 @@ namespace singinsystem.QLDangKyVao
             this.cbNhanSu.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNhanSu.FormattingEnabled = true;
             this.cbNhanSu.IntegralHeight = false;
-            this.cbNhanSu.Location = new System.Drawing.Point(231, 3);
+            this.cbNhanSu.Location = new System.Drawing.Point(230, 3);
             this.cbNhanSu.Name = "cbNhanSu";
-            this.cbNhanSu.Size = new System.Drawing.Size(215, 38);
+            this.cbNhanSu.Size = new System.Drawing.Size(214, 38);
             this.cbNhanSu.TabIndex = 3;
             this.cbNhanSu.TextUpdate += new System.EventHandler(this.cbNhanSu_TextUpdate);
             this.cbNhanSu.SelectedValueChanged += new System.EventHandler(this.cbNhanSu_SelectedValueChanged);
@@ -586,7 +586,7 @@ namespace singinsystem.QLDangKyVao
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(222, 44);
+            this.panel4.Size = new System.Drawing.Size(221, 44);
             this.panel4.TabIndex = 0;
             // 
             // label1
@@ -594,11 +594,11 @@ namespace singinsystem.QLDangKyVao
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(286, 0);
+            this.label1.Location = new System.Drawing.Point(328, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 37);
+            this.label1.Size = new System.Drawing.Size(206, 37);
             this.label1.TabIndex = 8;
-            this.label1.Text = "打卡 - Punch in/out ";
+            this.label1.Text = "Punch in/out ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // dataGridViewButtonColumn1

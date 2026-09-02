@@ -133,7 +133,7 @@ namespace singinsystem.QLDiLai
 			this.label2.Name = "label2";
 			this.label2.Size = new global::System.Drawing.Size(189, 31);
 			this.label2.TabIndex = 8;
-			this.label2.Text = "导出报告成功 ！";
+			this.label2.Text = "Report exported successfully ！";
 			base.AutoScaleDimensions = new global::System.Drawing.SizeF(8f, 19f);
 			base.AutoScaleMode = global::System.Windows.Forms.AutoScaleMode.Font;
 			base.ClientSize = new global::System.Drawing.Size(378, 235);

@@ -290,9 +290,9 @@ namespace singinsystem.QLDangKyVao
 					bool flag4 = flag3;
 					if (flag4)
 					{
-						CustomMessageBoxPhu.Show("开始出去 ！", "成功 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+						CustomMessageBoxPhu.Show("Start heading out ！", "success ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 
-						string test = "开始出去";// + qldiLaiEntity.LyDo;
+						string test = "Start heading out";// + qldiLaiEntity.LyDo;
 						SpeechSynthesizer reader = new SpeechSynthesizer();
                         // Chọn voice tiếng Trung
                         reader.SelectVoiceByHints(
@@ -302,7 +302,7 @@ namespace singinsystem.QLDangKyVao
                             new CultureInfo("zh-CN") // tiếng Trung giản thể
                         );
                         //reader.Rate = ; giá trị -10 đến 10 điều chỉnh tốc độ đọc
-                        reader.Speak("开始出去");
+                        //reader.Speak("Start heading out");
 
                     }
 					else
@@ -310,11 +310,11 @@ namespace singinsystem.QLDangKyVao
 						bool flag5 = this.error == "=> 不能再选这个选项 <= 请选其他选项";
 						if (flag5)
 						{
-							CustomMessageBox.Show(this.error, "失败 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+							CustomMessageBox.Show(this.error, "fail ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 						}
 						else
 						{
-							CustomMessageBoxPhu.Show(this.error, "失败 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+							CustomMessageBoxPhu.Show(this.error, "fail ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 						}
 					}
 					this.cbNhanSu.Text = "";
@@ -347,23 +347,24 @@ namespace singinsystem.QLDangKyVao
 				bool flag3 = flag2;
 				if (flag3)
 				{
-					CustomMessageBoxPhu.Show("进入成功 !", "成功", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    // test lại sau
+                    CustomMessageBoxPhu.Show("Successfully entered !", "success", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 					this.cbNhanSu.Text = "";
 					this.cbNhanSu.ValueMember = "";
 					ucQLDangKyVao.LuuThongTin.MaNV = "";
 					ucQLDangKyVao.LuuThongTin.LyDo = "";
 					this.cbLoaiDangKy.Text = "";
-                    string test = "开始出去";// + qldiLaiEntity.LyDo;
+                    string test = "Start heading out";// + qldiLaiEntity.LyDo;
                     SpeechSynthesizer reader = new SpeechSynthesizer();
                     // Chọn voice tiếng Trung
-                    reader.SelectVoiceByHints(
-                        VoiceGender.NotSet,
-                        VoiceAge.NotSet,
-                        0,
-                        new CultureInfo("zh-CN") // tiếng Trung giản thể
-                    );
-                    //reader.Rate = ; giá trị -10 đến 10 điều chỉnh tốc độ đọc
-                    reader.Speak("开始出去");
+                    //reader.SelectVoiceByHints(
+                    //    VoiceGender.NotSet,
+                    //    VoiceAge.NotSet,
+                    //    0,
+                    //    new CultureInfo("zh-CN") // tiếng Trung giản thể
+                    //);
+                    ////reader.Rate = ; giá trị -10 đến 10 điều chỉnh tốc độ đọc
+                    //reader.Speak("Start heading out");
                     this.HienThiDanhSachQLDangKyVao();
 				}
 				else

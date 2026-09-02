@@ -324,7 +324,7 @@ namespace singinsystem.QuanTri.QLTaiKhoan
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(92, 28);
             this.btnThem.TabIndex = 1;
-            this.btnThem.Text = "添加";
+            this.btnThem.Text = "Add to ";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 

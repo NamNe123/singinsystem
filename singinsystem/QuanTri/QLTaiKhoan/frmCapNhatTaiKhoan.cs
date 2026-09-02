@@ -84,7 +84,7 @@ namespace singinsystem.QuanTri.QLTaiKhoan
 			bool flag5 = flag4;
 			if (flag5)
 			{
-				MessageBox.Show("更新成功 ！");
+				MessageBox.Show("Update successful ！");
 				base.Close();
 			}
 			else

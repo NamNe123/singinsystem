@@ -61,12 +61,12 @@ namespace singinsystem.QuanTri.QLLoaiDangKy
 					bool flag4 = flag3;
 					if (flag4)
 					{
-						MessageBox.Show("添加成功 ! ");
+						MessageBox.Show("Add to success ! ");
 						this.HienThiDanhSachQLLoaiDangKy();
 					}
 					else
 					{
-						MessageBox.Show("添加失败 ! ");
+						MessageBox.Show("Add to fail ! ");
 					}
 				}
 				else
@@ -114,12 +114,12 @@ namespace singinsystem.QuanTri.QLLoaiDangKy
 					bool flag4 = flag3;
 					if (flag4)
 					{
-						MessageBox.Show("修改成功 ! ");
+						MessageBox.Show("Modification successful ! ");
 						this.HienThiDanhSachQLLoaiDangKy();
 					}
 					else
 					{
-						MessageBox.Show("修改失败 ! ");
+						MessageBox.Show("Modification failed ! ");
 					}
 				}
 				else

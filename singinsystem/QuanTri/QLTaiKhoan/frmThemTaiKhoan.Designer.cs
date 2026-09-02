@@ -126,7 +126,7 @@ namespace singinsystem.QuanTri.QLTaiKhoan
 			this.btnThem.Name = "btnThem";
 			this.btnThem.Size = new global::System.Drawing.Size(127, 33);
 			this.btnThem.TabIndex = 4;
-			this.btnThem.Text = "添加";
+			this.btnThem.Text = "Add to ";
 			this.btnThem.UseVisualStyleBackColor = false;
 			this.btnThem.Click += new global::System.EventHandler(this.btnThem_Click);
 			this.btnThoat.BackColor = global::System.Drawing.Color.LightSeaGreen;

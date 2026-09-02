@@ -61,7 +61,7 @@ namespace singinsystem.QuanTri.QLTaiKhoan
 				bool flag3 = flag2;
 				if (flag3)
 				{
-					MessageBox.Show("添加成功 ! ");
+					MessageBox.Show("Add to success ! ");
 					base.Close();
 				}
 				else

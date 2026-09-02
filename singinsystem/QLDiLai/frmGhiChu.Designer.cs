@@ -121,7 +121,7 @@ namespace singinsystem.QLDiLai
 			this.label2.Name = "label2";
 			this.label2.Size = new global::System.Drawing.Size(182, 31);
 			this.label2.TabIndex = 8;
-			this.label2.Text = "添加备注给员工";
+			this.label2.Text = "Add employee note";
 			this.txtGhiChu.Font = new global::System.Drawing.Font("Microsoft Sans Serif", 12f, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point, 0);
 			this.txtGhiChu.Location = new global::System.Drawing.Point(103, 98);
 			this.txtGhiChu.Margin = new global::System.Windows.Forms.Padding(3, 4, 3, 4);

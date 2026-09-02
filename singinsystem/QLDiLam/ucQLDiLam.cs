@@ -156,7 +156,7 @@ namespace singinsystem.QLDiLam
 								bool flag5 = dataTable == null;
 								if (flag5)
 								{
-									CustomMessageBoxPhu.Show("没有数据 " + this.error, "失败 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+									CustomMessageBoxPhu.Show("No data available " + this.error, "fail ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 								}
 								else
 								{
@@ -186,7 +186,7 @@ namespace singinsystem.QLDiLam
 								bool flag7 = dataTable2 == null;
 								if (flag7)
 								{
-									CustomMessageBoxPhu.Show("没有数据 " + this.error, "失败 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+									CustomMessageBoxPhu.Show("No data available " + this.error, "fail ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 								}
 								else
 								{
@@ -218,7 +218,7 @@ namespace singinsystem.QLDiLam
 			bool flag = dataTable == null;
 			if (flag)
 			{
-				CustomMessageBoxPhu.Show("没有数据: " + this.error, "失败 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+				CustomMessageBoxPhu.Show("No data available: " + this.error, "fail ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 			}
 			else
 			{
@@ -231,7 +231,7 @@ namespace singinsystem.QLDiLam
 			bool flag = dataTable == null;
 			if (flag)
 			{
-				CustomMessageBoxPhu.Show("没有数据: " + this.error, "失败 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+				CustomMessageBoxPhu.Show("No data available: " + this.error, "fail ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 			}
 			else
 			{
@@ -244,7 +244,7 @@ namespace singinsystem.QLDiLam
 			bool flag = dataTable == null;
 			if (flag)
 			{
-				CustomMessageBoxPhu.Show("没有数据: " + this.error, "失败 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+				CustomMessageBoxPhu.Show("No data available: " + this.error, "fail ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 			}
 			else
 			{
@@ -302,7 +302,7 @@ namespace singinsystem.QLDiLam
 				bool flag3 = flag2;
 				if (flag3)
 				{
-					CustomMessageBoxPhu.Show("操作成功 !", "成功 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+					CustomMessageBoxPhu.Show("Successfully completed !", "success ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 					ucQLDiLam.LuuThongTin.MaNV = "";
 					this.cbNhanSu.Text = "";
 					this.cbNhanSu.ValueMember = "";
@@ -310,7 +310,7 @@ namespace singinsystem.QLDiLam
 				}
 				else
 				{
-					CustomMessageBox.Show(this.error, "失败 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+					CustomMessageBox.Show(this.error, "fail ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 				}
 			}
 			else
@@ -318,7 +318,7 @@ namespace singinsystem.QLDiLam
 				bool flag4 = this.cbNhanSu.SelectedItem == null;
 				if (flag4)
 				{
-					CustomMessageBoxPhu.Show("请输入ID或姓名 !", "失败 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+					CustomMessageBoxPhu.Show("Please enter ID or name !", "fail ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 				}
 				else
 				{
@@ -332,14 +332,14 @@ namespace singinsystem.QLDiLam
 					bool flag6 = flag5;
 					if (flag6)
 					{
-						CustomMessageBoxPhu.Show("操作成功 !", "成功 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+						CustomMessageBoxPhu.Show("Successfully completed !", "success ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 						this.cbNhanSu.Text = "";
 						this.cbNhanSu.ValueMember = "";
 						this.HienThiDanhSachQLDiLam();
 					}
 					else
 					{
-						CustomMessageBox.Show(this.error, "失败 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+						CustomMessageBox.Show(this.error, "fail ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 					}
 				}
 			}
@@ -389,7 +389,7 @@ namespace singinsystem.QLDiLam
 					}
 					else
 					{
-						CustomMessageBoxPhu.Show("下班失败: " + this.error, "失败 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+						CustomMessageBoxPhu.Show("Failed to clock out: " + this.error, "fail ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 					}
 				}
 			}
@@ -414,7 +414,7 @@ namespace singinsystem.QLDiLam
 					bool flag3 = dataTable == null;
 					if (flag3)
 					{
-						CustomMessageBoxPhu.Show("没有数据 " + this.error, "失败 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+						CustomMessageBoxPhu.Show("No data available " + this.error, "fail ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 					}
 					else
 					{

@@ -242,7 +242,7 @@ namespace singinsystem.QLDiLai
 			bool flag3 = dataTable == null;
 			if (flag3)
 			{
-				MessageBox.Show("没有数据 " + this.error);
+				MessageBox.Show("No data available " + this.error);
 			}
 			else
 			{
@@ -373,7 +373,7 @@ namespace singinsystem.QLDiLai
 				System.Data.DataTable dataTable = QLDLManager.HienThiTimKiem(manv, lydo, fromDate, toDate, cangay, cadem, ref error);
 				if (dataTable == null || dataTable.Rows.Count == 0)
 				{
-					MessageBox.Show(dataTable == null ? $"没有数据: {error}" : "没有列 !");
+					MessageBox.Show(dataTable == null ? $"No data available: {error}" : "没有列 !");
 					return;
 				}
 
@@ -452,7 +452,7 @@ namespace singinsystem.QLDiLai
 					}
 					catch (Exception ex)
 					{
-						MessageBox.Show("导出报告失败 ！\n" + ex.Message);
+						MessageBox.Show("Failed to export report ！\n" + ex.Message);
 					}
 				}
 				frmLogin.LuuThongTin.KiemTra = 0;
@@ -485,7 +485,7 @@ namespace singinsystem.QLDiLai
 				System.Data.DataTable dataTable = QLDLManager.BaoCaoTongHop(manv, lydo, fromDate, toDate, cangay, cadem, ref error);
 				if (dataTable == null || dataTable.Rows.Count == 0)
 				{
-					MessageBox.Show(dataTable == null ? $"没有数据: {error}" : "没有数据 !");
+					MessageBox.Show(dataTable == null ? $"No data available: {error}" : "No data available !");
 					return;
 				}
 
@@ -548,7 +548,7 @@ namespace singinsystem.QLDiLai
 					}
 					catch (Exception ex)
 					{
-						MessageBox.Show("导出报告失败 ！\n" + ex.Message);
+						MessageBox.Show("Failed to export report ！\n" + ex.Message);
 					}
 				}
 				frmLogin.LuuThongTin.KiemTra = 0;

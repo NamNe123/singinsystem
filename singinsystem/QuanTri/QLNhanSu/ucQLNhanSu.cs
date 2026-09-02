@@ -62,12 +62,12 @@ namespace singinsystem.QuanTri.QLNhanSu
 					bool flag4 = flag3;
 					if (flag4)
 					{
-						MessageBox.Show("添加成功 ! ");
+						MessageBox.Show("Add to success ! ");
 						this.HienThiDanhSachQLNhanSu();
 					}
 					else
 					{
-						MessageBox.Show("添加失败 ! ");
+						MessageBox.Show("Add to fail ! ");
 					}
 				}
 				else
@@ -119,12 +119,12 @@ namespace singinsystem.QuanTri.QLNhanSu
 					bool flag4 = flag3;
 					if (flag4)
 					{
-						MessageBox.Show("修改成功 ! ");
+						MessageBox.Show("Modification successful ! ");
 						this.HienThiDanhSachQLNhanSu();
 					}
 					else
 					{
-						MessageBox.Show("修改失败 ! ");
+						MessageBox.Show("Modification failed ! ");
 					}
 				}
 				else
@@ -150,11 +150,11 @@ namespace singinsystem.QuanTri.QLNhanSu
 			try
 			{
 				File.Copy(sourceFilePath, path, true);
-				MessageBox.Show("下载成功 !");
+				MessageBox.Show("Download successful !");
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show("下载失败 !\n" + ex.Message);
+				MessageBox.Show("Download failed !\n" + ex.Message);
 			}
 		}
 		private void btnXuatFileMau_Click(object sender, EventArgs e)
@@ -195,7 +195,7 @@ namespace singinsystem.QuanTri.QLNhanSu
 				Range usedRange = worksheet.UsedRange;
 				if (usedRange == null || usedRange.Rows.Count == 0 || usedRange.Columns.Count == 0)
 				{
-					MessageBox.Show("文档没有数据 ！");
+					MessageBox.Show("The document is empty ！");
 					return;
 				}
 
@@ -253,12 +253,12 @@ namespace singinsystem.QuanTri.QLNhanSu
 
 				if (importSuccess)
 				{
-					MessageBox.Show("导入成功 ！");
+					MessageBox.Show("Import successful ！");
 					HienThiDanhSachQLNhanSu();
 				}
 				else
 				{
-					MessageBox.Show($"导入失败: {errorMessage}");
+					MessageBox.Show($"Import failed: {errorMessage}");
 				}
 			}
 			catch (Exception ex)

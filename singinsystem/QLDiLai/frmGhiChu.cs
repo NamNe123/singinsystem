@@ -43,7 +43,7 @@ namespace singinsystem.QLDiLai
             }
             else
             {
-                CustomMessageBoxPhu.Show("下班失败: " + this.error, "失败 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                CustomMessageBoxPhu.Show("Failed to clock out: " + this.error, "fail ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
             frmGhiChu.LuuThongTin.KiemTra = 1;
             base.Close();

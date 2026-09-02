@@ -20,7 +20,7 @@ namespace DataAccessLayer.Reponsitories
 			}
 			catch (Exception ex)
 			{
-				error = "连接失败 : " + ex.Message;
+				error = "Connection failed : " + ex.Message;
 				result = null;
 			}
 			return result;
@@ -38,7 +38,7 @@ namespace DataAccessLayer.Reponsitories
 			}
 			catch (Exception ex)
 			{
-				error = "连接失败 : " + ex.Message;
+				error = "Connection failed : " + ex.Message;
 				result = null;
 			}
 			return result;
@@ -56,7 +56,7 @@ namespace DataAccessLayer.Reponsitories
 			}
 			catch (Exception ex)
 			{
-				error = "连接失败 : " + ex.Message;
+				error = "Connection failed : " + ex.Message;
 				result = null;
 			}
 			return result;
@@ -77,7 +77,7 @@ namespace DataAccessLayer.Reponsitories
 			}
 			catch (Exception ex)
 			{
-				error = "连接失败 : " + ex.Message;
+				error = "Connection failed : " + ex.Message;
 				result = false;
 			}
 			return result;
@@ -101,7 +101,7 @@ namespace DataAccessLayer.Reponsitories
 			}
 			catch (Exception ex)
 			{
-				error = "连接失败 : " + ex.Message;
+				error = "Connection failed : " + ex.Message;
 				result = false;
 			}
 			return result;
@@ -125,7 +125,7 @@ namespace DataAccessLayer.Reponsitories
 			}
 			catch (Exception ex)
 			{
-				error = "连接失败 : " + ex.Message;
+				error = "Connection failed : " + ex.Message;
 				result = false;
 			}
 			return result;

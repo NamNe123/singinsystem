@@ -150,7 +150,7 @@ namespace BusinessLogicLayer.Manager
 			bool result;
 			if (flag6)
 			{
-				error = "请输入ID或姓名 !";
+				error = "Please enter ID or name !";
 				result = false;
 			}
 			else

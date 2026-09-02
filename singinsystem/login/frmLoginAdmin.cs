@@ -55,7 +55,7 @@ namespace singinsystem.Login
 					bool flag2 = text != "A";
 					if (flag2)
 					{
-						MessageBox.Show("登录失败 ！");
+						MessageBox.Show("Login failed ！");
 					}
 					else
 					{
@@ -67,7 +67,7 @@ namespace singinsystem.Login
 				}
 				catch (Exception ex)
 				{
-					MessageBox.Show("连接失败: " + ex.Message);
+					MessageBox.Show("Connection failed: " + ex.Message);
 				}
 				finally
 				{
