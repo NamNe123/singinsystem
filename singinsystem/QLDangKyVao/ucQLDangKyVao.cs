@@ -7,11 +7,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
+using System.Speech.Synthesis;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Speech.Synthesis;
 
 namespace singinsystem.QLDangKyVao
 {
@@ -290,10 +291,18 @@ namespace singinsystem.QLDangKyVao
 					if (flag4)
 					{
 						CustomMessageBoxPhu.Show("开始出去 ！", "成功 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-						string test = "开始出去"+ qldiLaiEntity.LyDo;
+
+						string test = "开始出去";// + qldiLaiEntity.LyDo;
 						SpeechSynthesizer reader = new SpeechSynthesizer();
-						//reader.Rate = ; giá trị -10 đến 10 điều chỉnh tốc độ đọc
-                        reader.Speak(test);
+                        // Chọn voice tiếng Trung
+                        reader.SelectVoiceByHints(
+                            VoiceGender.NotSet,
+                            VoiceAge.NotSet,
+                            0,
+                            new CultureInfo("zh-CN") // tiếng Trung giản thể
+                        );
+                        //reader.Rate = ; giá trị -10 đến 10 điều chỉnh tốc độ đọc
+                        reader.Speak("开始出去");
 
                     }
 					else
@@ -344,10 +353,17 @@ namespace singinsystem.QLDangKyVao
 					ucQLDangKyVao.LuuThongTin.MaNV = "";
 					ucQLDangKyVao.LuuThongTin.LyDo = "";
 					this.cbLoaiDangKy.Text = "";
-                    string test = "test new" ;
+                    string test = "开始出去";// + qldiLaiEntity.LyDo;
                     SpeechSynthesizer reader = new SpeechSynthesizer();
+                    // Chọn voice tiếng Trung
+                    reader.SelectVoiceByHints(
+                        VoiceGender.NotSet,
+                        VoiceAge.NotSet,
+                        0,
+                        new CultureInfo("zh-CN") // tiếng Trung giản thể
+                    );
                     //reader.Rate = ; giá trị -10 đến 10 điều chỉnh tốc độ đọc
-                    reader.Speak(test);
+                    reader.Speak("开始出去");
                     this.HienThiDanhSachQLDangKyVao();
 				}
 				else
