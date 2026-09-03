@@ -17,115 +17,151 @@
 		// Token: 0x060000C2 RID: 194 RVA: 0x00019030 File Offset: 0x00017230
 		private void InitializeComponent()
 		{
-			this.tableLayoutPanel1 = new global::System.Windows.Forms.TableLayoutPanel();
-			this.pnMain = new global::System.Windows.Forms.Panel();
-			this.pnMenu = new global::System.Windows.Forms.Panel();
-			this.button1 = new global::System.Windows.Forms.Button();
-			this.btnQuanTri = new global::System.Windows.Forms.Button();
-			this.btnQLDangKy = new global::System.Windows.Forms.Button();
-			this.btnQLXuongCa = new global::System.Windows.Forms.Button();
-			this.btnDangKyVao = new global::System.Windows.Forms.Button();
-			this.btnDiLam = new global::System.Windows.Forms.Button();
-			this.tableLayoutPanel1.SuspendLayout();
-			this.pnMenu.SuspendLayout();
-			base.SuspendLayout();
-			this.tableLayoutPanel1.ColumnCount = 1;
-			this.tableLayoutPanel1.ColumnStyles.Add(new global::System.Windows.Forms.ColumnStyle(global::System.Windows.Forms.SizeType.Percent, 100f));
-			this.tableLayoutPanel1.Controls.Add(this.pnMain, 0, 1);
-			this.tableLayoutPanel1.Controls.Add(this.pnMenu, 0, 0);
-			this.tableLayoutPanel1.Dock = global::System.Windows.Forms.DockStyle.Fill;
-			this.tableLayoutPanel1.Location = new global::System.Drawing.Point(0, 0);
-			this.tableLayoutPanel1.Margin = new global::System.Windows.Forms.Padding(4);
-			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-			this.tableLayoutPanel1.RowCount = 2;
-			this.tableLayoutPanel1.RowStyles.Add(new global::System.Windows.Forms.RowStyle(global::System.Windows.Forms.SizeType.Absolute, 56f));
-			this.tableLayoutPanel1.RowStyles.Add(new global::System.Windows.Forms.RowStyle(global::System.Windows.Forms.SizeType.Percent, 100f));
-			this.tableLayoutPanel1.Size = new global::System.Drawing.Size(1044, 645);
-			this.tableLayoutPanel1.TabIndex = 0;
-			this.tableLayoutPanel1.Paint += new global::System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
-			this.pnMain.Dock = global::System.Windows.Forms.DockStyle.Fill;
-			this.pnMain.Location = new global::System.Drawing.Point(4, 60);
-			this.pnMain.Margin = new global::System.Windows.Forms.Padding(4);
-			this.pnMain.Name = "pnMain";
-			this.pnMain.Size = new global::System.Drawing.Size(1036, 581);
-			this.pnMain.TabIndex = 1;
-			this.pnMenu.Controls.Add(this.button1);
-			this.pnMenu.Controls.Add(this.btnQuanTri);
-			this.pnMenu.Controls.Add(this.btnQLDangKy);
-			this.pnMenu.Controls.Add(this.btnQLXuongCa);
-			this.pnMenu.Controls.Add(this.btnDangKyVao);
-			this.pnMenu.Controls.Add(this.btnDiLam);
-			this.pnMenu.Dock = global::System.Windows.Forms.DockStyle.Fill;
-			this.pnMenu.Location = new global::System.Drawing.Point(3, 3);
-			this.pnMenu.Name = "pnMenu";
-			this.pnMenu.Size = new global::System.Drawing.Size(1038, 50);
-			this.pnMenu.TabIndex = 2;
-			this.button1.Dock = global::System.Windows.Forms.DockStyle.Right;
-			this.button1.Location = new global::System.Drawing.Point(1017, 0);
-			this.button1.Name = "button1";
-			this.button1.Size = new global::System.Drawing.Size(21, 50);
-			this.button1.TabIndex = 6;
-			this.button1.Text = " ";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new global::System.EventHandler(this.button1_Click);
-			this.btnQuanTri.Anchor = (global::System.Windows.Forms.AnchorStyles.Top | global::System.Windows.Forms.AnchorStyles.Bottom | global::System.Windows.Forms.AnchorStyles.Left);
-			this.btnQuanTri.Font = new global::System.Drawing.Font("Microsoft YaHei", 10.2f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
-			this.btnQuanTri.Location = new global::System.Drawing.Point(511, -1);
-			this.btnQuanTri.Name = "btnQuanTri";
-			this.btnQuanTri.Size = new global::System.Drawing.Size(121, 52);
-			this.btnQuanTri.TabIndex = 4;
-			this.btnQuanTri.Text = "后台";
-			this.btnQuanTri.UseVisualStyleBackColor = true;
-			this.btnQuanTri.Click += new global::System.EventHandler(this.btnQuanTri_Click);
-			this.btnQLDangKy.Anchor = (global::System.Windows.Forms.AnchorStyles.Top | global::System.Windows.Forms.AnchorStyles.Bottom | global::System.Windows.Forms.AnchorStyles.Left);
-			this.btnQLDangKy.Font = new global::System.Drawing.Font("Microsoft YaHei", 10.2f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
-			this.btnQLDangKy.Location = new global::System.Drawing.Point(375, 0);
-			this.btnQLDangKy.Name = "btnQLDangKy";
-			this.btnQLDangKy.Size = new global::System.Drawing.Size(130, 51);
-			this.btnQLDangKy.TabIndex = 3;
-			this.btnQLDangKy.Text = "打卡记录";
-			this.btnQLDangKy.UseVisualStyleBackColor = true;
-			this.btnQLDangKy.Click += new global::System.EventHandler(this.btnKyLuc_Click);
-			this.btnQLXuongCa.Anchor = (global::System.Windows.Forms.AnchorStyles.Top | global::System.Windows.Forms.AnchorStyles.Bottom | global::System.Windows.Forms.AnchorStyles.Left);
-			this.btnQLXuongCa.Font = new global::System.Drawing.Font("Microsoft YaHei", 10.2f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
-			this.btnQLXuongCa.Location = new global::System.Drawing.Point(228, 0);
-			this.btnQLXuongCa.Name = "btnQLXuongCa";
-			this.btnQLXuongCa.Size = new global::System.Drawing.Size(141, 51);
-			this.btnQLXuongCa.TabIndex = 2;
-			this.btnQLXuongCa.Text = "上下班记录";
-			this.btnQLXuongCa.UseVisualStyleBackColor = true;
-			this.btnQLXuongCa.Click += new global::System.EventHandler(this.btnQLXuongCa_Click);
-			this.btnDangKyVao.Anchor = (global::System.Windows.Forms.AnchorStyles.Top | global::System.Windows.Forms.AnchorStyles.Bottom | global::System.Windows.Forms.AnchorStyles.Left);
-			this.btnDangKyVao.Font = new global::System.Drawing.Font("Microsoft YaHei", 10.2f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
-			this.btnDangKyVao.Location = new global::System.Drawing.Point(112, 0);
-			this.btnDangKyVao.Name = "btnDangKyVao";
-			this.btnDangKyVao.Size = new global::System.Drawing.Size(110, 51);
-			this.btnDangKyVao.TabIndex = 1;
-			this.btnDangKyVao.Text = "打卡";
-			this.btnDangKyVao.UseVisualStyleBackColor = true;
-			this.btnDangKyVao.Click += new global::System.EventHandler(this.btnDangKyVao_Click);
-			this.btnDiLam.Anchor = (global::System.Windows.Forms.AnchorStyles.Top | global::System.Windows.Forms.AnchorStyles.Bottom | global::System.Windows.Forms.AnchorStyles.Left);
-			this.btnDiLam.Font = new global::System.Drawing.Font("Microsoft YaHei", 10.2f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
-			this.btnDiLam.Location = new global::System.Drawing.Point(0, 0);
-			this.btnDiLam.Name = "btnDiLam";
-			this.btnDiLam.Size = new global::System.Drawing.Size(106, 51);
-			this.btnDiLam.TabIndex = 0;
-			this.btnDiLam.Text = "上下班";
-			this.btnDiLam.UseVisualStyleBackColor = true;
-			this.btnDiLam.Click += new global::System.EventHandler(this.btnDiLam_Click);
-			base.AutoScaleDimensions = new global::System.Drawing.SizeF(8f, 16f);
-			base.AutoScaleMode = global::System.Windows.Forms.AutoScaleMode.Font;
-			base.ClientSize = new global::System.Drawing.Size(1044, 645);
-			base.Controls.Add(this.tableLayoutPanel1);
-			base.Margin = new global::System.Windows.Forms.Padding(4);
-			base.Name = "frmMainForm";
-			this.Text = "Quan ly ban hang";
-			base.WindowState = global::System.Windows.Forms.FormWindowState.Maximized;
-			base.FormClosing += new global::System.Windows.Forms.FormClosingEventHandler(this.frmMainForm_FormClosing);
-			base.Load += new global::System.EventHandler(this.frmMainForm_Load);
-			this.tableLayoutPanel1.ResumeLayout(false);
-			this.pnMenu.ResumeLayout(false);
-			base.ResumeLayout(false);
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pnMain = new System.Windows.Forms.Panel();
+            this.pnMenu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnQuanTri = new System.Windows.Forms.Button();
+            this.btnQLDangKy = new System.Windows.Forms.Button();
+            this.btnQLXuongCa = new System.Windows.Forms.Button();
+            this.btnDangKyVao = new System.Windows.Forms.Button();
+            this.btnDiLam = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.pnMenu.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.pnMain, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.pnMenu, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1044, 645);
+            this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // pnMain
+            // 
+            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMain.Location = new System.Drawing.Point(4, 60);
+            this.pnMain.Margin = new System.Windows.Forms.Padding(4);
+            this.pnMain.Name = "pnMain";
+            this.pnMain.Size = new System.Drawing.Size(1036, 581);
+            this.pnMain.TabIndex = 1;
+            // 
+            // pnMenu
+            // 
+            this.pnMenu.Controls.Add(this.button1);
+            this.pnMenu.Controls.Add(this.btnQuanTri);
+            this.pnMenu.Controls.Add(this.btnQLDangKy);
+            this.pnMenu.Controls.Add(this.btnQLXuongCa);
+            this.pnMenu.Controls.Add(this.btnDangKyVao);
+            this.pnMenu.Controls.Add(this.btnDiLam);
+            this.pnMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMenu.Location = new System.Drawing.Point(3, 3);
+            this.pnMenu.Name = "pnMenu";
+            this.pnMenu.Size = new System.Drawing.Size(1038, 50);
+            this.pnMenu.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.Location = new System.Drawing.Point(1017, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(21, 50);
+            this.button1.TabIndex = 6;
+            this.button1.Text = " ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnQuanTri
+            // 
+            this.btnQuanTri.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnQuanTri.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanTri.Location = new System.Drawing.Point(664, 0);
+            this.btnQuanTri.Name = "btnQuanTri";
+            this.btnQuanTri.Size = new System.Drawing.Size(83, 50);
+            this.btnQuanTri.TabIndex = 4;
+            this.btnQuanTri.Text = "Admin";
+            this.btnQuanTri.UseVisualStyleBackColor = true;
+            this.btnQuanTri.Click += new System.EventHandler(this.btnQuanTri_Click);
+            // 
+            // btnQLDangKy
+            // 
+            this.btnQLDangKy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnQLDangKy.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLDangKy.Location = new System.Drawing.Point(482, 0);
+            this.btnQLDangKy.Name = "btnQLDangKy";
+            this.btnQLDangKy.Size = new System.Drawing.Size(176, 51);
+            this.btnQLDangKy.TabIndex = 3;
+            this.btnQLDangKy.Text = "Break Records";
+            this.btnQLDangKy.UseVisualStyleBackColor = true;
+            this.btnQLDangKy.Click += new System.EventHandler(this.btnKyLuc_Click);
+            // 
+            // btnQLXuongCa
+            // 
+            this.btnQLXuongCa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnQLXuongCa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLXuongCa.Location = new System.Drawing.Point(293, 0);
+            this.btnQLXuongCa.Name = "btnQLXuongCa";
+            this.btnQLXuongCa.Size = new System.Drawing.Size(183, 51);
+            this.btnQLXuongCa.TabIndex = 2;
+            this.btnQLXuongCa.Text = "Clock Records";
+            this.btnQLXuongCa.UseVisualStyleBackColor = true;
+            this.btnQLXuongCa.Click += new System.EventHandler(this.btnQLXuongCa_Click);
+            // 
+            // btnDangKyVao
+            // 
+            this.btnDangKyVao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDangKyVao.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangKyVao.Location = new System.Drawing.Point(145, 0);
+            this.btnDangKyVao.Name = "btnDangKyVao";
+            this.btnDangKyVao.Size = new System.Drawing.Size(143, 51);
+            this.btnDangKyVao.TabIndex = 1;
+            this.btnDangKyVao.Text = "Break In/Out";
+            this.btnDangKyVao.UseVisualStyleBackColor = true;
+            this.btnDangKyVao.Click += new System.EventHandler(this.btnDangKyVao_Click);
+            // 
+            // btnDiLam
+            // 
+            this.btnDiLam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDiLam.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDiLam.Location = new System.Drawing.Point(0, 0);
+            this.btnDiLam.Name = "btnDiLam";
+            this.btnDiLam.Size = new System.Drawing.Size(140, 51);
+            this.btnDiLam.TabIndex = 0;
+            this.btnDiLam.Text = "Clock In/Out";
+            this.btnDiLam.UseVisualStyleBackColor = true;
+            this.btnDiLam.Click += new System.EventHandler(this.btnDiLam_Click);
+            // 
+            // frmMainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1044, 645);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "frmMainForm";
+            this.Text = "Quan ly ban hang";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainForm_FormClosing);
+            this.Load += new System.EventHandler(this.frmMainForm_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.pnMenu.ResumeLayout(false);
+            this.ResumeLayout(false);
+
 		}
 
 		// Token: 0x040001AE RID: 430

@@ -322,7 +322,7 @@ namespace singinsystem.QLDiLai
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(934, 31);
@@ -445,7 +445,7 @@ namespace singinsystem.QLDiLai
             // 
             this.cbNhanSu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbNhanSu.DropDownHeight = 100;
-            this.cbNhanSu.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNhanSu.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNhanSu.FormattingEnabled = true;
             this.cbNhanSu.IntegralHeight = false;
             this.cbNhanSu.Location = new System.Drawing.Point(0, 0);
@@ -467,7 +467,7 @@ namespace singinsystem.QLDiLai
             // cbLoaiDangKy
             // 
             this.cbLoaiDangKy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbLoaiDangKy.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLoaiDangKy.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLoaiDangKy.FormattingEnabled = true;
             this.cbLoaiDangKy.Location = new System.Drawing.Point(0, 0);
             this.cbLoaiDangKy.Name = "cbLoaiDangKy";
@@ -515,7 +515,7 @@ namespace singinsystem.QLDiLai
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(518, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(401, 24);
@@ -526,7 +526,7 @@ namespace singinsystem.QLDiLai
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(335, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(177, 24);
@@ -545,7 +545,7 @@ namespace singinsystem.QLDiLai
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(26, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 24);
@@ -585,7 +585,7 @@ namespace singinsystem.QLDiLai
             // 
             // btnBCTH
             // 
-            this.btnBCTH.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBCTH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBCTH.Location = new System.Drawing.Point(814, 3);
             this.btnBCTH.Name = "btnBCTH";
             this.btnBCTH.Size = new System.Drawing.Size(110, 35);
@@ -622,7 +622,7 @@ namespace singinsystem.QLDiLai
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(5, 3);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 27);
@@ -644,7 +644,7 @@ namespace singinsystem.QLDiLai
             // cBCaDem
             // 
             this.cBCaDem.AutoSize = true;
-            this.cBCaDem.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBCaDem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBCaDem.Location = new System.Drawing.Point(104, 3);
             this.cBCaDem.Name = "cBCaDem";
             this.cBCaDem.Size = new System.Drawing.Size(74, 31);
@@ -656,7 +656,7 @@ namespace singinsystem.QLDiLai
             // cBCaNgay
             // 
             this.cBCaNgay.AutoSize = true;
-            this.cBCaNgay.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBCaNgay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBCaNgay.Location = new System.Drawing.Point(3, 3);
             this.cBCaNgay.Name = "cBCaNgay";
             this.cBCaNgay.Size = new System.Drawing.Size(74, 31);

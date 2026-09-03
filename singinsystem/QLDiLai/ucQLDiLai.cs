@@ -328,7 +328,7 @@ namespace singinsystem.QLDiLai
 					this.dgDSQLDiLai.Rows[i].DefaultCellStyle.BackColor = Color.LightCoral;
 				}
 			}
-			this.dgDSQLDiLai.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Yahei", 16f);
+			this.dgDSQLDiLai.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 16f);
 			float num = 0.1f;
 			int num2 = this.dgDSQLDiLai.ClientSize.Height - this.dgDSQLDiLai.ColumnHeadersHeight;
 			int height = (int)((float)num2 * num);

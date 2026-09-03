@@ -71,7 +71,7 @@ namespace singinsystem.QLDiLam
 			this.tableLayoutPanel2.RowStyles.Add(new global::System.Windows.Forms.RowStyle(global::System.Windows.Forms.SizeType.Percent, 50f));
 			this.tableLayoutPanel2.Size = new global::System.Drawing.Size(475, 51);
 			this.tableLayoutPanel2.TabIndex = 1;
-			this.btnKhongDongY.Font = new global::System.Drawing.Font("Microsoft YaHei", 12f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
+			this.btnKhongDongY.Font = new global::System.Drawing.Font("Segoe UI", 12f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
 			this.btnKhongDongY.Location = new global::System.Drawing.Point(221, 3);
 			this.btnKhongDongY.Name = "btnKhongDongY";
 			this.btnKhongDongY.Size = new global::System.Drawing.Size(125, 45);
@@ -80,7 +80,7 @@ namespace singinsystem.QLDiLam
 			this.btnKhongDongY.UseVisualStyleBackColor = true;
 			this.btnKhongDongY.Click += new global::System.EventHandler(this.btnKhongDongY_Click);
 			this.btnDongY.Anchor = (global::System.Windows.Forms.AnchorStyles.Top | global::System.Windows.Forms.AnchorStyles.Right);
-			this.btnDongY.Font = new global::System.Drawing.Font("Microsoft YaHei", 12f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
+			this.btnDongY.Font = new global::System.Drawing.Font("Segoe UI", 12f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
 			this.btnDongY.Location = new global::System.Drawing.Point(91, 3);
 			this.btnDongY.Name = "btnDongY";
 			this.btnDongY.Size = new global::System.Drawing.Size(124, 45);
@@ -102,7 +102,7 @@ namespace singinsystem.QLDiLam
 			this.tableLayoutPanel3.TabIndex = 2;
 			this.lbThongBao1.Anchor = (global::System.Windows.Forms.AnchorStyles.Top | global::System.Windows.Forms.AnchorStyles.Bottom | global::System.Windows.Forms.AnchorStyles.Left | global::System.Windows.Forms.AnchorStyles.Right);
 			this.lbThongBao1.AutoSize = true;
-			this.lbThongBao1.Font = new global::System.Drawing.Font("Microsoft YaHei", 24f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
+			this.lbThongBao1.Font = new global::System.Drawing.Font("Segoe UI", 24f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
 			this.lbThongBao1.ForeColor = global::System.Drawing.Color.Red;
 			this.lbThongBao1.Location = new global::System.Drawing.Point(3, 0);
 			this.lbThongBao1.Name = "lbThongBao1";
@@ -112,7 +112,7 @@ namespace singinsystem.QLDiLam
 			this.lbThongBao1.TextAlign = global::System.Drawing.ContentAlignment.MiddleCenter;
 			this.lbThongBao2.Anchor = (global::System.Windows.Forms.AnchorStyles.Top | global::System.Windows.Forms.AnchorStyles.Bottom | global::System.Windows.Forms.AnchorStyles.Left | global::System.Windows.Forms.AnchorStyles.Right);
 			this.lbThongBao2.AutoSize = true;
-			this.lbThongBao2.Font = new global::System.Drawing.Font("Microsoft YaHei", 18f, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point, 0);
+			this.lbThongBao2.Font = new global::System.Drawing.Font("Segoe UI", 18f, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point, 0);
 			this.lbThongBao2.Location = new global::System.Drawing.Point(3, 96);
 			this.lbThongBao2.Name = "lbThongBao2";
 			this.lbThongBao2.Size = new global::System.Drawing.Size(469, 125);

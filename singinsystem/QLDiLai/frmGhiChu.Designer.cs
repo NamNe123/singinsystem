@@ -79,7 +79,7 @@ namespace singinsystem.QLDiLai
 			this.tableLayoutPanel2.RowStyles.Add(new global::System.Windows.Forms.RowStyle(global::System.Windows.Forms.SizeType.Percent, 50f));
 			this.tableLayoutPanel2.Size = new global::System.Drawing.Size(462, 49);
 			this.tableLayoutPanel2.TabIndex = 2;
-			this.btnKhongDongY.Font = new global::System.Drawing.Font("Microsoft YaHei", 12f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
+			this.btnKhongDongY.Font = new global::System.Drawing.Font("Segoe UI", 12f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
 			this.btnKhongDongY.Location = new global::System.Drawing.Point(234, 4);
 			this.btnKhongDongY.Margin = new global::System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.btnKhongDongY.Name = "btnKhongDongY";
@@ -89,7 +89,7 @@ namespace singinsystem.QLDiLai
 			this.btnKhongDongY.UseVisualStyleBackColor = true;
 			this.btnKhongDongY.Click += new global::System.EventHandler(this.btnKhongDongY_Click);
 			this.btnDongY.Anchor = (global::System.Windows.Forms.AnchorStyles.Top | global::System.Windows.Forms.AnchorStyles.Right);
-			this.btnDongY.Font = new global::System.Drawing.Font("Microsoft YaHei", 12f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
+			this.btnDongY.Font = new global::System.Drawing.Font("Segoe UI", 12f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
 			this.btnDongY.Location = new global::System.Drawing.Point(104, 4);
 			this.btnDongY.Margin = new global::System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.btnDongY.Name = "btnDongY";
@@ -116,7 +116,7 @@ namespace singinsystem.QLDiLai
 			this.lbTenNV.TabIndex = 9;
 			this.lbTenNV.Text = "TenNV";
 			this.label2.AutoSize = true;
-			this.label2.Font = new global::System.Drawing.Font("Microsoft YaHei", 13.8f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
+			this.label2.Font = new global::System.Drawing.Font("Segoe UI", 13.8f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
 			this.label2.Location = new global::System.Drawing.Point(9, 5);
 			this.label2.Name = "label2";
 			this.label2.Size = new global::System.Drawing.Size(182, 31);
@@ -130,7 +130,7 @@ namespace singinsystem.QLDiLai
 			this.txtGhiChu.TabIndex = 7;
 			this.txtGhiChu.Text = "";
 			this.label1.AutoSize = true;
-			this.label1.Font = new global::System.Drawing.Font("Microsoft YaHei", 12f, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point, 0);
+			this.label1.Font = new global::System.Drawing.Font("Segoe UI", 12f, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point, 0);
 			this.label1.Location = new global::System.Drawing.Point(22, 98);
 			this.label1.Name = "label1";
 			this.label1.Size = new global::System.Drawing.Size(63, 27);
@@ -140,7 +140,7 @@ namespace singinsystem.QLDiLai
 			base.AutoScaleMode = global::System.Windows.Forms.AutoScaleMode.Font;
 			base.ClientSize = new global::System.Drawing.Size(468, 278);
 			base.Controls.Add(this.tableLayoutPanel1);
-			this.Font = new global::System.Drawing.Font("Microsoft YaHei", 7.8f, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point, 0);
+			this.Font = new global::System.Drawing.Font("Segoe UI", 7.8f, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point, 0);
 			base.Margin = new global::System.Windows.Forms.Padding(3, 4, 3, 4);
 			base.Name = "frmGhiChu";
 			base.StartPosition = global::System.Windows.Forms.FormStartPosition.CenterScreen;

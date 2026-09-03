@@ -16,7 +16,7 @@ namespace singinsystem
 			form.BackColor = Color.White;
 			form.Text = title;
 			label.Text = message;
-			label.Font = new Font("Microsoft Yahei", 16f, FontStyle.Bold);
+			label.Font = new Font("Segoe UI", 16f, FontStyle.Bold);
 			label.ForeColor = Color.Black;
 			label.Dock = DockStyle.Fill;
 			label.TextAlign = ContentAlignment.MiddleCenter;
@@ -24,7 +24,7 @@ namespace singinsystem
 			button.DialogResult = DialogResult.OK;
 			button.Dock = DockStyle.Bottom;
 			button.BackColor = Color.White;
-			button.Font = new Font("Microsoft Yahei", 16f, FontStyle.Bold);
+			button.Font = new Font("Segoe UI", 16f, FontStyle.Bold);
 			button.Size = new Size(40, 40);
 			form.StartPosition = FormStartPosition.CenterScreen;
 			form.FormBorderStyle = FormBorderStyle.FixedDialog;

@@ -390,7 +390,7 @@ namespace singinsystem.QLDangKyVao
 					this.dgDSQLDangKyVao.Rows[i].DefaultCellStyle.BackColor = Color.LightCoral;
 				}
 			}
-			this.dgDSQLDangKyVao.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Yahei", 16f);
+			this.dgDSQLDangKyVao.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 16f);
 			float num = 0.1f;
 			int num2 = this.dgDSQLDangKyVao.ClientSize.Height - this.dgDSQLDangKyVao.ColumnHeadersHeight;
 			int height = (int)((float)num2 * num);

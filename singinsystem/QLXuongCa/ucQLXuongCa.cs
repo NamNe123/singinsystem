@@ -323,7 +323,7 @@ namespace singinsystem.QLXuongCa
 					this.dgDSQLXuongCa.Rows[i].DefaultCellStyle.BackColor = Color.LightCoral;
 				}
 			}
-			this.dgDSQLXuongCa.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Yahei", 16f);
+			this.dgDSQLXuongCa.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 16f);
 			float num = 0.1f;
 			int num2 = this.dgDSQLXuongCa.ClientSize.Height - this.dgDSQLXuongCa.ColumnHeadersHeight;
 			int height = (int)((float)num2 * num);

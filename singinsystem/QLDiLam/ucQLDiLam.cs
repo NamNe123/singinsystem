@@ -279,7 +279,7 @@ namespace singinsystem.QLDiLam
 					this.dgDSQLDiLam.Rows[i].DefaultCellStyle.BackColor = Color.LightCoral;
 				}
 			}
-			this.dgDSQLDiLam.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Yahei", 16f);
+			this.dgDSQLDiLam.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 16f);
 			float num = 0.1f;
 			int num2 = this.dgDSQLDiLam.ClientSize.Height - this.dgDSQLDiLam.ColumnHeadersHeight;
 			int height = (int)((float)num2 * num);

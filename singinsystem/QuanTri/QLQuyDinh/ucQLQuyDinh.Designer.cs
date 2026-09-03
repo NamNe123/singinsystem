@@ -306,7 +306,7 @@ namespace singinsystem.QuanTri.QLQuyDinh
             // btnImport
             // 
             this.btnImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnImport.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImport.Location = new System.Drawing.Point(627, 116);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(112, 30);
@@ -318,7 +318,7 @@ namespace singinsystem.QuanTri.QLQuyDinh
             // btnXuatFileMau
             // 
             this.btnXuatFileMau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnXuatFileMau.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuatFileMau.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXuatFileMau.Location = new System.Drawing.Point(466, 116);
             this.btnXuatFileMau.Name = "btnXuatFileMau";
             this.btnXuatFileMau.Size = new System.Drawing.Size(143, 30);

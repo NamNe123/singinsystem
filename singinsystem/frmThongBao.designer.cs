@@ -38,7 +38,7 @@
 			this.tableLayoutPanel1.TabIndex = 0;
 			this.label1.AutoSize = true;
 			this.label1.Dock = global::System.Windows.Forms.DockStyle.Fill;
-			this.label1.Font = new global::System.Drawing.Font("Microsoft YaHei", 12f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
+			this.label1.Font = new global::System.Drawing.Font("Segoe UI", 12f, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point, 0);
 			this.label1.Location = new global::System.Drawing.Point(3, 0);
 			this.label1.Name = "label1";
 			this.label1.Size = new global::System.Drawing.Size(615, 197);
