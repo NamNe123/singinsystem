@@ -83,7 +83,7 @@ namespace singinsystem.QLQuanTri
             // 
             // pnMenu
             // 
-            this.pnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.pnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.pnMenu.Controls.Add(this.btnQLTaiKhoan);
             this.pnMenu.Controls.Add(this.button5);
             this.pnMenu.Controls.Add(this.btnQLLoaiDangNhap);
@@ -100,7 +100,7 @@ namespace singinsystem.QLQuanTri
             // 
             // btnQLTaiKhoan
             // 
-            this.btnQLTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnQLTaiKhoan.BackColor = System.Drawing.Color.Blue;
             this.btnQLTaiKhoan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnQLTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLTaiKhoan.Location = new System.Drawing.Point(0, 493);
@@ -108,14 +108,14 @@ namespace singinsystem.QLQuanTri
             this.btnQLTaiKhoan.Name = "btnQLTaiKhoan";
             this.btnQLTaiKhoan.Size = new System.Drawing.Size(306, 63);
             this.btnQLTaiKhoan.TabIndex = 12;
-            this.btnQLTaiKhoan.Text = "账号管理";
+            this.btnQLTaiKhoan.Text = "Account Management";
             this.btnQLTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLTaiKhoan.UseVisualStyleBackColor = false;
             this.btnQLTaiKhoan.Click += new System.EventHandler(this.btnQLTaiKhoan_Click);
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button5.BackColor = System.Drawing.Color.Blue;
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(0, 422);
@@ -123,14 +123,14 @@ namespace singinsystem.QLQuanTri
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(306, 63);
             this.button5.TabIndex = 11;
-            this.button5.Text = "规定管理";
+            this.button5.Text = "Regulation Management";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // btnQLLoaiDangNhap
             // 
-            this.btnQLLoaiDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnQLLoaiDangNhap.BackColor = System.Drawing.Color.Blue;
             this.btnQLLoaiDangNhap.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnQLLoaiDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLLoaiDangNhap.Location = new System.Drawing.Point(0, 354);
@@ -138,14 +138,14 @@ namespace singinsystem.QLQuanTri
             this.btnQLLoaiDangNhap.Name = "btnQLLoaiDangNhap";
             this.btnQLLoaiDangNhap.Size = new System.Drawing.Size(306, 60);
             this.btnQLLoaiDangNhap.TabIndex = 8;
-            this.btnQLLoaiDangNhap.Text = "打卡类型";
+            this.btnQLLoaiDangNhap.Text = "Check-in Type";
             this.btnQLLoaiDangNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLLoaiDangNhap.UseVisualStyleBackColor = false;
             this.btnQLLoaiDangNhap.Click += new System.EventHandler(this.btnQLLoaiDangNhap_Click);
             // 
             // btnMenuQuanLyNhanSu
             // 
-            this.btnMenuQuanLyNhanSu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnMenuQuanLyNhanSu.BackColor = System.Drawing.Color.Blue;
             this.btnMenuQuanLyNhanSu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnMenuQuanLyNhanSu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuQuanLyNhanSu.Location = new System.Drawing.Point(0, 285);
@@ -153,7 +153,7 @@ namespace singinsystem.QLQuanTri
             this.btnMenuQuanLyNhanSu.Name = "btnMenuQuanLyNhanSu";
             this.btnMenuQuanLyNhanSu.Size = new System.Drawing.Size(306, 61);
             this.btnMenuQuanLyNhanSu.TabIndex = 7;
-            this.btnMenuQuanLyNhanSu.Text = "人事管理";
+            this.btnMenuQuanLyNhanSu.Text = "Personnel Management";
             this.btnMenuQuanLyNhanSu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMenuQuanLyNhanSu.UseVisualStyleBackColor = false;
             this.btnMenuQuanLyNhanSu.Click += new System.EventHandler(this.btnMenuQuanLyNhanSu_Click);
@@ -170,7 +170,7 @@ namespace singinsystem.QLQuanTri
             // 
             // btnMenuTaiKhoan
             // 
-            this.btnMenuTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnMenuTaiKhoan.BackColor = System.Drawing.Color.Blue;
             this.btnMenuTaiKhoan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnMenuTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnMenuTaiKhoan.Location = new System.Drawing.Point(0, 213);
@@ -178,7 +178,7 @@ namespace singinsystem.QLQuanTri
             this.btnMenuTaiKhoan.Name = "btnMenuTaiKhoan";
             this.btnMenuTaiKhoan.Size = new System.Drawing.Size(306, 64);
             this.btnMenuTaiKhoan.TabIndex = 2;
-            this.btnMenuTaiKhoan.Text = "办公室管理";
+            this.btnMenuTaiKhoan.Text = "Office Management";
             this.btnMenuTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMenuTaiKhoan.UseVisualStyleBackColor = false;
             this.btnMenuTaiKhoan.Click += new System.EventHandler(this.btnMenuTaiKhoan_Click);

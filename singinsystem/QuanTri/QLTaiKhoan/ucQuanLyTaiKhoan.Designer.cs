@@ -30,11 +30,6 @@ namespace singinsystem.QuanTri.QLTaiKhoan
 		private Panel panel4;
 		private Label label9;
 		private Label lblSoLuong;
-		private DataGridViewTextBoxColumn tendangnhap;
-		private DataGridViewTextBoxColumn tendaydu;
-		private DataGridViewTextBoxColumn quyen;
-		private DataGridViewTextBoxColumn tinhtrang;
-		private DataGridViewTextBoxColumn matkhau;
 		/// <summary> 
 		/// Clean up any resources being used.
 		/// </summary>
@@ -59,11 +54,6 @@ namespace singinsystem.QuanTri.QLTaiKhoan
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgDSTaiKhoan = new System.Windows.Forms.DataGridView();
-            this.tendangnhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tendaydu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tinhtrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.matkhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblQuyenDN = new System.Windows.Forms.Label();
             this.lblTenDayDu = new System.Windows.Forms.Label();
@@ -80,6 +70,11 @@ namespace singinsystem.QuanTri.QLTaiKhoan
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblSoLuong = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.tendangnhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tendaydu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tinhtrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matkhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDSTaiKhoan)).BeginInit();
@@ -134,50 +129,6 @@ namespace singinsystem.QuanTri.QLTaiKhoan
             this.dgDSTaiKhoan.TabIndex = 0;
             this.dgDSTaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDSTaiKhoan_CellClick);
             // 
-            // tendangnhap
-            // 
-            this.tendangnhap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.tendangnhap.DataPropertyName = "tendangnhap";
-            this.tendangnhap.HeaderText = "账号";
-            this.tendangnhap.MinimumWidth = 6;
-            this.tendangnhap.Name = "tendangnhap";
-            this.tendangnhap.Width = 81;
-            // 
-            // tendaydu
-            // 
-            this.tendaydu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.tendaydu.DataPropertyName = "tendaydu";
-            this.tendaydu.HeaderText = "姓名";
-            this.tendaydu.MinimumWidth = 6;
-            this.tendaydu.Name = "tendaydu";
-            this.tendaydu.Width = 81;
-            // 
-            // quyen
-            // 
-            this.quyen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.quyen.DataPropertyName = "maquyen";
-            this.quyen.HeaderText = "账号类型";
-            this.quyen.MinimumWidth = 6;
-            this.quyen.Name = "quyen";
-            this.quyen.Width = 116;
-            // 
-            // tinhtrang
-            // 
-            this.tinhtrang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tinhtrang.DataPropertyName = "tinhtrang";
-            this.tinhtrang.HeaderText = "状态";
-            this.tinhtrang.MinimumWidth = 6;
-            this.tinhtrang.Name = "tinhtrang";
-            // 
-            // matkhau
-            // 
-            this.matkhau.DataPropertyName = "matkhau";
-            this.matkhau.HeaderText = "密码";
-            this.matkhau.MinimumWidth = 6;
-            this.matkhau.Name = "matkhau";
-            this.matkhau.Visible = false;
-            this.matkhau.Width = 125;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -220,9 +171,9 @@ namespace singinsystem.QuanTri.QLTaiKhoan
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(197, 114);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 25);
+            this.label6.Size = new System.Drawing.Size(140, 25);
             this.label6.TabIndex = 1;
-            this.label6.Text = "账号类型:";
+            this.label6.Text = "Account Type:";
             // 
             // lblTenDangNhap
             // 
@@ -240,9 +191,9 @@ namespace singinsystem.QuanTri.QLTaiKhoan
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(196, 88);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 25);
+            this.label4.Size = new System.Drawing.Size(70, 25);
             this.label4.TabIndex = 1;
-            this.label4.Text = "姓名:";
+            this.label4.Text = "Name:";
             // 
             // label2
             // 
@@ -250,9 +201,9 @@ namespace singinsystem.QuanTri.QLTaiKhoan
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(196, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 25);
+            this.label2.Size = new System.Drawing.Size(108, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "账号:";
+            this.label2.Text = "Username:";
             // 
             // label1
             // 
@@ -261,9 +212,9 @@ namespace singinsystem.QuanTri.QLTaiKhoan
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(266, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 31);
+            this.label1.Size = new System.Drawing.Size(295, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "账号管理";
+            this.label1.Text = "Account Management";
             // 
             // tableLayoutPanel2
             // 
@@ -300,7 +251,7 @@ namespace singinsystem.QuanTri.QLTaiKhoan
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(92, 28);
             this.btnXoa.TabIndex = 1;
-            this.btnXoa.Text = "删除";
+            this.btnXoa.Text = "Delete";
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -312,7 +263,7 @@ namespace singinsystem.QuanTri.QLTaiKhoan
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(92, 28);
             this.btnSua.TabIndex = 1;
-            this.btnSua.Text = "修改";
+            this.btnSua.Text = "Edit";
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -324,7 +275,7 @@ namespace singinsystem.QuanTri.QLTaiKhoan
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(92, 28);
             this.btnThem.TabIndex = 1;
-            this.btnThem.Text = "Add to ";
+            this.btnThem.Text = "Add";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -355,9 +306,53 @@ namespace singinsystem.QuanTri.QLTaiKhoan
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label9.Location = new System.Drawing.Point(3, 4);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 25);
+            this.label9.Size = new System.Drawing.Size(85, 25);
             this.label9.TabIndex = 2;
-            this.label9.Text = "数量";
+            this.label9.Text = "Quantity";
+            // 
+            // tendangnhap
+            // 
+            this.tendangnhap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.tendangnhap.DataPropertyName = "tendangnhap";
+            this.tendangnhap.HeaderText = "Username";
+            this.tendangnhap.MinimumWidth = 6;
+            this.tendangnhap.Name = "tendangnhap";
+            this.tendangnhap.Width = 131;
+            // 
+            // tendaydu
+            // 
+            this.tendaydu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.tendaydu.DataPropertyName = "tendaydu";
+            this.tendaydu.HeaderText = "Name";
+            this.tendaydu.MinimumWidth = 6;
+            this.tendaydu.Name = "tendaydu";
+            this.tendaydu.Width = 93;
+            // 
+            // quyen
+            // 
+            this.quyen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.quyen.DataPropertyName = "maquyen";
+            this.quyen.HeaderText = "Account Type";
+            this.quyen.MinimumWidth = 6;
+            this.quyen.Name = "quyen";
+            this.quyen.Width = 163;
+            // 
+            // tinhtrang
+            // 
+            this.tinhtrang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tinhtrang.DataPropertyName = "tinhtrang";
+            this.tinhtrang.HeaderText = "Status";
+            this.tinhtrang.MinimumWidth = 6;
+            this.tinhtrang.Name = "tinhtrang";
+            // 
+            // matkhau
+            // 
+            this.matkhau.DataPropertyName = "matkhau";
+            this.matkhau.HeaderText = "Password";
+            this.matkhau.MinimumWidth = 6;
+            this.matkhau.Name = "matkhau";
+            this.matkhau.Visible = false;
+            this.matkhau.Width = 125;
             // 
             // ucQuanLyTaiKhoan
             // 
@@ -382,6 +377,12 @@ namespace singinsystem.QuanTri.QLTaiKhoan
 
 		}
 
-		#endregion
-	}
+        #endregion
+
+        private DataGridViewTextBoxColumn tendangnhap;
+        private DataGridViewTextBoxColumn tendaydu;
+        private DataGridViewTextBoxColumn quyen;
+        private DataGridViewTextBoxColumn tinhtrang;
+        private DataGridViewTextBoxColumn matkhau;
+    }
 }

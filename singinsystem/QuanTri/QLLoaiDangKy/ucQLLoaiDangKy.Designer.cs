@@ -28,10 +28,6 @@ namespace singinsystem.QuanTri.QLLoaiDangKy
 		private Button btnXoa;
 		private Label label2;
 		private TextBox txtId;
-		private DataGridViewTextBoxColumn Id;
-		private DataGridViewTextBoxColumn Kieu;
-		private DataGridViewTextBoxColumn ThoiGian;
-		private DataGridViewTextBoxColumn SoLan;
 		/// <summary> 
 		/// Clean up any resources being used.
 		/// </summary>
@@ -56,10 +52,6 @@ namespace singinsystem.QuanTri.QLLoaiDangKy
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgDSQLLoaiDangKy = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThoiGian = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -74,6 +66,10 @@ namespace singinsystem.QuanTri.QLLoaiDangKy
             this.button1 = new System.Windows.Forms.Button();
             this.txtKieu = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThoiGian = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDSQLLoaiDangKy)).BeginInit();
@@ -123,38 +119,6 @@ namespace singinsystem.QuanTri.QLLoaiDangKy
             this.dgDSQLLoaiDangKy.TabIndex = 1;
             this.dgDSQLLoaiDangKy.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDSQLLoaiDangKy_CellClick);
             // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "ID";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.Width = 125;
-            // 
-            // Kieu
-            // 
-            this.Kieu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Kieu.DataPropertyName = "Kieu";
-            this.Kieu.HeaderText = "理由";
-            this.Kieu.MinimumWidth = 6;
-            this.Kieu.Name = "Kieu";
-            // 
-            // ThoiGian
-            // 
-            this.ThoiGian.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ThoiGian.DataPropertyName = "ThoiGian";
-            this.ThoiGian.HeaderText = "时间";
-            this.ThoiGian.MinimumWidth = 6;
-            this.ThoiGian.Name = "ThoiGian";
-            // 
-            // SoLan
-            // 
-            this.SoLan.DataPropertyName = "SoLan";
-            this.SoLan.HeaderText = "数次";
-            this.SoLan.MinimumWidth = 6;
-            this.SoLan.Name = "SoLan";
-            this.SoLan.Width = 125;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -198,27 +162,27 @@ namespace singinsystem.QuanTri.QLLoaiDangKy
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(468, 48);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 25);
+            this.label5.Size = new System.Drawing.Size(127, 25);
             this.label5.TabIndex = 26;
-            this.label5.Text = "数次";
+            this.label5.Text = "Usage Count";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(339, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 25);
+            this.label4.Size = new System.Drawing.Size(56, 25);
             this.label4.TabIndex = 25;
-            this.label4.Text = "时间";
+            this.label4.Text = "Time";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(122, 48);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 25);
+            this.label3.Size = new System.Drawing.Size(79, 25);
             this.label3.TabIndex = 24;
-            this.label3.Text = "理由";
+            this.label3.Text = "Reason";
             // 
             // txtThoiGian
             // 
@@ -241,7 +205,7 @@ namespace singinsystem.QuanTri.QLLoaiDangKy
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(121, 30);
             this.btnSua.TabIndex = 19;
-            this.btnSua.Text = "修改";
+            this.btnSua.Text = "Edit";
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -252,7 +216,7 @@ namespace singinsystem.QuanTri.QLLoaiDangKy
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(121, 30);
             this.btnThem.TabIndex = 18;
-            this.btnThem.Text = "Add to ";
+            this.btnThem.Text = "Add";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -263,7 +227,7 @@ namespace singinsystem.QuanTri.QLLoaiDangKy
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(121, 30);
             this.btnXoa.TabIndex = 17;
-            this.btnXoa.Text = "删除";
+            this.btnXoa.Text = "Delete";
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -274,7 +238,7 @@ namespace singinsystem.QuanTri.QLLoaiDangKy
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 30);
             this.button1.TabIndex = 2;
-            this.button1.Text = "搜索";
+            this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -292,9 +256,41 @@ namespace singinsystem.QuanTri.QLLoaiDangKy
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(274, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 31);
+            this.label1.Size = new System.Drawing.Size(187, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "打卡类型";
+            this.label1.Text = "Break-in type";
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "ID";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.Width = 125;
+            // 
+            // Kieu
+            // 
+            this.Kieu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Kieu.DataPropertyName = "Kieu";
+            this.Kieu.HeaderText = "Reason";
+            this.Kieu.MinimumWidth = 6;
+            this.Kieu.Name = "Kieu";
+            // 
+            // ThoiGian
+            // 
+            this.ThoiGian.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ThoiGian.DataPropertyName = "ThoiGian";
+            this.ThoiGian.HeaderText = "Time";
+            this.ThoiGian.MinimumWidth = 6;
+            this.ThoiGian.Name = "ThoiGian";
+            // 
+            // SoLan
+            // 
+            this.SoLan.DataPropertyName = "SoLan";
+            this.SoLan.HeaderText = "Usage Count";
+            this.SoLan.MinimumWidth = 6;
+            this.SoLan.Name = "SoLan";
+            this.SoLan.Width = 125;
             // 
             // ucQLLoaiDangKy
             // 
@@ -315,6 +311,11 @@ namespace singinsystem.QuanTri.QLLoaiDangKy
 
 		}
 
-		#endregion
-	}
+        #endregion
+
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn Kieu;
+        private DataGridViewTextBoxColumn ThoiGian;
+        private DataGridViewTextBoxColumn SoLan;
+    }
 }

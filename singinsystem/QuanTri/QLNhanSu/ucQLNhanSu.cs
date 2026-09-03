@@ -46,7 +46,7 @@ namespace singinsystem.QuanTri.QLNhanSu
 			bool flag = string.IsNullOrEmpty(this.txtId.Text) || string.IsNullOrEmpty(this.txtTenNS.Text);
 			if (flag)
 			{
-				MessageBox.Show("请输入全部信息 ！");
+				MessageBox.Show("Please fill in all fields ！");
 			}
 			else
 			{
@@ -72,7 +72,7 @@ namespace singinsystem.QuanTri.QLNhanSu
 				}
 				else
 				{
-					MessageBox.Show("ID必须是数号 !", "错误 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+					MessageBox.Show("ID must be a number !", "Error ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 				}
 			}
 		}
@@ -104,7 +104,7 @@ namespace singinsystem.QuanTri.QLNhanSu
 			bool flag = string.IsNullOrEmpty(this.txtId.Text) || string.IsNullOrEmpty(this.txtTenNS.Text);
 			if (flag)
 			{
-				MessageBox.Show(" 请输入全部信息 ！");
+				MessageBox.Show(" Please fill in all fields ！");
 			}
 			else
 			{
@@ -129,7 +129,7 @@ namespace singinsystem.QuanTri.QLNhanSu
 				}
 				else
 				{
-					MessageBox.Show("ID必须是数号 !", "错误 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+					MessageBox.Show("ID must be a number !", "Error ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 				}
 			}
 		}
@@ -187,7 +187,7 @@ namespace singinsystem.QuanTri.QLNhanSu
 
 				if (worksheet == null)
 				{
-					MessageBox.Show("不能收到文档的数据 ！");
+					MessageBox.Show("Unable to retrieve data from the document ！");
 					return;
 				}
 
@@ -263,7 +263,7 @@ namespace singinsystem.QuanTri.QLNhanSu
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show($"错误 : {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show($"Error : {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 

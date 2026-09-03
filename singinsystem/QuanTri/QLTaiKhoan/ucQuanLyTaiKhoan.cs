@@ -66,7 +66,7 @@ namespace singinsystem.QuanTri.QLTaiKhoan
 			bool flag = this.check == 0;
 			if (flag)
 			{
-				MessageBox.Show("请选择要修改的账号 ！");
+				MessageBox.Show("Please select an account to modify ！");
 			}
 			new frmCapNhatTaiKhoan(this.TaiKhoanDaChon, this.QuyenCuaNguoiLogin)
 			{

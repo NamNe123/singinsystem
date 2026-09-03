@@ -62,7 +62,7 @@ namespace singinsystem.QuanTri.QLTaiKhoan
 				bool flag2 = string.IsNullOrEmpty(this.txtMatKhauMoi.Text) || this.txtMatKhauMoi.Text != this.txtNhapLaiMK.Text;
 				if (flag2)
 				{
-					MessageBox.Show("密码错误 !");
+					MessageBox.Show("Incorrect Password !");
 					return;
 				}
 			}
@@ -71,7 +71,7 @@ namespace singinsystem.QuanTri.QLTaiKhoan
 				bool flag3 = clsCauHinhHeThong.TenDangNhap != this.txtTenDangNhap.Text || string.IsNullOrEmpty(this.txtMatKhauMoi.Text) || this.txtMatKhauMoi.Text != this.txtNhapLaiMK.Text;
 				if (flag3)
 				{
-					MessageBox.Show("再检查要改的账号 ！");
+					MessageBox.Show("Please check the account you want to modify again ！");
 					return;
 				}
 			}

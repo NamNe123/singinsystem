@@ -40,7 +40,7 @@ namespace singinsystem.QuanTri.QLLoaiDangKy
 			bool flag = string.IsNullOrEmpty(this.txtId.Text) || string.IsNullOrEmpty(this.txtKieu.Text) || string.IsNullOrEmpty(this.txtSoLan.Text) || string.IsNullOrEmpty(this.txtThoiGian.Text);
 			if (flag)
 			{
-				MessageBox.Show("请输入全部信息 ！");
+				MessageBox.Show("Please fill in all fields ！");
 			}
 			else
 			{
@@ -71,7 +71,7 @@ namespace singinsystem.QuanTri.QLLoaiDangKy
 				}
 				else
 				{
-					MessageBox.Show("ID必须是数号 !", "错误 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+					MessageBox.Show("ID must be a number !", "Error ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 				}
 			}
 		}
@@ -93,7 +93,7 @@ namespace singinsystem.QuanTri.QLLoaiDangKy
 			bool flag = string.IsNullOrEmpty(this.txtId.Text) || string.IsNullOrEmpty(this.txtKieu.Text) || string.IsNullOrEmpty(this.txtSoLan.Text) || string.IsNullOrEmpty(this.txtThoiGian.Text);
 			if (flag)
 			{
-				MessageBox.Show("请输入全部信息 ！");
+				MessageBox.Show("Please fill in all fields ！");
 			}
 			else
 			{
@@ -124,7 +124,7 @@ namespace singinsystem.QuanTri.QLLoaiDangKy
 				}
 				else
 				{
-					MessageBox.Show("ID必须是数号 !", "错误 ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+					MessageBox.Show("ID must be a number !", "Error ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 				}
 			}
 		}

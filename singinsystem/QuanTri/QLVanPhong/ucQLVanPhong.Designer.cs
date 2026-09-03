@@ -23,8 +23,6 @@ namespace singinsystem.QuanTri.QLVanPhong
 		private Label label3;
 		private Label label2;
 		private TextBox txtTenVP;
-		private DataGridViewTextBoxColumn Id;
-		private DataGridViewTextBoxColumn Ten;
 		/// <summary> 
 		/// Clean up any resources being used.
 		/// </summary>
@@ -49,8 +47,6 @@ namespace singinsystem.QuanTri.QLVanPhong
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgDSQLVanPhong = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,6 +56,8 @@ namespace singinsystem.QuanTri.QLVanPhong
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDSQLVanPhong)).BeginInit();
@@ -107,22 +105,6 @@ namespace singinsystem.QuanTri.QLVanPhong
             this.dgDSQLVanPhong.TabIndex = 1;
             this.dgDSQLVanPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDSQLVanPhong_CellClick);
             // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "ID";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.Width = 125;
-            // 
-            // Ten
-            // 
-            this.Ten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Ten.DataPropertyName = "Ten";
-            this.Ten.HeaderText = "办公室";
-            this.Ten.MinimumWidth = 6;
-            this.Ten.Name = "Ten";
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -152,9 +134,9 @@ namespace singinsystem.QuanTri.QLVanPhong
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(147, 64);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 25);
+            this.label3.Size = new System.Drawing.Size(63, 25);
             this.label3.TabIndex = 19;
-            this.label3.Text = "办公室";
+            this.label3.Text = "Office";
             // 
             // label2
             // 
@@ -179,7 +161,7 @@ namespace singinsystem.QuanTri.QLVanPhong
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(121, 30);
             this.btnSua.TabIndex = 16;
-            this.btnSua.Text = "修改";
+            this.btnSua.Text = "Edit";
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -190,7 +172,7 @@ namespace singinsystem.QuanTri.QLVanPhong
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(121, 30);
             this.btnThem.TabIndex = 15;
-            this.btnThem.Text = "Add to ";
+            this.btnThem.Text = "Add";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -201,7 +183,7 @@ namespace singinsystem.QuanTri.QLVanPhong
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(121, 30);
             this.btnXoa.TabIndex = 14;
-            this.btnXoa.Text = "删除";
+            this.btnXoa.Text = "Delete";
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -212,9 +194,25 @@ namespace singinsystem.QuanTri.QLVanPhong
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(266, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 31);
+            this.label1.Size = new System.Drawing.Size(267, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "办公室管理";
+            this.label1.Text = "Office Management";
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "ID";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.Width = 125;
+            // 
+            // Ten
+            // 
+            this.Ten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Ten.DataPropertyName = "Ten";
+            this.Ten.HeaderText = "Office";
+            this.Ten.MinimumWidth = 6;
+            this.Ten.Name = "Ten";
             // 
             // ucQLVanPhong
             // 
@@ -235,6 +233,9 @@ namespace singinsystem.QuanTri.QLVanPhong
 
 		}
 
-		#endregion
-	}
+        #endregion
+
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn Ten;
+    }
 }

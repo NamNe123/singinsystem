@@ -47,7 +47,7 @@ namespace singinsystem.QuanTri.QLTaiKhoan
 			bool flag = this.txtMatKhau.Text != this.txtNhapLaiMK.Text;
 			if (flag)
 			{
-				MessageBox.Show("密码不一致 ！");
+				MessageBox.Show("Passwords do not match ！");
 			}
 			else
 			{

@@ -136,7 +136,7 @@ namespace DataAccessLayer.Reponsitories
 			}
 			catch (Exception ex)
 			{
-				error = "Kết nối 错误 ！: test " + ex.Message + dataTable.ToString() + "test";
+				error = "Kết nối Error ！: test " + ex.Message + dataTable.ToString() + "test";
 				result = false;
 			}
 			return result;

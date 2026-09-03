@@ -100,7 +100,7 @@ namespace BusinessLogicLayer.Manager
 			bool result;
 			if (flag)
 			{
-				error = "请输入员工姓名!";
+				error = "Please choose the employee's code-name!";
 				result = false;
 			}
 			else
@@ -129,10 +129,10 @@ namespace BusinessLogicLayer.Manager
 				if (flag3)
 				{
 					DateTime d = Convert.ToDateTime(dataRow["GioXuongCa"]);
-					bool flag4 = (Entity.GioLamViec - d).TotalHours < 3.0;
+					bool flag4 = (Entity.GioLamViec - d).TotalHours < 1.0;
 					if (flag4)
 					{
-						error = "员工已经下班 !";
+						error = "Employee is already clocked out !";
 						return false;
 					}
 				}
@@ -142,7 +142,7 @@ namespace BusinessLogicLayer.Manager
 				bool flag5 = dataTable2.Rows[i]["TrangThai"].ToString() == "Đang làm việc";
 				if (flag5)
 				{
-					error = "员工已经上班 ！";
+					error = "Employee is already clocked in ！";
 					return false;
 				}
 			}
@@ -172,7 +172,7 @@ namespace BusinessLogicLayer.Manager
 					bool flag2 = dataTable.Rows[i]["TrangThai"].ToString() == "Đã ra";
 					if (flag2)
 					{
-						error = "你出去还没打入，先打入才可以下班 !";
+						error = "You haven't break in yet. You need to break in first before you can clock out!";
 						return false;
 					}
 				}

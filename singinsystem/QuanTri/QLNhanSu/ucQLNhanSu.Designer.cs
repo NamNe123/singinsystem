@@ -25,9 +25,6 @@ namespace singinsystem.QuanTri.QLNhanSu
 		private Label label2;
 		private Button btnSua;
 		private Button btnXoaTimKiem;
-		private DataGridViewTextBoxColumn STT;
-		private DataGridViewTextBoxColumn Id;
-		private DataGridViewTextBoxColumn Ten;
 		private Button btnImport;
 		private Button btnXuatFileMau;
 		private Label label4;
@@ -55,9 +52,6 @@ namespace singinsystem.QuanTri.QLNhanSu
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgDSQLNhanSu = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.btnImport = new System.Windows.Forms.Button();
@@ -72,6 +66,9 @@ namespace singinsystem.QuanTri.QLNhanSu
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtTenNS = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDSQLNhanSu)).BeginInit();
@@ -120,31 +117,6 @@ namespace singinsystem.QuanTri.QLNhanSu
             this.dgDSQLNhanSu.TabIndex = 1;
             this.dgDSQLNhanSu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDSQLNhanSu_CellClick);
             // 
-            // STT
-            // 
-            this.STT.DataPropertyName = "STT";
-            this.STT.HeaderText = "序号";
-            this.STT.MinimumWidth = 6;
-            this.STT.Name = "STT";
-            this.STT.Width = 125;
-            // 
-            // Id
-            // 
-            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "ID";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.Width = 125;
-            // 
-            // Ten
-            // 
-            this.Ten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Ten.DataPropertyName = "Ten";
-            this.Ten.HeaderText = "姓名";
-            this.Ten.MinimumWidth = 6;
-            this.Ten.Name = "Ten";
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -172,9 +144,9 @@ namespace singinsystem.QuanTri.QLNhanSu
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(3, 146);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 25);
+            this.label4.Size = new System.Drawing.Size(62, 25);
             this.label4.TabIndex = 17;
-            this.label4.Text = "总共:";
+            this.label4.Text = "Total:";
             // 
             // btnImport
             // 
@@ -184,7 +156,7 @@ namespace singinsystem.QuanTri.QLNhanSu
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(121, 30);
             this.btnImport.TabIndex = 16;
-            this.btnImport.Text = "导入";
+            this.btnImport.Text = "Import";
             this.btnImport.UseVisualStyleBackColor = false;
             this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
@@ -196,7 +168,7 @@ namespace singinsystem.QuanTri.QLNhanSu
             this.btnXuatFileMau.Name = "btnXuatFileMau";
             this.btnXuatFileMau.Size = new System.Drawing.Size(152, 30);
             this.btnXuatFileMau.TabIndex = 15;
-            this.btnXuatFileMau.Text = "原本";
+            this.btnXuatFileMau.Text = "Original";
             this.btnXuatFileMau.UseVisualStyleBackColor = false;
             this.btnXuatFileMau.Click += new System.EventHandler(this.btnXuatFileMau_Click);
             // 
@@ -207,7 +179,7 @@ namespace singinsystem.QuanTri.QLNhanSu
             this.btnXoaTimKiem.Name = "btnXoaTimKiem";
             this.btnXoaTimKiem.Size = new System.Drawing.Size(121, 30);
             this.btnXoaTimKiem.TabIndex = 14;
-            this.btnXoaTimKiem.Text = "刷新";
+            this.btnXoaTimKiem.Text = "Refresh";
             this.btnXoaTimKiem.UseVisualStyleBackColor = false;
             this.btnXoaTimKiem.Click += new System.EventHandler(this.btnXoaTimKiem_Click);
             // 
@@ -218,7 +190,7 @@ namespace singinsystem.QuanTri.QLNhanSu
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(121, 30);
             this.btnSua.TabIndex = 13;
-            this.btnSua.Text = "修改";
+            this.btnSua.Text = "Edit";
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -234,9 +206,9 @@ namespace singinsystem.QuanTri.QLNhanSu
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(144, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 25);
+            this.label3.Size = new System.Drawing.Size(64, 25);
             this.label3.TabIndex = 11;
-            this.label3.Text = "姓名";
+            this.label3.Text = "Name";
             // 
             // label2
             // 
@@ -254,7 +226,7 @@ namespace singinsystem.QuanTri.QLNhanSu
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(121, 30);
             this.btnThem.TabIndex = 4;
-            this.btnThem.Text = "Add to ";
+            this.btnThem.Text = "Add";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -265,7 +237,7 @@ namespace singinsystem.QuanTri.QLNhanSu
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(121, 30);
             this.btnXoa.TabIndex = 3;
-            this.btnXoa.Text = "删除";
+            this.btnXoa.Text = "Delete";
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -276,7 +248,7 @@ namespace singinsystem.QuanTri.QLNhanSu
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(121, 30);
             this.btnTimKiem.TabIndex = 2;
-            this.btnTimKiem.Text = "搜索";
+            this.btnTimKiem.Text = "Search";
             this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
@@ -294,9 +266,34 @@ namespace singinsystem.QuanTri.QLNhanSu
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(266, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 31);
+            this.label1.Size = new System.Drawing.Size(320, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "人事管理";
+            this.label1.Text = "Personnel Management";
+            // 
+            // STT
+            // 
+            this.STT.DataPropertyName = "STT";
+            this.STT.HeaderText = "No";
+            this.STT.MinimumWidth = 6;
+            this.STT.Name = "STT";
+            this.STT.Width = 125;
+            // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "ID";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.Width = 125;
+            // 
+            // Ten
+            // 
+            this.Ten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Ten.DataPropertyName = "Ten";
+            this.Ten.HeaderText = "Name";
+            this.Ten.MinimumWidth = 6;
+            this.Ten.Name = "Ten";
             // 
             // ucQLNhanSu
             // 
@@ -317,6 +314,10 @@ namespace singinsystem.QuanTri.QLNhanSu
 
 		}
 
-		#endregion
-	}
+        #endregion
+
+        private DataGridViewTextBoxColumn STT;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn Ten;
+    }
 }

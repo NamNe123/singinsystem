@@ -60,14 +60,14 @@ namespace singinsystem.QLXuongCa
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucQLXuongCa));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucQLXuongCa));
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -88,12 +88,12 @@ namespace singinsystem.QLXuongCa
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.cbHienThi = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.dgDSQLXuongCa = new System.Windows.Forms.DataGridView();
+            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaNv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -103,7 +103,7 @@ namespace singinsystem.QLXuongCa
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTroLaiLamViec = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnXuLyDuLieu = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -117,10 +117,10 @@ namespace singinsystem.QLXuongCa
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDSQLXuongCa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -182,7 +182,7 @@ namespace singinsystem.QLXuongCa
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(934, 34);
             this.label1.TabIndex = 1;
-            this.label1.Text = "上下班记录";
+            this.label1.Text = "Clock Records";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel4
@@ -223,7 +223,7 @@ namespace singinsystem.QLXuongCa
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 275F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 216F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
             this.tableLayoutPanel7.Controls.Add(this.cbNhanSu, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel5, 3, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel6, 4, 0);
@@ -243,9 +243,9 @@ namespace singinsystem.QLXuongCa
             this.cbNhanSu.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNhanSu.FormattingEnabled = true;
             this.cbNhanSu.IntegralHeight = false;
-            this.cbNhanSu.Location = new System.Drawing.Point(36, 3);
+            this.cbNhanSu.Location = new System.Drawing.Point(35, 3);
             this.cbNhanSu.Name = "cbNhanSu";
-            this.cbNhanSu.Size = new System.Drawing.Size(115, 39);
+            this.cbNhanSu.Size = new System.Drawing.Size(112, 39);
             this.cbNhanSu.TabIndex = 2;
             this.cbNhanSu.TextUpdate += new System.EventHandler(this.cbNhanSu_TextUpdate);
             this.cbNhanSu.SelectedValueChanged += new System.EventHandler(this.cbNhanSu_SelectedValueChanged);
@@ -254,7 +254,7 @@ namespace singinsystem.QLXuongCa
             // 
             this.panel5.Controls.Add(this.dtpTu);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(432, 3);
+            this.panel5.Location = new System.Drawing.Point(428, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(159, 32);
             this.panel5.TabIndex = 3;
@@ -274,7 +274,7 @@ namespace singinsystem.QLXuongCa
             // 
             this.panel6.Controls.Add(this.dtpDen);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(597, 3);
+            this.panel6.Location = new System.Drawing.Point(593, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(210, 32);
             this.panel6.TabIndex = 4;
@@ -292,7 +292,7 @@ namespace singinsystem.QLXuongCa
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(157, 3);
+            this.panel7.Location = new System.Drawing.Point(153, 3);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(269, 32);
             this.panel7.TabIndex = 5;
@@ -302,7 +302,7 @@ namespace singinsystem.QLXuongCa
             this.tableLayoutPanel6.ColumnCount = 3;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.16505F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 88.83495F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 386F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 390F));
             this.tableLayoutPanel6.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel4, 2, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -319,7 +319,7 @@ namespace singinsystem.QLXuongCa
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(62, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(470, 24);
+            this.panel2.Size = new System.Drawing.Size(466, 24);
             this.panel2.TabIndex = 0;
             // 
             // label3
@@ -329,17 +329,17 @@ namespace singinsystem.QLXuongCa
             this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 31);
+            this.label3.Size = new System.Drawing.Size(152, 31);
             this.label3.TabIndex = 1;
-            this.label3.Text = "代码 - 姓名";
+            this.label3.Text = "Code - Name";
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(538, 3);
+            this.panel4.Location = new System.Drawing.Point(534, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(381, 24);
+            this.panel4.Size = new System.Drawing.Size(385, 24);
             this.panel4.TabIndex = 1;
             // 
             // label2
@@ -351,7 +351,7 @@ namespace singinsystem.QLXuongCa
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 31);
             this.label2.TabIndex = 0;
-            this.label2.Text = "时间";
+            this.label2.Text = "Date";
             // 
             // tableLayoutPanel8
             // 
@@ -368,17 +368,6 @@ namespace singinsystem.QLXuongCa
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(928, 40);
             this.tableLayoutPanel8.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(882, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel8
             // 
@@ -399,7 +388,7 @@ namespace singinsystem.QLXuongCa
             "100",
             "200",
             "500"});
-            this.cbHienThi.Location = new System.Drawing.Point(70, 0);
+            this.cbHienThi.Location = new System.Drawing.Point(165, 0);
             this.cbHienThi.Name = "cbHienThi";
             this.cbHienThi.Size = new System.Drawing.Size(91, 33);
             this.cbHienThi.TabIndex = 1;
@@ -411,9 +400,9 @@ namespace singinsystem.QLXuongCa
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(6, 1);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 28);
+            this.label4.Size = new System.Drawing.Size(162, 28);
             this.label4.TabIndex = 0;
-            this.label4.Text = "显示:";
+            this.label4.Text = "Rows per page :";
             // 
             // panel9
             // 
@@ -456,6 +445,22 @@ namespace singinsystem.QLXuongCa
             this.dgDSQLXuongCa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDSQLXuongCa_CellContentClick);
             this.dgDSQLXuongCa.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgDSQLXuongCa_DataBindingComplete);
             // 
+            // dataGridViewButtonColumn1
+            // 
+            this.dataGridViewButtonColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewButtonColumn1.DataPropertyName = "btnTroLaiLamViec";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewButtonColumn1.HeaderText = "Thao tác";
+            this.dataGridViewButtonColumn1.MinimumWidth = 6;
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewButtonColumn1.Text = "Trở lại làm việc";
+            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
+            // 
             // Id
             // 
             this.Id.DataPropertyName = "Id";
@@ -467,7 +472,7 @@ namespace singinsystem.QLXuongCa
             // MaNv
             // 
             this.MaNv.DataPropertyName = "MaNv";
-            this.MaNv.HeaderText = "代码";
+            this.MaNv.HeaderText = "Code";
             this.MaNv.MinimumWidth = 6;
             this.MaNv.Name = "MaNv";
             this.MaNv.Width = 125;
@@ -477,7 +482,7 @@ namespace singinsystem.QLXuongCa
             this.Ten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Ten.DataPropertyName = "Ten";
             this.Ten.FillWeight = 150F;
-            this.Ten.HeaderText = "姓名";
+            this.Ten.HeaderText = "Name";
             this.Ten.MinimumWidth = 6;
             this.Ten.Name = "Ten";
             // 
@@ -488,7 +493,7 @@ namespace singinsystem.QLXuongCa
             dataGridViewCellStyle2.Format = "G";
             dataGridViewCellStyle2.NullValue = null;
             this.GioLamViec.DefaultCellStyle = dataGridViewCellStyle2;
-            this.GioLamViec.HeaderText = "上班时间";
+            this.GioLamViec.HeaderText = "Clock-in ";
             this.GioLamViec.MinimumWidth = 6;
             this.GioLamViec.Name = "GioLamViec";
             // 
@@ -499,7 +504,7 @@ namespace singinsystem.QLXuongCa
             dataGridViewCellStyle3.Format = "G";
             dataGridViewCellStyle3.NullValue = null;
             this.GioXuongCa.DefaultCellStyle = dataGridViewCellStyle3;
-            this.GioXuongCa.HeaderText = "下班时间";
+            this.GioXuongCa.HeaderText = "Clock-out ";
             this.GioXuongCa.MinimumWidth = 6;
             this.GioXuongCa.Name = "GioXuongCa";
             // 
@@ -509,7 +514,7 @@ namespace singinsystem.QLXuongCa
             this.TongGioLam.DataPropertyName = "TongGioLam";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.TongGioLam.DefaultCellStyle = dataGridViewCellStyle4;
-            this.TongGioLam.HeaderText = "总时间";
+            this.TongGioLam.HeaderText = "Total time";
             this.TongGioLam.MinimumWidth = 6;
             this.TongGioLam.Name = "TongGioLam";
             // 
@@ -530,12 +535,12 @@ namespace singinsystem.QLXuongCa
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.Lime;
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             this.btnTroLaiLamViec.DefaultCellStyle = dataGridViewCellStyle5;
-            this.btnTroLaiLamViec.HeaderText = "操作";
+            this.btnTroLaiLamViec.HeaderText = "Actions";
             this.btnTroLaiLamViec.MinimumWidth = 6;
             this.btnTroLaiLamViec.Name = "btnTroLaiLamViec";
             this.btnTroLaiLamViec.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.btnTroLaiLamViec.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.btnTroLaiLamViec.Text = "回来上班";
+            this.btnTroLaiLamViec.Text = "Return to Work";
             this.btnTroLaiLamViec.UseColumnTextForButtonValue = true;
             // 
             // btnXuLyDuLieu
@@ -546,28 +551,23 @@ namespace singinsystem.QLXuongCa
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.Lime;
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
             this.btnXuLyDuLieu.DefaultCellStyle = dataGridViewCellStyle6;
-            this.btnXuLyDuLieu.HeaderText = "操作";
+            this.btnXuLyDuLieu.HeaderText = "Actions";
             this.btnXuLyDuLieu.MinimumWidth = 6;
             this.btnXuLyDuLieu.Name = "btnXuLyDuLieu";
             this.btnXuLyDuLieu.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.btnXuLyDuLieu.Text = "更新时间";
+            this.btnXuLyDuLieu.Text = "Last Updated";
             this.btnXuLyDuLieu.UseColumnTextForButtonValue = true;
             // 
-            // dataGridViewButtonColumn1
+            // pictureBox1
             // 
-            this.dataGridViewButtonColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewButtonColumn1.DataPropertyName = "btnTroLaiLamViec";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridViewButtonColumn1.HeaderText = "Thao tác";
-            this.dataGridViewButtonColumn1.MinimumWidth = 6;
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewButtonColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewButtonColumn1.Text = "Trở lại làm việc";
-            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(882, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ucQLXuongCa
             // 
@@ -595,11 +595,11 @@ namespace singinsystem.QLXuongCa
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgDSQLXuongCa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
 		}

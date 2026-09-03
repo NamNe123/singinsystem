@@ -309,7 +309,7 @@ namespace singinsystem.QLXuongCa
 		private void dgDSQLXuongCa_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
 		{
 			this.dgDSQLXuongCa.EnableHeadersVisualStyles = false;
-			this.dgDSQLXuongCa.ColumnHeadersDefaultCellStyle.BackColor = Color.Red;
+			this.dgDSQLXuongCa.ColumnHeadersDefaultCellStyle.BackColor = Color.Blue;
 			this.dgDSQLXuongCa.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 			for (int i = 0; i < this.dgDSQLXuongCa.Rows.Count; i++)
 			{
@@ -320,7 +320,7 @@ namespace singinsystem.QLXuongCa
 				}
 				else
 				{
-					this.dgDSQLXuongCa.Rows[i].DefaultCellStyle.BackColor = Color.LightCoral;
+					this.dgDSQLXuongCa.Rows[i].DefaultCellStyle.BackColor = Color.LightBlue;
 				}
 			}
 			this.dgDSQLXuongCa.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 16f);
@@ -404,7 +404,7 @@ namespace singinsystem.QLXuongCa
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show($"发生错误: {ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 		private void pictureBox1_Click(object sender, EventArgs e)
@@ -417,7 +417,7 @@ namespace singinsystem.QLXuongCa
 			{
 				SaveFileDialog saveFileDialog = new SaveFileDialog();
 				saveFileDialog.Title = "Export Excel";
-				saveFileDialog.FileName = "上下班记录.xlsx";
+				saveFileDialog.FileName = "ClockRecords.xlsx";
 				saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx";
 				bool flag2 = saveFileDialog.ShowDialog() == DialogResult.OK;
 				if (flag2)

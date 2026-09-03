@@ -20,7 +20,7 @@ namespace singinsystem.MainForm
 		{
 			this.InitializeComponent();
 			this.Text = "User: " + clsCauHinhHeThong.TenDangNhap + " Login: " + DateTime.Now.ToString("hh:mm:ss dd.MM.yyyy");
-			this.btnDiLam.BackColor = Color.Red;
+			this.btnDiLam.BackColor = Color.Blue;
 			this.btnDiLam.ForeColor = Color.White;
 			this.btnDangKyVao.BackColor = Color.White;
 			this.btnDangKyVao.ForeColor = Color.Blue;
@@ -80,7 +80,7 @@ namespace singinsystem.MainForm
 		// Token: 0x060000BA RID: 186 RVA: 0x000187A4 File Offset: 0x000169A4
 		private void btnDiLam_Click(object sender, EventArgs e)
 		{
-			this.btnDiLam.BackColor = Color.Red;
+			this.btnDiLam.BackColor = Color.Blue;
 			this.btnDiLam.ForeColor = Color.White;
 			this.btnDangKyVao.BackColor = Color.White;
 			this.btnDangKyVao.ForeColor = Color.Blue;
@@ -110,7 +110,7 @@ namespace singinsystem.MainForm
 		// Token: 0x060000BB RID: 187 RVA: 0x000188EC File Offset: 0x00016AEC
 		private void btnDangKyVao_Click(object sender, EventArgs e)
 		{
-			this.btnDangKyVao.BackColor = Color.Red;
+			this.btnDangKyVao.BackColor = Color.Blue;
 			this.btnDangKyVao.ForeColor = Color.White;
 			this.btnDiLam.BackColor = Color.White;
 			this.btnDiLam.ForeColor = Color.Blue;
@@ -141,7 +141,7 @@ namespace singinsystem.MainForm
 		// Token: 0x060000BC RID: 188 RVA: 0x00018A40 File Offset: 0x00016C40
 		private void btnKyLuc_Click(object sender, EventArgs e)
 		{
-			this.btnQLDangKy.BackColor = Color.Red;
+			this.btnQLDangKy.BackColor = Color.Blue;
 			this.btnQLDangKy.ForeColor = Color.White;
 			this.btnDiLam.BackColor = Color.White;
 			this.btnDiLam.ForeColor = Color.Blue;
@@ -171,7 +171,7 @@ namespace singinsystem.MainForm
 		// Token: 0x060000BD RID: 189 RVA: 0x00018B7C File Offset: 0x00016D7C
 		private void btnQuanTri_Click(object sender, EventArgs e)
 		{
-			this.btnQuanTri.BackColor = Color.Red;
+			this.btnQuanTri.BackColor = Color.Blue;
 			this.btnQuanTri.ForeColor = Color.White;
 			this.btnDiLam.BackColor = Color.White;
 			this.btnDiLam.ForeColor = Color.Blue;
@@ -223,7 +223,7 @@ namespace singinsystem.MainForm
 		// Token: 0x060000BF RID: 191 RVA: 0x00018D3C File Offset: 0x00016F3C
 		private void btnQLXuongCa_Click(object sender, EventArgs e)
 		{
-			this.btnQLXuongCa.BackColor = Color.Red;
+			this.btnQLXuongCa.BackColor = Color.Blue;
 			this.btnQLXuongCa.ForeColor = Color.White;
 			this.btnDangKyVao.BackColor = Color.White;
 			this.btnDangKyVao.ForeColor = Color.Blue;

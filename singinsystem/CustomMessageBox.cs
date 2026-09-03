@@ -13,7 +13,7 @@ namespace singinsystem
 			Form form = new Form();
 			Label label = new Label();
 			Button button = new Button();
-			form.BackColor = Color.Red;
+			form.BackColor = Color.Blue;
 			form.Text = title;
 			label.Text = message;
 			label.Font = new Font("Segoe UI", 24f, FontStyle.Bold);

@@ -908,7 +908,7 @@ namespace DataAccessLayer.Reponsitories
 					bool flag3 = a == "Đã ra";
 					if (flag3)
 					{
-						error = "你还没进入，先打入 ！";
+						error = "You haven't break in yet. Please break in first!";
 						return false;
 					}
 				}
@@ -918,7 +918,7 @@ namespace DataAccessLayer.Reponsitories
 			bool result;
 			if (flag4)
 			{
-				error = "=> 不能再选这个选项 <= 请选其他选项";
+				error = "=> This option cannot be selected again <= Please select another option";
 				result = false;
 			}
 			else

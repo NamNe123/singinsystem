@@ -21,15 +21,6 @@ namespace singinsystem.QLDangKyVao
         private Panel panel1;
         private TableLayoutPanel tableLayoutPanel2;
         private DataGridView dgDSQLDangKyVao;
-
-		private DataGridViewTextBoxColumn Id;
-		private DataGridViewTextBoxColumn MaNV;
-		private DataGridViewTextBoxColumn TenNV;
-		private DataGridViewTextBoxColumn LyDo;
-		private DataGridViewTextBoxColumn TimeOut;
-		private DataGridViewTextBoxColumn GhiChu;
-
-        private DataGridViewButtonColumn btnCheckIn;
         private TableLayoutPanel tableLayoutPanel8;
         private Panel panel7;
         private Panel panel8;
@@ -77,9 +68,9 @@ namespace singinsystem.QLDangKyVao
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -90,13 +81,6 @@ namespace singinsystem.QLDangKyVao
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dgDSQLDangKyVao = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LyDo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TimeOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCheckIn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -116,6 +100,13 @@ namespace singinsystem.QLDangKyVao
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LyDo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TimeOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCheckIn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -201,7 +192,7 @@ namespace singinsystem.QLDangKyVao
             this.dgDSQLQuyDinh.Name = "dgDSQLQuyDinh";
             this.dgDSQLQuyDinh.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Blue;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -319,84 +310,12 @@ namespace singinsystem.QLDangKyVao
             this.dgDSQLDangKyVao.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDSQLDangKyVao_CellContentClick);
             this.dgDSQLDangKyVao.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgDSQLDangKyVao_DataBindingComplete);
             // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.Width = 125;
-            // 
-            // MaNV
-            // 
-            this.MaNV.DataPropertyName = "MaNV";
-            this.MaNV.HeaderText = "Code";
-            this.MaNV.MinimumWidth = 6;
-            this.MaNV.Name = "MaNV";
-            this.MaNV.Width = 125;
-            // 
-            // TenNV
-            // 
-            this.TenNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenNV.DataPropertyName = "TenNV";
-            this.TenNV.FillWeight = 150F;
-            this.TenNV.HeaderText = "Name";
-            this.TenNV.MinimumWidth = 6;
-            this.TenNV.Name = "TenNV";
-            // 
-            // LyDo
-            // 
-            this.LyDo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.LyDo.DataPropertyName = "LyDo";
-            this.LyDo.HeaderText = "Reason";
-            this.LyDo.MinimumWidth = 6;
-            this.LyDo.Name = "LyDo";
-            // 
-            // TimeOut
-            // 
-            this.TimeOut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TimeOut.DataPropertyName = "TimeOut";
-            dataGridViewCellStyle7.Format = "G";
-            dataGridViewCellStyle7.NullValue = null;
-            this.TimeOut.DefaultCellStyle = dataGridViewCellStyle7;
-            this.TimeOut.HeaderText = "Time Out";
-            this.TimeOut.MinimumWidth = 6;
-            this.TimeOut.Name = "TimeOut";
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.GhiChu.DataPropertyName = "GhiChu";
-            this.GhiChu.HeaderText = "Ghi Chú";
-            this.GhiChu.MinimumWidth = 6;
-            this.GhiChu.Name = "GhiChu";
-            // 
-            // btnCheckIn
-            // 
-            this.btnCheckIn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.btnCheckIn.DataPropertyName = "btnCheckIn";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.btnCheckIn.DefaultCellStyle = dataGridViewCellStyle8;
-            this.btnCheckIn.HeaderText = "Check In";
-            this.btnCheckIn.MinimumWidth = 6;
-            this.btnCheckIn.Name = "btnCheckIn";
-            this.btnCheckIn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.btnCheckIn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.btnCheckIn.Text = "Check In";
-            this.btnCheckIn.UseColumnTextForButtonValue = true;
-            // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.ColumnCount = 3;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.65399F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.34601F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 354F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 355F));
             this.tableLayoutPanel8.Controls.Add(this.panel7, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.panel8, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -420,7 +339,7 @@ namespace singinsystem.QLDangKyVao
             this.panel8.Controls.Add(this.btnCheckOut);
             this.panel8.Location = new System.Drawing.Point(287, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(212, 50);
+            this.panel8.Size = new System.Drawing.Size(211, 50);
             this.panel8.TabIndex = 2;
             // 
             // btnCheckOut
@@ -432,7 +351,7 @@ namespace singinsystem.QLDangKyVao
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(217, 47);
             this.btnCheckOut.TabIndex = 4;
-            this.btnCheckOut.Text = "Punch - out";
+            this.btnCheckOut.Text = "Break - out";
             this.btnCheckOut.UseVisualStyleBackColor = false;
             this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
@@ -441,7 +360,7 @@ namespace singinsystem.QLDangKyVao
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.88409F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.11591F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 410F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 411F));
             this.tableLayoutPanel7.Controls.Add(this.cbLoaiDangKy, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel6, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -457,7 +376,7 @@ namespace singinsystem.QLDangKyVao
             this.cbLoaiDangKy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbLoaiDangKy.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLoaiDangKy.FormattingEnabled = true;
-            this.cbLoaiDangKy.Location = new System.Drawing.Point(230, 3);
+            this.cbLoaiDangKy.Location = new System.Drawing.Point(229, 3);
             this.cbLoaiDangKy.Name = "cbLoaiDangKy";
             this.cbLoaiDangKy.Size = new System.Drawing.Size(213, 39);
             this.cbLoaiDangKy.TabIndex = 6;
@@ -470,7 +389,7 @@ namespace singinsystem.QLDangKyVao
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(3, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(221, 45);
+            this.panel6.Size = new System.Drawing.Size(220, 45);
             this.panel6.TabIndex = 0;
             // 
             // tableLayoutPanel6
@@ -556,7 +475,7 @@ namespace singinsystem.QLDangKyVao
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.88409F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.11591F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 410F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 411F));
             this.tableLayoutPanel5.Controls.Add(this.cbNhanSu, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.panel4, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -574,7 +493,7 @@ namespace singinsystem.QLDangKyVao
             this.cbNhanSu.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNhanSu.FormattingEnabled = true;
             this.cbNhanSu.IntegralHeight = false;
-            this.cbNhanSu.Location = new System.Drawing.Point(230, 3);
+            this.cbNhanSu.Location = new System.Drawing.Point(229, 3);
             this.cbNhanSu.Name = "cbNhanSu";
             this.cbNhanSu.Size = new System.Drawing.Size(213, 39);
             this.cbNhanSu.TabIndex = 3;
@@ -586,7 +505,7 @@ namespace singinsystem.QLDangKyVao
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(221, 44);
+            this.panel4.Size = new System.Drawing.Size(220, 44);
             this.panel4.TabIndex = 0;
             // 
             // label1
@@ -594,11 +513,11 @@ namespace singinsystem.QLDangKyVao
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(333, 0);
+            this.label1.Location = new System.Drawing.Point(336, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 38);
+            this.label1.Size = new System.Drawing.Size(190, 38);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Punch in/out ";
+            this.label1.Text = "Break in/out ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // dataGridViewButtonColumn1
@@ -613,6 +532,78 @@ namespace singinsystem.QLDangKyVao
             this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
             this.dataGridViewButtonColumn1.Text = "Thêm Ghi Chú";
             this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.Width = 125;
+            // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.HeaderText = "Code";
+            this.MaNV.MinimumWidth = 6;
+            this.MaNV.Name = "MaNV";
+            this.MaNV.Width = 125;
+            // 
+            // TenNV
+            // 
+            this.TenNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenNV.DataPropertyName = "TenNV";
+            this.TenNV.FillWeight = 150F;
+            this.TenNV.HeaderText = "Name";
+            this.TenNV.MinimumWidth = 6;
+            this.TenNV.Name = "TenNV";
+            // 
+            // LyDo
+            // 
+            this.LyDo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.LyDo.DataPropertyName = "LyDo";
+            this.LyDo.HeaderText = "Reason";
+            this.LyDo.MinimumWidth = 6;
+            this.LyDo.Name = "LyDo";
+            // 
+            // TimeOut
+            // 
+            this.TimeOut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TimeOut.DataPropertyName = "TimeOut";
+            dataGridViewCellStyle7.Format = "G";
+            dataGridViewCellStyle7.NullValue = null;
+            this.TimeOut.DefaultCellStyle = dataGridViewCellStyle7;
+            this.TimeOut.HeaderText = "Time Out";
+            this.TimeOut.MinimumWidth = 6;
+            this.TimeOut.Name = "TimeOut";
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GhiChu.DataPropertyName = "GhiChu";
+            this.GhiChu.HeaderText = "Ghi Chú";
+            this.GhiChu.MinimumWidth = 6;
+            this.GhiChu.Name = "GhiChu";
+            // 
+            // btnCheckIn
+            // 
+            this.btnCheckIn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.btnCheckIn.DataPropertyName = "btnCheckIn";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnCheckIn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.btnCheckIn.HeaderText = "Break-in";
+            this.btnCheckIn.MinimumWidth = 6;
+            this.btnCheckIn.Name = "btnCheckIn";
+            this.btnCheckIn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnCheckIn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btnCheckIn.Text = "Break-in";
+            this.btnCheckIn.UseColumnTextForButtonValue = true;
             // 
             // ucQLDangKyVao
             // 
@@ -646,5 +637,13 @@ namespace singinsystem.QLDangKyVao
 		}
 
         #endregion
+
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn MaNV;
+        private DataGridViewTextBoxColumn TenNV;
+        private DataGridViewTextBoxColumn LyDo;
+        private DataGridViewTextBoxColumn TimeOut;
+        private DataGridViewTextBoxColumn GhiChu;
+        private DataGridViewButtonColumn btnCheckIn;
     }
 }

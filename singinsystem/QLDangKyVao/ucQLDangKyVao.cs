@@ -290,9 +290,9 @@ namespace singinsystem.QLDangKyVao
 					bool flag4 = flag3;
 					if (flag4)
 					{
-						CustomMessageBoxPhu.Show("Start heading out ！", "success ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+						CustomMessageBoxPhu.Show("Start Break Time ！", "success ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 
-						string test = "Start heading out";// + qldiLaiEntity.LyDo;
+						string test = "Start Break Time";// + qldiLaiEntity.LyDo;
 						SpeechSynthesizer reader = new SpeechSynthesizer();
                         // Chọn voice tiếng Trung
                         reader.SelectVoiceByHints(
@@ -302,12 +302,12 @@ namespace singinsystem.QLDangKyVao
                             new CultureInfo("zh-CN") // tiếng Trung giản thể
                         );
                         //reader.Rate = ; giá trị -10 đến 10 điều chỉnh tốc độ đọc
-                        //reader.Speak("Start heading out");
+                        //reader.Speak("Start Break Time");
 
                     }
 					else
 					{
-						bool flag5 = this.error == "=> 不能再选这个选项 <= 请选其他选项";
+						bool flag5 = this.error == "=> This reason cannot be selected again <= Please select another reason";
 						if (flag5)
 						{
 							CustomMessageBox.Show(this.error, "fail ！", MessageBoxButtons.OK, MessageBoxIcon.Hand);
@@ -348,13 +348,13 @@ namespace singinsystem.QLDangKyVao
 				if (flag3)
 				{
                     // test lại sau
-                    CustomMessageBoxPhu.Show("Successfully entered !", "success", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    CustomMessageBoxPhu.Show("Break ended successfully !", "success", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 					this.cbNhanSu.Text = "";
 					this.cbNhanSu.ValueMember = "";
 					ucQLDangKyVao.LuuThongTin.MaNV = "";
 					ucQLDangKyVao.LuuThongTin.LyDo = "";
 					this.cbLoaiDangKy.Text = "";
-                    string test = "Start heading out";// + qldiLaiEntity.LyDo;
+                    string test = "Start Break Time";// + qldiLaiEntity.LyDo;
                     SpeechSynthesizer reader = new SpeechSynthesizer();
                     // Chọn voice tiếng Trung
                     //reader.SelectVoiceByHints(
@@ -364,7 +364,7 @@ namespace singinsystem.QLDangKyVao
                     //    new CultureInfo("zh-CN") // tiếng Trung giản thể
                     //);
                     ////reader.Rate = ; giá trị -10 đến 10 điều chỉnh tốc độ đọc
-                    //reader.Speak("Start heading out");
+                    //reader.Speak("Start Break Time");
                     this.HienThiDanhSachQLDangKyVao();
 				}
 				else
@@ -376,7 +376,7 @@ namespace singinsystem.QLDangKyVao
 		private void dgDSQLDangKyVao_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
 		{
 			this.dgDSQLDangKyVao.EnableHeadersVisualStyles = false;
-			this.dgDSQLDangKyVao.ColumnHeadersDefaultCellStyle.BackColor = Color.Red;
+			this.dgDSQLDangKyVao.ColumnHeadersDefaultCellStyle.BackColor = Color.Blue;
 			this.dgDSQLDangKyVao.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 			for (int i = 0; i < this.dgDSQLDangKyVao.Rows.Count; i++)
 			{
@@ -387,7 +387,7 @@ namespace singinsystem.QLDangKyVao
 				}
 				else
 				{
-					this.dgDSQLDangKyVao.Rows[i].DefaultCellStyle.BackColor = Color.LightCoral;
+					this.dgDSQLDangKyVao.Rows[i].DefaultCellStyle.BackColor = Color.LightBlue;
 				}
 			}
 			this.dgDSQLDangKyVao.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 16f);

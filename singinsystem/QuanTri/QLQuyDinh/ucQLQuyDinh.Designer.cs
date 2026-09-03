@@ -28,10 +28,6 @@ namespace singinsystem.QuanTri.QLQuyDinh
 		private Button button1;
 		private TextBox txtQuyDinh;
 		private ComboBox cbKieu;
-		private DataGridViewTextBoxColumn Id;
-		private DataGridViewTextBoxColumn QuyDinh;
-		private DataGridViewTextBoxColumn DiemBiTru;
-		private DataGridViewTextBoxColumn Kieu;
 		/// <summary> 
 		/// Clean up any resources being used.
 		/// </summary>
@@ -56,11 +52,9 @@ namespace singinsystem.QuanTri.QLQuyDinh
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgDSQLQuyDinh = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuyDinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemBiTru = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnImport = new System.Windows.Forms.Button();
+            this.btnXuatFileMau = new System.Windows.Forms.Button();
             this.cbKieu = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -74,8 +68,10 @@ namespace singinsystem.QuanTri.QLQuyDinh
             this.button1 = new System.Windows.Forms.Button();
             this.txtQuyDinh = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnImport = new System.Windows.Forms.Button();
-            this.btnXuatFileMau = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QuyDinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemBiTru = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDSQLQuyDinh)).BeginInit();
@@ -125,38 +121,6 @@ namespace singinsystem.QuanTri.QLQuyDinh
             this.dgDSQLQuyDinh.TabIndex = 1;
             this.dgDSQLQuyDinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDSQLQuyDinh_CellClick);
             // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "ID";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.Width = 125;
-            // 
-            // QuyDinh
-            // 
-            this.QuyDinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.QuyDinh.DataPropertyName = "QuyDinh";
-            this.QuyDinh.HeaderText = "规定";
-            this.QuyDinh.MinimumWidth = 6;
-            this.QuyDinh.Name = "QuyDinh";
-            // 
-            // DiemBiTru
-            // 
-            this.DiemBiTru.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DiemBiTru.DataPropertyName = "DiemBiTru";
-            this.DiemBiTru.HeaderText = "扣分";
-            this.DiemBiTru.MinimumWidth = 6;
-            this.DiemBiTru.Name = "DiemBiTru";
-            // 
-            // Kieu
-            // 
-            this.Kieu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Kieu.DataPropertyName = "Kieu";
-            this.Kieu.HeaderText = "类型";
-            this.Kieu.MinimumWidth = 6;
-            this.Kieu.Name = "Kieu";
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -180,6 +144,30 @@ namespace singinsystem.QuanTri.QLQuyDinh
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(775, 149);
             this.panel3.TabIndex = 2;
+            // 
+            // btnImport
+            // 
+            this.btnImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnImport.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.Location = new System.Drawing.Point(627, 116);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(112, 30);
+            this.btnImport.TabIndex = 43;
+            this.btnImport.Text = "Import";
+            this.btnImport.UseVisualStyleBackColor = false;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // btnXuatFileMau
+            // 
+            this.btnXuatFileMau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnXuatFileMau.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuatFileMau.Location = new System.Drawing.Point(466, 116);
+            this.btnXuatFileMau.Name = "btnXuatFileMau";
+            this.btnXuatFileMau.Size = new System.Drawing.Size(143, 30);
+            this.btnXuatFileMau.TabIndex = 42;
+            this.btnXuatFileMau.Text = "Original";
+            this.btnXuatFileMau.UseVisualStyleBackColor = false;
+            this.btnXuatFileMau.Click += new System.EventHandler(this.btnXuatFileMau_Click);
             // 
             // cbKieu
             // 
@@ -213,27 +201,27 @@ namespace singinsystem.QuanTri.QLQuyDinh
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(461, 48);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 25);
+            this.label5.Size = new System.Drawing.Size(57, 25);
             this.label5.TabIndex = 38;
-            this.label5.Text = "类型";
+            this.label5.Text = "Type";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(332, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 25);
+            this.label4.Size = new System.Drawing.Size(131, 25);
             this.label4.TabIndex = 37;
-            this.label4.Text = "扣分";
+            this.label4.Text = "Deduct points";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(115, 48);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 25);
+            this.label3.Size = new System.Drawing.Size(104, 25);
             this.label3.TabIndex = 36;
-            this.label3.Text = "规定";
+            this.label3.Text = "Regulation";
             // 
             // txtDiemBiTru
             // 
@@ -249,7 +237,7 @@ namespace singinsystem.QuanTri.QLQuyDinh
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(121, 30);
             this.btnSua.TabIndex = 33;
-            this.btnSua.Text = "修改";
+            this.btnSua.Text = "Edit";
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -260,7 +248,7 @@ namespace singinsystem.QuanTri.QLQuyDinh
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(121, 30);
             this.btnThem.TabIndex = 32;
-            this.btnThem.Text = "Add to ";
+            this.btnThem.Text = "Add";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -271,7 +259,7 @@ namespace singinsystem.QuanTri.QLQuyDinh
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(121, 30);
             this.btnXoa.TabIndex = 31;
-            this.btnXoa.Text = "删除";
+            this.btnXoa.Text = "Delete";
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -282,7 +270,7 @@ namespace singinsystem.QuanTri.QLQuyDinh
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 30);
             this.button1.TabIndex = 30;
-            this.button1.Text = "搜索";
+            this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // txtQuyDinh
@@ -299,33 +287,41 @@ namespace singinsystem.QuanTri.QLQuyDinh
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(294, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 31);
+            this.label1.Size = new System.Drawing.Size(329, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "规定管理";
+            this.label1.Text = "Regulation Management";
             // 
-            // btnImport
+            // Id
             // 
-            this.btnImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnImport.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImport.Location = new System.Drawing.Point(627, 116);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(112, 30);
-            this.btnImport.TabIndex = 43;
-            this.btnImport.Text = "导入";
-            this.btnImport.UseVisualStyleBackColor = false;
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "ID";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.Width = 125;
             // 
-            // btnXuatFileMau
+            // QuyDinh
             // 
-            this.btnXuatFileMau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnXuatFileMau.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuatFileMau.Location = new System.Drawing.Point(466, 116);
-            this.btnXuatFileMau.Name = "btnXuatFileMau";
-            this.btnXuatFileMau.Size = new System.Drawing.Size(143, 30);
-            this.btnXuatFileMau.TabIndex = 42;
-            this.btnXuatFileMau.Text = "原本";
-            this.btnXuatFileMau.UseVisualStyleBackColor = false;
-            this.btnXuatFileMau.Click += new System.EventHandler(this.btnXuatFileMau_Click);
+            this.QuyDinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.QuyDinh.DataPropertyName = "QuyDinh";
+            this.QuyDinh.HeaderText = "Regulation";
+            this.QuyDinh.MinimumWidth = 6;
+            this.QuyDinh.Name = "QuyDinh";
+            // 
+            // DiemBiTru
+            // 
+            this.DiemBiTru.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DiemBiTru.DataPropertyName = "DiemBiTru";
+            this.DiemBiTru.HeaderText = "Deduct points";
+            this.DiemBiTru.MinimumWidth = 6;
+            this.DiemBiTru.Name = "DiemBiTru";
+            // 
+            // Kieu
+            // 
+            this.Kieu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Kieu.DataPropertyName = "Kieu";
+            this.Kieu.HeaderText = "Type";
+            this.Kieu.MinimumWidth = 6;
+            this.Kieu.Name = "Kieu";
             // 
             // ucQLQuyDinh
             // 
@@ -350,5 +346,9 @@ namespace singinsystem.QuanTri.QLQuyDinh
 
         private Button btnImport;
         private Button btnXuatFileMau;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn QuyDinh;
+        private DataGridViewTextBoxColumn DiemBiTru;
+        private DataGridViewTextBoxColumn Kieu;
     }
 }

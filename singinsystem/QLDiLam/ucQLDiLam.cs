@@ -265,7 +265,7 @@ namespace singinsystem.QLDiLam
 		private void dgDSQLDiLam_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
 		{
 			this.dgDSQLDiLam.EnableHeadersVisualStyles = false;
-			this.dgDSQLDiLam.ColumnHeadersDefaultCellStyle.BackColor = Color.Red;
+			this.dgDSQLDiLam.ColumnHeadersDefaultCellStyle.BackColor = Color.Blue;
 			this.dgDSQLDiLam.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 			for (int i = 0; i < this.dgDSQLDiLam.Rows.Count; i++)
 			{
@@ -276,9 +276,9 @@ namespace singinsystem.QLDiLam
 				}
 				else
 				{
-					this.dgDSQLDiLam.Rows[i].DefaultCellStyle.BackColor = Color.LightCoral;
-				}
-			}
+                    this.dgDSQLDiLam.Rows[i].DefaultCellStyle.BackColor = Color.LightBlue;
+                }
+            }
 			this.dgDSQLDiLam.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 16f);
 			float num = 0.1f;
 			int num2 = this.dgDSQLDiLam.ClientSize.Height - this.dgDSQLDiLam.ColumnHeadersHeight;
@@ -363,7 +363,7 @@ namespace singinsystem.QLDiLam
 				qlxuongCaEntity.GioXuongCa = DateTime.Now;
 				qlxuongCaEntity.TrangThai = "Đã xuống ca";
 				ucQLDiLam.LuuThongTin.ThongBao1 = maNV.ToString() + " - " + text;
-				ucQLDiLam.LuuThongTin.ThongBao2 = "你确定要下班？";
+				ucQLDiLam.LuuThongTin.ThongBao2 = "Are you sure you want to leave work？";
 				frmDongYXuongCa frmDongYXuongCa = new frmDongYXuongCa();
 				frmDongYXuongCa.ShowDialog();
 				int kiemTra = frmDongYXuongCa.LuuThongTin.KiemTra;

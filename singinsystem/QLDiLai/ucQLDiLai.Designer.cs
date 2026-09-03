@@ -33,16 +33,8 @@ namespace singinsystem.QLDiLai
 		private Panel panel2;
 		private Panel panel4;
 		private Label label3;
+		//private Label label6;
 		private PictureBox pictureBox1;
-		private DataGridViewTextBoxColumn Id;
-		private DataGridViewTextBoxColumn MaNV;
-		private DataGridViewTextBoxColumn TenNV;
-		private DataGridViewTextBoxColumn LyDo;
-		private DataGridViewTextBoxColumn TimeOut;
-		private DataGridViewTextBoxColumn TimeIn;
-		private DataGridViewTextBoxColumn TongTime;
-		private DataGridViewTextBoxColumn GhiChu;
-		private DataGridViewButtonColumn btnThemGhiChu;
 		private Button btnBCTH;
 		private DateTimePicker dtpDen;
 		private Panel panel7;
@@ -76,13 +68,13 @@ namespace singinsystem.QLDiLai
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucQLDiLai));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -100,6 +92,12 @@ namespace singinsystem.QLDiLai
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dtpTu = new System.Windows.Forms.DateTimePicker();
@@ -112,11 +110,6 @@ namespace singinsystem.QLDiLai
             this.cbLoaiDangKy = new System.Windows.Forms.ComboBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBCTH = new System.Windows.Forms.Button();
@@ -134,12 +127,12 @@ namespace singinsystem.QLDiLai
             ((System.ComponentModel.ISupportInitialize)(this.dgDSQLDiLai)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel11.SuspendLayout();
@@ -192,6 +185,7 @@ namespace singinsystem.QLDiLai
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 461F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(940, 620);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
@@ -202,14 +196,14 @@ namespace singinsystem.QLDiLai
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgDSQLDiLai.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgDSQLDiLai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgDSQLDiLai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dgDSQLDiLai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDSQLDiLai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -240,7 +234,7 @@ namespace singinsystem.QLDiLai
             // MaNV
             // 
             this.MaNV.DataPropertyName = "MaNV";
-            this.MaNV.HeaderText = "代码";
+            this.MaNV.HeaderText = "Code";
             this.MaNV.MinimumWidth = 6;
             this.MaNV.Name = "MaNV";
             this.MaNV.Width = 125;
@@ -250,7 +244,7 @@ namespace singinsystem.QLDiLai
             this.TenNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TenNV.DataPropertyName = "TenNV";
             this.TenNV.FillWeight = 150F;
-            this.TenNV.HeaderText = "姓名";
+            this.TenNV.HeaderText = "Name";
             this.TenNV.MinimumWidth = 6;
             this.TenNV.Name = "TenNV";
             // 
@@ -258,7 +252,7 @@ namespace singinsystem.QLDiLai
             // 
             this.LyDo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.LyDo.DataPropertyName = "LyDo";
-            this.LyDo.HeaderText = "理由";
+            this.LyDo.HeaderText = "Reason";
             this.LyDo.MinimumWidth = 6;
             this.LyDo.Name = "LyDo";
             // 
@@ -266,10 +260,10 @@ namespace singinsystem.QLDiLai
             // 
             this.TimeOut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TimeOut.DataPropertyName = "TimeOut";
-            dataGridViewCellStyle2.Format = "G";
-            dataGridViewCellStyle2.NullValue = null;
-            this.TimeOut.DefaultCellStyle = dataGridViewCellStyle2;
-            this.TimeOut.HeaderText = "出去时间";
+            dataGridViewCellStyle26.Format = "G";
+            dataGridViewCellStyle26.NullValue = null;
+            this.TimeOut.DefaultCellStyle = dataGridViewCellStyle26;
+            this.TimeOut.HeaderText = "Time-out";
             this.TimeOut.MinimumWidth = 6;
             this.TimeOut.Name = "TimeOut";
             // 
@@ -277,10 +271,10 @@ namespace singinsystem.QLDiLai
             // 
             this.TimeIn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TimeIn.DataPropertyName = "TimeIn";
-            dataGridViewCellStyle3.Format = "G";
-            dataGridViewCellStyle3.NullValue = null;
-            this.TimeIn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.TimeIn.HeaderText = "进入时间";
+            dataGridViewCellStyle27.Format = "G";
+            dataGridViewCellStyle27.NullValue = null;
+            this.TimeIn.DefaultCellStyle = dataGridViewCellStyle27;
+            this.TimeIn.HeaderText = "Time-in";
             this.TimeIn.MinimumWidth = 6;
             this.TimeIn.Name = "TimeIn";
             // 
@@ -288,9 +282,9 @@ namespace singinsystem.QLDiLai
             // 
             this.TongTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TongTime.DataPropertyName = "TongTime";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.TongTime.DefaultCellStyle = dataGridViewCellStyle4;
-            this.TongTime.HeaderText = "超时";
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.TongTime.DefaultCellStyle = dataGridViewCellStyle28;
+            this.TongTime.HeaderText = "Total Time";
             this.TongTime.MinimumWidth = 6;
             this.TongTime.Name = "TongTime";
             // 
@@ -298,7 +292,7 @@ namespace singinsystem.QLDiLai
             // 
             this.GhiChu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.GhiChu.DataPropertyName = "GhiChu";
-            this.GhiChu.HeaderText = "备注 ";
+            this.GhiChu.HeaderText = "Notes";
             this.GhiChu.MinimumWidth = 6;
             this.GhiChu.Name = "GhiChu";
             // 
@@ -306,16 +300,16 @@ namespace singinsystem.QLDiLai
             // 
             this.btnThemGhiChu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.btnThemGhiChu.DataPropertyName = "btnThemGhiChu";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            this.btnThemGhiChu.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.White;
+            this.btnThemGhiChu.DefaultCellStyle = dataGridViewCellStyle29;
             this.btnThemGhiChu.HeaderText = "";
             this.btnThemGhiChu.MinimumWidth = 6;
             this.btnThemGhiChu.Name = "btnThemGhiChu";
             this.btnThemGhiChu.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.btnThemGhiChu.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.btnThemGhiChu.Text = "备注";
+            this.btnThemGhiChu.Text = "Notes";
             this.btnThemGhiChu.UseColumnTextForButtonValue = true;
             // 
             // label1
@@ -327,7 +321,7 @@ namespace singinsystem.QLDiLai
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(934, 31);
             this.label1.TabIndex = 1;
-            this.label1.Text = "打卡记录";
+            this.label1.Text = "Break Records";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel4
@@ -349,8 +343,8 @@ namespace singinsystem.QLDiLai
             // 
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel7, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel7, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -359,6 +353,81 @@ namespace singinsystem.QLDiLai
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.41177F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(928, 68);
             this.tableLayoutPanel5.TabIndex = 0;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 5;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.132834F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.35792F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.2321F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.78742F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.92191F));
+            this.tableLayoutPanel6.Controls.Add(this.label2, 4, 0);
+            this.tableLayoutPanel6.Controls.Add(this.label4, 3, 0);
+            this.tableLayoutPanel6.Controls.Add(this.panel2, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.label6, 2, 0);
+            this.tableLayoutPanel6.Controls.Add(this.label3, 1, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(922, 24);
+            this.tableLayoutPanel6.TabIndex = 2;
+            this.tableLayoutPanel6.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel6_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(685, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(234, 24);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "To date";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(522, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(157, 24);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "From date";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(68, 18);
+            this.panel2.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label6.Location = new System.Drawing.Point(401, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(90, 24);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Reason";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(77, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(152, 24);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Code - Name";
             // 
             // tableLayoutPanel7
             // 
@@ -369,7 +438,7 @@ namespace singinsystem.QLDiLai
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 199F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 210F));
             this.tableLayoutPanel7.Controls.Add(this.panel5, 4, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel6, 5, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel4, 0, 0);
@@ -389,7 +458,7 @@ namespace singinsystem.QLDiLai
             // 
             this.panel5.Controls.Add(this.dtpTu);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(387, 3);
+            this.panel5.Location = new System.Drawing.Point(376, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(166, 26);
             this.panel5.TabIndex = 3;
@@ -402,14 +471,14 @@ namespace singinsystem.QLDiLai
             this.dtpTu.Name = "dtpTu";
             this.dtpTu.Size = new System.Drawing.Size(166, 30);
             this.dtpTu.TabIndex = 0;
-            this.dtpTu.Value = DateTime.Now.Date;
-            this.dtpTu.ValueChanged += new System.EventHandler(this.dtpTu_ValueChanged);
+			this.dtpTu.Value = DateTime.Now.Date;
+			this.dtpTu.ValueChanged += new System.EventHandler(this.dtpTu_ValueChanged);
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.dtpDen);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(559, 3);
+            this.panel6.Location = new System.Drawing.Point(548, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(160, 26);
             this.panel6.TabIndex = 9;
@@ -421,24 +490,24 @@ namespace singinsystem.QLDiLai
             this.dtpDen.Name = "dtpDen";
             this.dtpDen.Size = new System.Drawing.Size(150, 30);
             this.dtpDen.TabIndex = 1;
-            this.dtpDen.Value = DateTime.Now.Date.AddHours(23.0).AddMinutes(59.0);
-            this.dtpDen.ValueChanged += new System.EventHandler(this.dtpDen_ValueChanged);
+			this.dtpDen.Value = DateTime.Now.Date.AddHours(23.0).AddMinutes(59.0);
+			this.dtpDen.ValueChanged += new System.EventHandler(this.dtpDen_ValueChanged);
             // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(13, 26);
+            this.panel4.Size = new System.Drawing.Size(10, 26);
             this.panel4.TabIndex = 6;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.cbNhanSu);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(22, 3);
+            this.panel7.Location = new System.Drawing.Point(19, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(65, 26);
+            this.panel7.Size = new System.Drawing.Size(57, 26);
             this.panel7.TabIndex = 10;
             // 
             // cbNhanSu
@@ -450,7 +519,7 @@ namespace singinsystem.QLDiLai
             this.cbNhanSu.IntegralHeight = false;
             this.cbNhanSu.Location = new System.Drawing.Point(0, 0);
             this.cbNhanSu.Name = "cbNhanSu";
-            this.cbNhanSu.Size = new System.Drawing.Size(65, 38);
+            this.cbNhanSu.Size = new System.Drawing.Size(57, 39);
             this.cbNhanSu.TabIndex = 14;
             this.cbNhanSu.TextUpdate += new System.EventHandler(this.cbNhanSu_TextUpdate);
             this.cbNhanSu.SelectedValueChanged += new System.EventHandler(this.cbNhanSu_SelectedValueChanged);
@@ -459,7 +528,7 @@ namespace singinsystem.QLDiLai
             // 
             this.panel8.Controls.Add(this.cbLoaiDangKy);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(93, 3);
+            this.panel8.Location = new System.Drawing.Point(82, 3);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(119, 26);
             this.panel8.TabIndex = 11;
@@ -471,7 +540,7 @@ namespace singinsystem.QLDiLai
             this.cbLoaiDangKy.FormattingEnabled = true;
             this.cbLoaiDangKy.Location = new System.Drawing.Point(0, 0);
             this.cbLoaiDangKy.Name = "cbLoaiDangKy";
-            this.cbLoaiDangKy.Size = new System.Drawing.Size(119, 38);
+            this.cbLoaiDangKy.Size = new System.Drawing.Size(119, 39);
             this.cbLoaiDangKy.TabIndex = 9;
             this.cbLoaiDangKy.TextUpdate += new System.EventHandler(this.cbLoaiDangKy_TextUpdate);
             this.cbLoaiDangKy.SelectedValueChanged += new System.EventHandler(this.cbLoaiDangKy_SelectedValueChanged);
@@ -479,7 +548,7 @@ namespace singinsystem.QLDiLai
             // panel9
             // 
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(218, 3);
+            this.panel9.Location = new System.Drawing.Point(207, 3);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(163, 26);
             this.panel9.TabIndex = 12;
@@ -487,78 +556,18 @@ namespace singinsystem.QLDiLai
             // panel10
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(725, 3);
+            this.panel10.Location = new System.Drawing.Point(714, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(194, 26);
+            this.panel10.Size = new System.Drawing.Size(205, 26);
             this.panel10.TabIndex = 13;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 4;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.16505F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 309F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 88.83495F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 407F));
-            this.tableLayoutPanel6.Controls.Add(this.label2, 3, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label4, 2, 0);
-            this.tableLayoutPanel6.Controls.Add(this.panel2, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label3, 1, 0);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(922, 24);
-            this.tableLayoutPanel6.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(518, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(401, 24);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "时间";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(335, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 24);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "理由";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(17, 18);
-            this.panel2.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 24);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "代码 - 姓名";
             // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.ColumnCount = 4;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 278F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.82759F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 116F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 237F));
             this.tableLayoutPanel8.Controls.Add(this.pictureBox1, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.btnBCTH, 3, 0);
             this.tableLayoutPanel8.Controls.Add(this.panel11, 0, 0);
@@ -568,14 +577,14 @@ namespace singinsystem.QLDiLai
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(928, 41);
             this.tableLayoutPanel8.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(761, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(621, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(47, 35);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -586,11 +595,11 @@ namespace singinsystem.QLDiLai
             // btnBCTH
             // 
             this.btnBCTH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBCTH.Location = new System.Drawing.Point(814, 3);
+            this.btnBCTH.Location = new System.Drawing.Point(694, 3);
             this.btnBCTH.Name = "btnBCTH";
-            this.btnBCTH.Size = new System.Drawing.Size(110, 35);
+            this.btnBCTH.Size = new System.Drawing.Size(231, 35);
             this.btnBCTH.TabIndex = 12;
-            this.btnBCTH.Text = "综合报告";
+            this.btnBCTH.Text = "Summary Report";
             this.btnBCTH.UseVisualStyleBackColor = true;
             this.btnBCTH.Click += new System.EventHandler(this.btnBCTH_Click);
             // 
@@ -613,7 +622,7 @@ namespace singinsystem.QLDiLai
             "100",
             "200",
             "500"});
-            this.cbHienThi.Location = new System.Drawing.Point(69, 2);
+            this.cbHienThi.Location = new System.Drawing.Point(167, 0);
             this.cbHienThi.Name = "cbHienThi";
             this.cbHienThi.Size = new System.Drawing.Size(91, 33);
             this.cbHienThi.TabIndex = 3;
@@ -625,9 +634,9 @@ namespace singinsystem.QLDiLai
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(5, 3);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 27);
+            this.label5.Size = new System.Drawing.Size(156, 28);
             this.label5.TabIndex = 2;
-            this.label5.Text = "显示:";
+            this.label5.Text = "Rows per page:";
             // 
             // panel12
             // 
@@ -638,18 +647,18 @@ namespace singinsystem.QLDiLai
             this.panel12.Controls.Add(this.cBCaNgay);
             this.panel12.Location = new System.Drawing.Point(281, 3);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(474, 35);
+            this.panel12.Size = new System.Drawing.Size(334, 35);
             this.panel12.TabIndex = 14;
             // 
             // cBCaDem
             // 
             this.cBCaDem.AutoSize = true;
             this.cBCaDem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBCaDem.Location = new System.Drawing.Point(104, 3);
+            this.cBCaDem.Location = new System.Drawing.Point(131, 3);
             this.cBCaDem.Name = "cBCaDem";
-            this.cBCaDem.Size = new System.Drawing.Size(74, 31);
+            this.cBCaDem.Size = new System.Drawing.Size(139, 32);
             this.cBCaDem.TabIndex = 1;
-            this.cBCaDem.Text = "夜班";
+            this.cBCaDem.Text = "Night Shift";
             this.cBCaDem.UseVisualStyleBackColor = true;
             this.cBCaDem.CheckedChanged += new System.EventHandler(this.cBCaDem_CheckedChanged);
             // 
@@ -659,9 +668,9 @@ namespace singinsystem.QLDiLai
             this.cBCaNgay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBCaNgay.Location = new System.Drawing.Point(3, 3);
             this.cBCaNgay.Name = "cBCaNgay";
-            this.cBCaNgay.Size = new System.Drawing.Size(74, 31);
+            this.cBCaNgay.Size = new System.Drawing.Size(122, 32);
             this.cBCaNgay.TabIndex = 0;
-            this.cBCaNgay.Text = "白班";
+            this.cBCaNgay.Text = "Day Shift";
             this.cBCaNgay.UseVisualStyleBackColor = true;
             this.cBCaNgay.CheckedChanged += new System.EventHandler(this.cBCaNgay_CheckedChanged);
             // 
@@ -669,10 +678,10 @@ namespace singinsystem.QLDiLai
             // 
             this.dataGridViewButtonColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewButtonColumn1.DataPropertyName = "btnTroLaiLamViec";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.White;
+            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle30;
             this.dataGridViewButtonColumn1.HeaderText = "Thao tác";
             this.dataGridViewButtonColumn1.MinimumWidth = 6;
             this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
@@ -699,13 +708,13 @@ namespace singinsystem.QLDiLai
             ((System.ComponentModel.ISupportInitialize)(this.dgDSQLDiLai)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel11.ResumeLayout(false);
@@ -721,5 +730,15 @@ namespace singinsystem.QLDiLai
         private Panel panel12;
         private CheckBox cBCaDem;
         private CheckBox cBCaNgay;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn MaNV;
+        private DataGridViewTextBoxColumn TenNV;
+        private DataGridViewTextBoxColumn LyDo;
+        private DataGridViewTextBoxColumn TimeOut;
+        private DataGridViewTextBoxColumn TimeIn;
+        private DataGridViewTextBoxColumn TongTime;
+        private DataGridViewTextBoxColumn GhiChu;
+        private DataGridViewButtonColumn btnThemGhiChu;
+        private Label label6;
     }
 }
